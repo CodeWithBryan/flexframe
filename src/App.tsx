@@ -1,5 +1,5 @@
 function App() {
-  return <></>;
+  return <h1 className=''>inter text</h1>;
 }
 
 export default App;
