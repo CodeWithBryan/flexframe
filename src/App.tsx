@@ -1,5 +1,7 @@
+import AppRouter from './components/shared/AppRouter';
+
 function App() {
-  return <h1 className=''>inter text</h1>;
+  return <AppRouter></AppRouter>;
 }
 
 export default App;
