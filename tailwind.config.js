@@ -13,6 +13,21 @@ export default {
         lg: '976px',
         xl: '1280px',
       },
+      colors: {
+        black: {
+          1: '#000000',
+          2: 'rgba(255, 255, 255, 0.04)',
+        },
+        red: {
+          1: '#B61F24',
+        },
+        white: {
+          1: '#FFF',
+        },
+        yellow: {
+          1: '#FCB823',
+        },
+      },
       fontSize: {
         // Text series
         't-xs': ['.75rem', '1rem'],

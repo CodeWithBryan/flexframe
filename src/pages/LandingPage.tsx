@@ -1,7 +1,12 @@
 import React from 'react';
+import SocialBanner from '../components/shared/SocialBanner/SocialBanner';
 
 const LandingPage = () => {
-  return <div>LandingPage</div>;
+  return (
+    <React.Fragment>
+      <SocialBanner />
+    </React.Fragment>
+  );
 };
 
 export default LandingPage;
