@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const SocialBanner = () => {
   return (
-    <div className='w-full h-[50px] bg-[#1b1b1b] border-b-[1px] border-white-1'>
+    <div className='w-full h-[50px] bg-[#1b1b1b] border-b-[1px] border-white-1/50'>
       <ComponentWrapper style='h-full'>
         <div className='w-full h-full flex justify-between items-center'>
           {/* left por ==>  */}

@@ -5,7 +5,10 @@ interface Props {
   style?: string;
 }
 
-const ComponentWrapper: React.FC<Props> = ({ children, style }: Props) => {
+const ComponentWrapper: React.FC<Props> = ({
+  children,
+  style = 'h-full',
+}: Props) => {
   return (
     <div className={`w-full ${style}`}>
       <div className='w-full h-full max-w-[1400px] m-auto md:px-8 px-4'>
