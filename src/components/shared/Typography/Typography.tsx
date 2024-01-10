@@ -30,6 +30,13 @@ export const text = ({
   return <p className={`text-t-lg ${styles}`}>{children}</p>;
 };
 
+export const lgText = ({
+  children,
+  styles = 'text-black-main font-semibold',
+}: Props) => {
+  return <p className={`text-d-xs ${styles}`}>{children}</p>;
+};
+
 export const Heading1 = ({ children, styles = 'text-black-main' }: Props) => {
   return <p className={`text-d-2xl font-bold ${styles}`}>{children}</p>;
 };
@@ -48,6 +55,7 @@ const Typography = {
   h1: Heading1,
   h2: Heading2,
   text: text,
+  lgText: lgText,
 };
 
 export default Typography;
