@@ -1,20 +1,17 @@
+'use client';
+
 import React from 'react';
-import * as Icons from '../../svg/Icons';
-import Typography from '../shared/Typography/Typography';
+import Marquee from 'react-fast-marquee';
+import FeatureCard from './Cards/FeatureCard';
 
 const FeatureBanner: React.FC = () => {
   return (
-    <div className='w-full bg-red-1 h-[80px] flex justify-between items-center px-1'>
-      {features.map((item, index) => {
-        return (
-          <div key={index} className='flex justify-center gap-2 items-center'>
-            <Icons.dumbel />
-            <Typography.lgText styles='text-white-1 font-medium'>
-              {item}
-            </Typography.lgText>
-          </div>
-        );
-      })}
+    <div className='w-full h-[35px] md:h-[80px] bg-red-1 flex justify-center items-center'>
+      <Marquee gradient={false} pauseOnHover={true} speed={120}>
+        {features.map((item, index) => {
+          return <FeatureCard feature={item} key={index} />;
+        })}
+      </Marquee>
     </div>
   );
 };

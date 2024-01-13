@@ -13,7 +13,7 @@ const AboutUs: React.FC = () => {
           <img
             src='/assets/aboutUs.png'
             alt=''
-            className='w-full max-w-[380px] sm:max-w-[430px] md:max-w-[540px] h-[350px] sm:h-[450px] md:h-[560px]'
+            className='w-full max-w-[380px] sm:max-w-[430px] md:max-w-[540px] h-[370px] sm:h-[450px] md:h-[560px]'
           />
         </div>
         {/* right portion =====>  */}
