@@ -23,6 +23,7 @@ export default {
         },
         white: {
           1: '#FFF',
+          2: '#CCCCCC',
         },
         yellow: {
           1: '#FCB823',

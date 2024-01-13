@@ -48,12 +48,17 @@ export const Heading2 = ({
   return <p className={`text-d-lg ${styles}`}>{children}</p>;
 };
 
+export const Heading3 = ({ children, styles = 'text-white-1' }: Props) => {
+  return <p className={`text-d-sm ${styles}`}>{children}</p>;
+};
+
 const Typography = {
   smallText: smallText,
   xsText: xSmallText,
   mText: mediumText,
   h1: Heading1,
   h2: Heading2,
+  h3: Heading3,
   text: text,
   lgText: lgText,
 };

@@ -3,6 +3,9 @@ import SocialBanner from '../components/shared/SocialBanner/SocialBanner';
 import Hero from '../components/LandingPage/Hero';
 import AboutUs from '../components/LandingPage/AboutUs';
 import FeatureBanner from '../components/LandingPage/FeatureBanner';
+import PowerOfRip from '../components/LandingPage/PowerOfRip';
+import ManBehindPr from '../components/LandingPage/ManBehindPr';
+import SuccessStories from '../components/LandingPage/SuccessStories';
 
 const LandingPage: React.FC = () => {
   return (
@@ -11,6 +14,10 @@ const LandingPage: React.FC = () => {
       <Hero />
       <AboutUs />
       <FeatureBanner />
+      {/* <TrainingProgram /> */}
+      <PowerOfRip />
+      <ManBehindPr />
+      <SuccessStories />
     </div>
   );
 };
