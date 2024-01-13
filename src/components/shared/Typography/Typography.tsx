@@ -38,7 +38,13 @@ export const lgText = ({
 };
 
 export const Heading1 = ({ children, styles = 'text-black-main' }: Props) => {
-  return <p className={`text-d-2xl font-bold ${styles}`}>{children}</p>;
+  return (
+    <p
+      className={`text-d-md sm:text-d-lg md:text-d-xl  lg:text-d-2xl font-bold ${styles}`}
+    >
+      {children}
+    </p>
+  );
 };
 
 export const Heading2 = ({

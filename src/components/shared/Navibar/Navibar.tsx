@@ -5,7 +5,6 @@ import { Link, useLocation } from 'react-router-dom';
 import Typography from '../Typography/Typography';
 import * as Icons from '../../../svg/Icons';
 import FillButton from '../Buttons/FillButton';
-import { Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
 const Navibar: React.FC = () => {
@@ -14,7 +13,7 @@ const Navibar: React.FC = () => {
 
   return (
     <React.Fragment>
-      <div className='w-full h-[88px] bg-transparent'>
+      <div className='w-full h-[60px] sm:h-[88px] bg-transparent sm:border-none border-b-[1px] border-white-1/10'>
         <ComponentWrapper style='h-full'>
           <div className='w-full h-full flex justify-between items-center'>
             {/* left por =====>  */}
@@ -22,7 +21,7 @@ const Navibar: React.FC = () => {
               <img
                 src={logo}
                 alt='logo'
-                className='w-[43px] h-[38px]'
+                className='w-[40px] sm:w-[43px] h-[30px] sm:h-[38px]'
                 loading='lazy'
               />
               {/* links ====>  */}
