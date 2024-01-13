@@ -17,8 +17,8 @@ const LandingPage: React.FC = () => {
       <FeatureBanner />
       <TrainingProgram />
       <PowerOfRip />
-      {/* <ManBehindPr /> */}
-      {/* <SuccessStories /> */}
+      <ManBehindPr />
+      <SuccessStories />
     </div>
   );
 };

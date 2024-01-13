@@ -3,17 +3,17 @@ import Typography from '../../shared/Typography/Typography';
 
 const SuccessStoryCard: React.FC = () => {
   return (
-    <div className='w-full grid grid-cols-[1fr,1.2fr] justify-center items-center'>
+    <div className='w-full grid grid-cols-1 cmd:grid-cols-[1fr,1.2fr] cmd:gap-0 gap-6 justify-center items-center'>
       {/* left por ===>  */}
       <div className='w-full flex justify-center items-center'>
         <img
           src='/assets/success.png'
           alt=''
-          className=' w-full max-w-[610px] h-[620px] object-fill'
+          className=' w-full max-w-[320px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[550px] xl:max-w-[610px] h-[280px] sm:h-[350px] md:h-[400px] lg:h-[470px] xl:h-[620px] object-fill'
         />
       </div>
       {/* right por ====>  */}
-      <div className='w-full flex gap-6 flex-col items-start pl-12'>
+      <div className='w-full flex gap-6 flex-col items-start pl-4 lg:pl-12'>
         <Typography.h3 styles='text-white-1 font-bold'>
           Emily was obese her entire adult life and knew she needed to change
         </Typography.h3>
@@ -33,7 +33,7 @@ const SuccessStoryCard: React.FC = () => {
             Graphic Designer
           </Typography.text>
         </div>
-        <div className='flex justify-center items-center gap-4 mt-3'>
+        <div className='hidden cmd:flex justify-center items-center gap-4 mt-3'>
           {[0, 1, 2].map((item, index) => {
             return (
               <img

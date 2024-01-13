@@ -33,7 +33,7 @@ const PowerOfRip: React.FC = () => {
           })}
         </div>
         {/*  Reviews ===========>  */}
-        <div className='w-full flex md:flex-row flex-col  lg:gap-0 gap-10 md:gap-4 justify-between items-center mt-12 md:mt-24'>
+        <div className='w-full flex md:flex-row flex-col  lg:gap-0 gap-10 md:gap-4 justify-between items-center mt-10 md:mt-24'>
           {/* left portion ====>  */}
           <div className='flex max-w-[400px] flex-col items-center md:items-start gap-3'>
             <Typography.h3 styles='text-white-1 font-bold md:text-left text-center'>
@@ -59,7 +59,7 @@ const PowerOfRip: React.FC = () => {
             </div>
           </div>
           {/* right por =====>  */}
-          <div className='w-full flex justify-center items-center translate-x-5 sm:translate-x-2 lg:translate-x-8 xl:translate-x-12'>
+          <div className='w-full flex justify-center items-center translate-x-4 sm:translate-x-2 lg:translate-x-8 xl:translate-x-8'>
             {stats.map((item, index) => {
               return (
                 <div

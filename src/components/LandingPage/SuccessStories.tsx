@@ -20,22 +20,6 @@ const SuccessStories: React.FC = () => {
     slidesToScroll: 1,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
 
   function CustomPrevArrow(props: any) {
@@ -46,7 +30,7 @@ const SuccessStories: React.FC = () => {
           onClick();
           setNavigateSlideItem(false);
         }}
-        className={`w-[44px] h-[44px] hover:bg-red-1 bg-transparent active:bg-red-1 border-[1px] border-red-1 rounded-full flex justify-center items-center z-30 absolute bottom-8 right-[72px] cursor-pointer glow`}
+        className={`w-[44px] h-[44px] hover:bg-red-1 bg-transparent active:bg-red-1 border-[1px] border-red-1 rounded-full flex justify-center items-center z-30 absolute -bottom-14 sm:bottom-1 cmd:bottom-8 left-4 sm:right-[72px] sm:left-auto cursor-pointer glow`}
       >
         <Icons.backIcon
           stroke='#ffffff'
@@ -64,7 +48,7 @@ const SuccessStories: React.FC = () => {
           onClick();
           setNavigateSlideItem(true);
         }}
-        className={`w-[44px] h-[44px] border-[1px] hover:bg-red-1 bg-transparent active:bg-red-1  border-red-1  rounded-full flex justify-center items-center absolute bottom-8 right-4   cursor-pointer glow`}
+        className={`w-[44px] h-[44px] border-[1px] hover:bg-red-1 bg-transparent active:bg-red-1 border-red-1 rounded-full flex justify-center items-center absolute -bottom-14 sm:bottom-1 cmd:bottom-8 left-[72px] sm:right-4 sm:left-auto cursor-pointer glow`}
       >
         <Icons.backIcon
           stroke='#ffffff'
@@ -84,7 +68,7 @@ const SuccessStories: React.FC = () => {
           We've empowered thousands of rebels, just like you, to unleash their
           superpowers and achieve lasting, transformative changes."
         </Typography.text>
-        <div className='w-full relative mt-10'>
+        <div className='w-full relative mt-10 sm:pb-0 pb-8'>
           <Slider {...settings}>
             {[0, 1, 2, 3].map((item: any, index: number) => {
               return <SuccessStoryCard key={index} />;
