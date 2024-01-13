@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
                 Join RP Fitness Today
               </Typography.mText>
             </FillButton>
-            <button className='sm:flex hidden  px-[24px] py-[16px] bg-transparent hover:bg-white-1/15 duration-200 rounded-[60px] justify-center items-center gap-2 hover:opacity-80 active:translate-y-[2px]'>
+            <button className='sm:flex hidden px-[24px] py-[16px] bg-transparent hover:bg-white-1/15 duration-200 rounded-[60px] justify-center items-center gap-2 hover:opacity-80 active:translate-y-[2px]'>
               <Icons.play />
               <Typography.mText styles='text-white-1 font-semibold'>
                 Watch Gym Tour

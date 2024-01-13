@@ -7,17 +7,17 @@ import * as Icons from '../../svg/Icons';
 const AboutUs: React.FC = () => {
   return (
     <ComponentWrapper style='py-10'>
-      <div className='w-full grid grid-cols-2'>
+      <div className='w-full grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-2'>
         {/* left portion ====>  */}
-        <div className='w-full flex justify-start items-center'>
+        <div className='w-full order-2 lg:order-1 flex justify-center lg:justify-start items-center'>
           <img
             src='/assets/aboutUs.png'
             alt=''
-            className='w-full max-w-[540px] h-[540px]'
+            className='w-full max-w-[380px] sm:max-w-[430px] md:max-w-[540px] h-[350px] sm:h-[450px] md:h-[560px]'
           />
         </div>
         {/* right portion =====>  */}
-        <div className='w-full h-full flex gap-3 justify-center items-start flex-col'>
+        <div className='w-full h-full lg:order-2 order-1 flex gap-3 sm:gap-5 xl:gap-4 justify-center items-start flex-col'>
           <Typography.smallText styles='text-red-1 font-normal'>
             About us
           </Typography.smallText>
@@ -37,12 +37,14 @@ const AboutUs: React.FC = () => {
             on workouts, diet, and stress management for a healthier, accessible
             life.
           </Typography.text>
-          <div className='flex justify-center items-center gap-6'>
-            <FillButton styles='px-[24px] py-[16px] bg-white-1/10 rounded-[60px]'>
-              <Typography.mText styles='text-white-1 font-semibold'>
-                Learn More
-              </Typography.mText>
-            </FillButton>
+          <div className='w-full flex sm:flex-row flex-col-reverse justify-center sm:justify-start items-start sm:items-center gap-4 sm:gap-6 sm:mt-3 mt-3'>
+            <div className='w-full sm:w-fit flex justify-center items-center'>
+              <FillButton styles='px-[24px] w-full max-w-[320px] sm:w-fit py-[16px] bg-white-1/10 rounded-[60px]'>
+                <Typography.mText styles='text-white-1 font-semibold'>
+                  Learn More
+                </Typography.mText>
+              </FillButton>
+            </div>
             {/* phone number ======>  */}
             <div className='flex justify-center items-center gap-2'>
               <Icons.call stroke='#B61F24' className='w-[20px] h-[20px]' />

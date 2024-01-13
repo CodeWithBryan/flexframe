@@ -13,7 +13,7 @@ const LandingPage: React.FC = () => {
     <div className='w-full h-full bg-[#121111]'>
       <SocialBanner />
       <Hero />
-      {/* <AboutUs /> */}
+      <AboutUs />
       {/* <FeatureBanner /> */}
       {/* <TrainingProgram /> */}
       {/* <PowerOfRip /> */}

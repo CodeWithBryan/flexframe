@@ -51,7 +51,7 @@ export const Heading2 = ({
   children,
   styles = 'text-black-main font-bold text-white-1',
 }: Props) => {
-  return <p className={`text-d-lg ${styles}`}>{children}</p>;
+  return <p className={`text-d-md xl:text-d-lg ${styles}`}>{children}</p>;
 };
 
 export const Heading3 = ({ children, styles = 'text-white-1' }: Props) => {
