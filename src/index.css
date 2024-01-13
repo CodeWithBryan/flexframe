@@ -9,3 +9,9 @@ body {
 .verticelAlign {
   writing-mode: vertical-lr;
 }
+
+@media screen and (max-width: 474px) {
+  .verticelAlign {
+    writing-mode: horizontal-tb !important;
+  }
+}
