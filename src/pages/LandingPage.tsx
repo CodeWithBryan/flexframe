@@ -6,18 +6,19 @@ import FeatureBanner from '../components/LandingPage/FeatureBanner';
 import PowerOfRip from '../components/LandingPage/PowerOfRip';
 import ManBehindPr from '../components/LandingPage/ManBehindPr';
 import SuccessStories from '../components/LandingPage/SuccessStories';
+import TrainingProgram from '../components/LandingPage/TrainingProgram';
 
 const LandingPage: React.FC = () => {
   return (
     <div className='w-full h-full bg-[#121111]'>
       <SocialBanner />
       <Hero />
-      <AboutUs />
-      <FeatureBanner />
+      {/* <AboutUs /> */}
+      {/* <FeatureBanner /> */}
       {/* <TrainingProgram /> */}
-      <PowerOfRip />
-      <ManBehindPr />
-      <SuccessStories />
+      {/* <PowerOfRip /> */}
+      {/* <ManBehindPr /> */}
+      {/* <SuccessStories /> */}
     </div>
   );
 };
