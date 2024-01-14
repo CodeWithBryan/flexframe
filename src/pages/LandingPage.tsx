@@ -8,6 +8,7 @@ import ManBehindPr from '../components/LandingPage/ManBehindPr';
 import SuccessStories from '../components/LandingPage/SuccessStories';
 import TrainingProgram from '../components/LandingPage/TrainingProgram';
 import GymTourVideo from '../components/LandingPage/GymTourVideo';
+import MemberShipPlane from '../components/LandingPage/MemberShipPlane';
 
 const LandingPage: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const LandingPage: React.FC = () => {
       <ManBehindPr />
       <SuccessStories />
       <GymTourVideo />
+      <MemberShipPlane />
     </div>
   );
 };

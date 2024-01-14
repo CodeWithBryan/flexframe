@@ -39,11 +39,11 @@ export const lgText = ({
 
 export const Heading1 = ({ children, styles = 'text-black-main' }: Props) => {
   return (
-    <p
+    <h1
       className={`text-d-md sm:text-d-lg md:text-d-xl  lg:text-d-2xl font-bold ${styles}`}
     >
       {children}
-    </p>
+    </h1>
   );
 };
 
@@ -51,11 +51,11 @@ export const Heading2 = ({
   children,
   styles = 'text-black-main font-bold text-white-1',
 }: Props) => {
-  return <p className={`text-d-md xl:text-d-lg ${styles}`}>{children}</p>;
+  return <h2 className={`text-d-md xl:text-d-lg ${styles}`}>{children}</h2>;
 };
 
 export const Heading3 = ({ children, styles = 'text-white-1' }: Props) => {
-  return <p className={`text-d-sm ${styles}`}>{children}</p>;
+  return <h3 className={`text-d-sm ${styles}`}>{children}</h3>;
 };
 
 const Typography = {
