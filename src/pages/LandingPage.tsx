@@ -9,6 +9,7 @@ import SuccessStories from '../components/LandingPage/SuccessStories';
 import TrainingProgram from '../components/LandingPage/TrainingProgram';
 import GymTourVideo from '../components/LandingPage/GymTourVideo';
 import MemberShipPlane from '../components/LandingPage/MemberShipPlane';
+import OurSocialCircle from '../components/LandingPage/OurSocialCircle';
 
 const LandingPage: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const LandingPage: React.FC = () => {
       <SuccessStories />
       <GymTourVideo />
       <MemberShipPlane />
+      <OurSocialCircle />
     </div>
   );
 };
