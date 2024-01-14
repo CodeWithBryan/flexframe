@@ -9,7 +9,7 @@ const SuccessStoryCard: React.FC = () => {
         <img
           src='/assets/success.png'
           alt=''
-          className=' w-full max-w-[320px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[550px] xl:max-w-[610px] h-[280px] sm:h-[350px] md:h-[400px] lg:h-[470px] xl:h-[620px] object-fill'
+          className=' w-full max-w-[320px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[550px] xl:max-w-[580px] h-[280px] sm:h-[350px] md:h-[400px] lg:h-[470px] xl:h-[570px] object-fill'
         />
       </div>
       {/* right por ====>  */}

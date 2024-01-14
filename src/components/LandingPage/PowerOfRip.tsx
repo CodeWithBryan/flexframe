@@ -64,7 +64,7 @@ const PowerOfRip: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className={` w-[100px] sm:w-[150px] h-[100px] sm:h-[150px] md:w-[170px] lg:w-[230px] xl:w-[300px]  md:h-[170px] lg:h-[230px] xl:h-[300px] ${
+                  className={` w-[120px] sm:w-[150px] h-[120px] sm:h-[150px] md:w-[170px] lg:w-[230px] xl:w-[300px]  md:h-[170px] lg:h-[230px] xl:h-[300px] ${
                     index === 1
                       ? '-translate-x-5 sm:-translate-x-2 md:-translate-x-5 lg:-translate-x-10'
                       : index === 2

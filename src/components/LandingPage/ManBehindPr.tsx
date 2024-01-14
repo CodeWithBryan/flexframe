@@ -5,7 +5,7 @@ import FillButton from '../shared/Buttons/FillButton';
 
 const ManBehindPr: React.FC = () => {
   return (
-    <div className='w-full xl:block hidden bg-red-1 py-12'>
+    <div className='w-full xl:block hidden bg-red-1 py-12 my-10'>
       <ComponentWrapper>
         <div className='w-full grid grid-cols-2 justify-center items-center'>
           {/* left port ====> */}

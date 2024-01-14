@@ -7,6 +7,7 @@ import PowerOfRip from '../components/LandingPage/PowerOfRip';
 import ManBehindPr from '../components/LandingPage/ManBehindPr';
 import SuccessStories from '../components/LandingPage/SuccessStories';
 import TrainingProgram from '../components/LandingPage/TrainingProgram';
+import GymTourVideo from '../components/LandingPage/GymTourVideo';
 
 const LandingPage: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const LandingPage: React.FC = () => {
       <PowerOfRip />
       <ManBehindPr />
       <SuccessStories />
+      <GymTourVideo />
     </div>
   );
 };
