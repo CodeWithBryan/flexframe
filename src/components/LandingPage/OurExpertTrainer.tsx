@@ -17,7 +17,7 @@ const OurExpertTrainer: React.FC = () => {
         </Typography.text>
       </div>
       {/*  */}
-      <div className='w-full grid grid-cols-2 justify-center items-center gap-[3rem] mt-12'>
+      <div className='w-full grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-[22px] sm:gap-[2rem] md:gap-[3rem] mt-12'>
         {/* left side */}
         {trainerData.map((item, index) => {
           return (

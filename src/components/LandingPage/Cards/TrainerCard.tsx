@@ -19,7 +19,9 @@ const TrainerCard: React.FC<Props> = ({
   return (
     <div
       className={`w-full flex ${
-        index === 0 ? 'justify-end ' : 'justify-start'
+        index === 0
+          ? 'justify-center md:justify-end '
+          : 'justify-center md:justify-start'
       } items-center`}
     >
       <div className='bg-[#242424] max-w-[378px] w-full rounded-xl'>
@@ -35,10 +37,10 @@ const TrainerCard: React.FC<Props> = ({
           </div>
           <img
             src={img}
-            className='w-[378px] h-[440px] object-fill rounded-t-xl'
+            className='w-[378px]  h-[230px] sm:h-[360px] md:h-[440px] object-fill rounded-t-xl'
           />
         </div>
-        <div className='p-[1.5rem] flex flex-col gap-1 border-b-[1px] border-l-[1px] border-r-[1px] rounded-b-xl border-white-1/10'>
+        <div className='p-[14px] sm:p-[1.5rem] flex flex-col gap-1 border-b-[1px] border-l-[1px] border-r-[1px] rounded-b-xl border-white-1/10'>
           <Typography.h3 styles='font-bold text-white-1'>{name}</Typography.h3>
           <Typography.text styles='font-normal text-white-2'>
             {speciality}
