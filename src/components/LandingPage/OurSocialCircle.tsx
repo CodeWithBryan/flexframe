@@ -1,17 +1,16 @@
 import React from 'react';
 import ComponentWrapper from '../shared/wrappers/ComponentWrapper';
 import Typography from '../shared/Typography/Typography';
-import FillButton from '../shared/Buttons/FillButton';
 
 const OurSocialCircle: React.FC = () => {
   return (
     <div className='w-full max-w-[1500px] m-auto h-full flex flex-col py-10'>
       <ComponentWrapper>
-        <div className='w-full flex flex-col justify-center items-center'>
-          <Typography.h2 styles='font-bold text-white-1'>
+        <div className='w-full flex flex-col gap-4 justify-center items-center'>
+          <Typography.h2 styles='font-bold text-white-1 text-left md:text-center w-full'>
             Our social cirlce
           </Typography.h2>
-          <Typography.text styles='font-normal text-white-1/80 max-w-[850px] w-full text-center'>
+          <Typography.text styles='font-normal text-white-1/80 max-w-[850px] w-full text-left md:text-center'>
             Explore the fitness buzz in our Social Circle! Dive into our
             Instagram feed for real-time inspiration, workout highlights, and a
             community united by wellness. Join us, share your fitness journey,
@@ -19,7 +18,7 @@ const OurSocialCircle: React.FC = () => {
           </Typography.text>
         </div>
       </ComponentWrapper>
-      <div className='w-full grid grid-cols-1 md:grid-cols-[230px,calc(100%-230px)] cmd:grid-cols-[300px,calc(100%-300px)] lg:grid-cols-[500px,calc(100%-500px)] xl:grid-cols-[550px,calc(100%-550px)] mt-10'>
+      <div className='w-full grid grid-cols-1 md:grid-cols-[230px,calc(100%-230px)] cmd:grid-cols-[300px,calc(100%-300px)] lg:grid-cols-[500px,calc(100%-500px)] xl:grid-cols-[550px,calc(100%-550px)] mt-6 sm:mt-10'>
         {/* one portion ----->  */}
         <img
           src='/assets/socialCircle1.png'

@@ -11,7 +11,7 @@ const TrainingProgram: React.FC = () => {
         <Typography.h2 styles='font-bold text-white-1'>
           Training program for you
         </Typography.h2>
-        <Typography.text styles='font-normal text-white-1/80 max-w-[850px] w-full text-center'>
+        <Typography.text styles='font-normal text-white-1/80 max-w-[850px] w-full text-left md:text-center'>
           We're committed to your fitness goals. Personalized training for all
           levels. Specialized expertise in body transformation, weight loss,
           bodybuilding, and competition.

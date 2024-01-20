@@ -7,10 +7,10 @@ const MemberShipPlane: React.FC = () => {
   return (
     <ComponentWrapper style='py-10'>
       <div className='flex flex-col w-full justify-center items-center gap-4'>
-        <Typography.h2 styles='font-bold text-white-1'>
+        <Typography.h2 styles='w-full font-bold text-white-1 text-left md:text-center'>
           Our memberships plans
         </Typography.h2>
-        <Typography.text styles='font-normal text-white-1/80 max-w-[850px] w-full text-center'>
+        <Typography.text styles='font-normal text-white-1/80 max-w-[850px] w-full text-left md:text-center'>
           If you're ready to embark on a transformative journey, the next step
           is simple. Select the ideal plan to kickstart your membership.
         </Typography.text>

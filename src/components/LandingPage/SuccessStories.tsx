@@ -61,10 +61,10 @@ const SuccessStories: React.FC = () => {
   return (
     <ComponentWrapper>
       <div className='w-full flex flex-col justify-center gap-3 items-center py-10'>
-        <Typography.h2 styles='text-white-1 font-bold'>
+        <Typography.h2 styles='text-white-1 font-bold w-full text-left md:text-center'>
           Success stories
         </Typography.h2>
-        <Typography.text styles='text-white-1/80 font-normal max-w-[800px] text-center'>
+        <Typography.text styles='text-white-1/80 font-normal max-w-[800px] text-left md:text-center'>
           We've empowered thousands of rebels, just like you, to unleash their
           superpowers and achieve lasting, transformative changes."
         </Typography.text>
