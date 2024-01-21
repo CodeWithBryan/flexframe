@@ -13,6 +13,7 @@ import OurSocialCircle from '../components/LandingPage/OurSocialCircle';
 import OurExpertTrainer from '../components/LandingPage/OurExpertTrainer';
 import OurArticles from '../components/LandingPage/OurArticles';
 import CallToActionBanner from '../components/LandingPage/CallToActionBanner';
+import Footer from '../components/shared/Footer/Footer';
 
 const LandingPage: React.FC = () => {
   return (
@@ -31,6 +32,7 @@ const LandingPage: React.FC = () => {
       <OurExpertTrainer />
       <OurArticles />
       <CallToActionBanner />
+      <Footer />
     </div>
   );
 };
