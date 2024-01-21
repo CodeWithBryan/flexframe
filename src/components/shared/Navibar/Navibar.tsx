@@ -91,7 +91,7 @@ const Navibar: React.FC = () => {
           <div className='flex flex-col gap-6 justify-center items-center w-full mt-14'>
             {naviLinks.map((item, index) => {
               return (
-                <Link to={item.path}>
+                <Link onClick={toggleDrawer} to={item.path}>
                   <Typography.text
                     styles='text-white-1 font-normal capitalize'
                     key={index}

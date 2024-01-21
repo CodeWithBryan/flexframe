@@ -33,20 +33,6 @@ const SuccessStoryCard: React.FC = () => {
             Graphic Designer
           </Typography.text>
         </div>
-        <div className='hidden cmd:flex justify-center items-center gap-4 mt-3'>
-          {[0, 1, 2].map((item, index) => {
-            return (
-              <img
-                key={index}
-                src='/assets/success1.png'
-                width='64px'
-                height='64px'
-                alt=''
-                className='object-fill rounded-full'
-              />
-            );
-          })}
-        </div>
       </div>
     </div>
   );
