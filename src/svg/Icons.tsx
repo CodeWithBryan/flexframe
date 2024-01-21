@@ -918,3 +918,26 @@ export const faceBook2: React.FC<Props> = ({
     />
   </svg>
 );
+
+export const curve: React.FC<Props> = ({
+  fill = 'none',
+  stroke = '#ffffff',
+  className = 'w-[32px] h-[20px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 32 20'
+    fill={fill}
+    stroke={stroke}
+  >
+    <path
+      d='M1 10.8401H8.87673L12.8884 2L19.6818 18L23.5387 10.8401H31'
+      stroke='#B61F24'
+      stroke-width='2'
+      stroke-miterlimit='10'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+  </svg>
+);

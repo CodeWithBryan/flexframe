@@ -11,6 +11,7 @@ import GymTourVideo from '../components/LandingPage/GymTourVideo';
 import MemberShipPlane from '../components/LandingPage/MemberShipPlane';
 import OurSocialCircle from '../components/LandingPage/OurSocialCircle';
 import OurExpertTrainer from '../components/LandingPage/OurExpertTrainer';
+import OurArticles from '../components/LandingPage/OurArticles';
 
 const LandingPage: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const LandingPage: React.FC = () => {
       <MemberShipPlane />
       <OurSocialCircle />
       <OurExpertTrainer />
+      <OurArticles />
     </div>
   );
 };
