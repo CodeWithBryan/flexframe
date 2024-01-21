@@ -12,6 +12,7 @@ import MemberShipPlane from '../components/LandingPage/MemberShipPlane';
 import OurSocialCircle from '../components/LandingPage/OurSocialCircle';
 import OurExpertTrainer from '../components/LandingPage/OurExpertTrainer';
 import OurArticles from '../components/LandingPage/OurArticles';
+import CallToActionBanner from '../components/LandingPage/CallToActionBanner';
 
 const LandingPage: React.FC = () => {
   return (
@@ -29,6 +30,7 @@ const LandingPage: React.FC = () => {
       <OurSocialCircle />
       <OurExpertTrainer />
       <OurArticles />
+      <CallToActionBanner />
     </div>
   );
 };
