@@ -3,7 +3,7 @@ import ComponentWrapper from '../shared/wrappers/ComponentWrapper';
 import Typography from '../shared/Typography/Typography';
 import * as Icons from '../../svg/Icons';
 import FillButton from '../shared/Buttons/FillButton';
-import BlogCard from './Cards/blogCard';
+import BlogCard from './Cards/BlogCard';
 
 const OurArticles: React.FC = () => {
   return (

@@ -55,11 +55,12 @@ const Footer: React.FC = () => {
                   <div className='flex flex-col gap-[8px] sm:gap-[10px]'>
                     {item.links.map((ls, index) => {
                       return (
-                        <Link to={ls.path} className='hover:opacity-80'>
-                          <Typography.mText
-                            key={index}
-                            styles='text-white-2 font-normal font-inter'
-                          >
+                        <Link
+                          key={index}
+                          to={ls.path}
+                          className='hover:opacity-80'
+                        >
+                          <Typography.mText styles='text-white-2 font-normal font-inter'>
                             {ls.name}
                           </Typography.mText>
                         </Link>
