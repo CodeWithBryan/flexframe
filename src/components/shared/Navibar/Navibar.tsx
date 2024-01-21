@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ComponentWrapper from '../wrappers/ComponentWrapper';
 import logo from '../../../assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import Typography from '../Typography/Typography';
 import * as Icons from '../../../svg/Icons';
 import FillButton from '../Buttons/FillButton';
-import { useDisclosure } from '@mantine/hooks';
+import Drawer from 'react-modern-drawer';
+import 'react-modern-drawer/dist/index.css';
 
 const Navibar: React.FC = () => {
   const location = useLocation();
-  const [opened, { open, close }] = useDisclosure(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState);
+  };
 
   return (
     <React.Fragment>
@@ -60,13 +66,44 @@ const Navibar: React.FC = () => {
             </div>
             {/* drawer for small screen ========>  */}
             <div className='md:hidden flex '>
-              <button onClick={open}>
+              <button onClick={toggleDrawer}>
                 <Icons.hamburger />
               </button>
             </div>
           </div>
         </ComponentWrapper>
       </div>
+      {/* drawer for small screen -------->  */}
+      <Drawer
+        open={isOpen}
+        onClose={toggleDrawer}
+        direction='right'
+        className='drawer'
+      >
+        <div className='flex flex-col p-10'>
+          {/* top header -->  */}
+          <button
+            onClick={toggleDrawer}
+            className='hover:opacity-80 w-full flex justify-end'
+          >
+            <Icons.crossIcon className='w-[20px] h-[20px]' fill='#ffffff' />
+          </button>
+          <div className='flex flex-col gap-6 justify-center items-center w-full mt-14'>
+            {naviLinks.map((item, index) => {
+              return (
+                <Link to={item.path}>
+                  <Typography.text
+                    styles='text-white-1 font-normal capitalize'
+                    key={index}
+                  >
+                    {item.text}
+                  </Typography.text>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </Drawer>
     </React.Fragment>
   );
 };
