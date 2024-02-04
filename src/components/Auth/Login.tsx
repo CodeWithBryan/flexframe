@@ -4,11 +4,13 @@ import Typography from '../shared/Typography/Typography';
 import * as Icons from '../../svg/Icons';
 import { Link } from 'react-router-dom';
 import Input from '../shared/Inputs/Input';
+import PasswordField from '../shared/Inputs/PasswordField';
 
 const Login: React.FC = () => {
   // states ----->
   const [signIn, setSignIn] = useState({
     email: '',
+    password: '',
   });
 
   // functions ----->
@@ -56,7 +58,7 @@ const Login: React.FC = () => {
             <div className='w-full h-[1px] bg-white-3'></div>
           </div>
           {/* inputs ----->  */}
-          <div className='flex flex-col items-start w-full'>
+          <div className='flex flex-col gap-3 mt-4 items-start w-full'>
             {/* email --> */}
             <div className='w-full flex flex-col gap-2'>
               <p className='text-[14px] text-[#0A0D14] font-medium'>Email</p>
@@ -66,6 +68,17 @@ const Login: React.FC = () => {
                 name='email'
                 onChange={setSignInValue}
                 placeholder='Enter your email'
+              />
+            </div>
+            {/* password ---->  */}
+            <div className='w-full flex flex-col gap-2'>
+              <p className='text-[14px] select-none text-[#0A0D14] font-medium'>
+                Password
+              </p>
+              <PasswordField
+                value={signIn.password}
+                name='password'
+                onChange={setSignInValue}
               />
             </div>
           </div>
@@ -89,4 +102,5 @@ const signWith = [
     path: '#',
   },
 ];
+
 export default Login;
