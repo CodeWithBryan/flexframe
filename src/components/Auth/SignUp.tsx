@@ -7,6 +7,7 @@ import Input from '../shared/Inputs/Input';
 import PasswordField from '../shared/Inputs/PasswordField';
 import FillButton from '../shared/Buttons/FillButton';
 import MobileNumInput from '../shared/Inputs/PhoneInput';
+import CheckBoxInput from '../shared/Inputs/CheckBox';
 
 const SignUp: React.FC = () => {
   // states ----->
@@ -105,13 +106,23 @@ const SignUp: React.FC = () => {
               />
             </div>
           </div>
-          {/* forgot password ---->  */}
-          <div className='w-full flex justify-end items-center'>
-            <Link to='#'>
-              <Typography.smallText styles='text-black-3 hover:opacity-80 font-normal'>
-                Forgot password?
-              </Typography.smallText>
-            </Link>
+          {/* agreement checkbox ----->  */}
+          <div className='w-full flex mt-2 justify-start items-center'>
+            <CheckBoxInput
+              label={
+                <p className='text-[14px] font-normal text-black-3 font-inter'>
+                  I agree to the Privacy Policy,{' '}
+                  <Link to='#' className='text-red-1 font-medium'>
+                    Terms of Use{' '}
+                  </Link>{' '}
+                  and{' '}
+                  <Link to='#' className='text-red-1 font-medium'>
+                    {' '}
+                    Terms of Service
+                  </Link>
+                </p>
+              }
+            />
           </div>
           {/* button ---->  */}
           <div className='w-full py-3'>
@@ -121,12 +132,12 @@ const SignUp: React.FC = () => {
           </div>
           {/* sign Up ---->  */}
           <Typography.mText styles='font-medium text-[#525866]'>
-            Not a member yet?{' '}
+            Already have an account?{' '}
             <Link
-              to='/signup'
+              to='/login'
               className='text-red-1 hover:opacity-80 font-semibold'
             >
-              Sign up
+              Login
             </Link>
           </Typography.mText>
           {/* language change + support ------>  */}
@@ -145,6 +156,10 @@ const SignUp: React.FC = () => {
             </button>
           </div>
         </div>
+      </div>
+      {/* right portion ----->  */}
+      <div className='w-full lg:block hidden h-full'>
+        <img src='/assets/auth.png' className='w-full h-full object-fill' />
       </div>
     </div>
   );
