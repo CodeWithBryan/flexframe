@@ -37,3 +37,26 @@ body {
     width: 100% !important;
   }
 }
+
+/* phoneNumber input styles ----->  */
+.react-international-phone-country-selector-button {
+  height: 100% !important;
+  width: 60px !important;
+  border-color: #e2e4e9 !important;
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+.react-international-phone-input-container {
+  width: 100% !important;
+  height: 45px !important;
+}
+.react-international-phone-input-container .react-international-phone-input {
+  width: 100% !important;
+  height: 100% !important;
+  border-color: #e2e4e9 !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  font-size: 14px !important;
+  color: black !important;
+  font-weight: 400 !important;
+}
