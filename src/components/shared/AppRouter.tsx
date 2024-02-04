@@ -1,15 +1,17 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LandingPage from '../../pages/LandingPage';
-import LoginPage from '../../pages/Login';
-import SignUpPage from '../../pages/SignUp';
+import Login from '../../pages/Login';
+import SignUp from '../../pages/SignUp';
+import VerifyEmail from '../../pages/VerifyEmail';
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<LandingPage />}></Route>
-        <Route path='/login' element={<LoginPage />}></Route>
-        <Route path='/signup' element={<SignUpPage />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/signup' element={<SignUp />}></Route>
+        <Route path='/verify-email' element={<VerifyEmail />}></Route>
       </Routes>
     </BrowserRouter>
   );
