@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Typography from '../components/shared/Typography/Typography';
-import logo from '../assets/logo.png';
-import * as Icons from '../svg/Icons';
+import Typography from '../../components/shared/Typography/Typography';
+import logo from '../../assets/logo.png';
+import * as Icons from '../../svg/Icons';
 
 const VerifyEmail: React.FC = () => {
   const [veriyCode, setVeifyCode] = useState([

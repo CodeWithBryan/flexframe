@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import logo from '../assets/logo.png';
-import Typography from '../components/shared/Typography/Typography';
-import * as Icons from '../svg/Icons';
+import logo from '../../assets/logo.png';
+import Typography from '../../components/shared/Typography/Typography';
+import * as Icons from '../../svg/Icons';
 import { Link } from 'react-router-dom';
-import Input from '../components/shared/Inputs/Input';
-import PasswordField from '../components/shared/Inputs/PasswordField';
-import FillButton from '../components/shared/Buttons/FillButton';
+import Input from '../../components/shared/Inputs/Input';
+import PasswordField from '../../components/shared/Inputs/PasswordField';
+import FillButton from '../../components/shared/Buttons/FillButton';
+import MobileNumInput from '../../components/shared/Inputs/PhoneInput';
+import CheckBoxInput from '../../components/shared/Inputs/CheckBox';
 
-const Login: React.FC = () => {
+const SignUp: React.FC = () => {
   // states ----->
   const [signIn, setSignIn] = useState({
+    fullName: '',
     email: '',
     password: '',
   });
@@ -25,9 +28,9 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className='w-full h-screen bg-white-1 grid grid-cols-1 lg:grid-cols-2 justify-center items-center'>
+    <div className='w-full min-h-screen bg-white-1 grid grid-cols-1 lg:grid-cols-2 justify-center items-center'>
       {/* left portion ------->  */}
-      <div className='w-full flex justify-center items-center'>
+      <div className='w-full py-10 flex justify-center items-center'>
         <div className='w-full max-w-[420px] flex flex-col gap-3 px-4 sm:px-8 h-full justify-center items-center'>
           <img src={logo} className='w-[44px] h-[38px] object-fill' />
           <Typography.lgText styles='text-black-1 font-bold'>
@@ -60,6 +63,19 @@ const Login: React.FC = () => {
           </div>
           {/* inputs ----->  */}
           <div className='flex flex-col gap-3 mt-2 sm:mt-4 items-start w-full'>
+            {/* full name ----->  */}
+            <div className='w-full flex flex-col gap-2'>
+              <p className='text-[14px] text-[#0A0D14] font-medium'>
+                Full name
+              </p>
+              <Input
+                value={signIn.fullName}
+                type='text'
+                name='fullName'
+                onChange={setSignInValue}
+                placeholder='Enter Your Full Name'
+              />
+            </div>
             {/* email --> */}
             <div className='w-full flex flex-col gap-2'>
               <p className='text-[14px] text-[#0A0D14] font-medium'>Email</p>
@@ -68,8 +84,15 @@ const Login: React.FC = () => {
                 type='text'
                 name='email'
                 onChange={setSignInValue}
-                placeholder='Enter your email'
+                placeholder='Enter Your Email'
               />
+            </div>
+            {/* phoneInput ---->  */}
+            <div className='w-full flex flex-col gap-2'>
+              <p className='text-[14px] text-[#0A0D14] font-medium'>
+                Mobile number
+              </p>
+              <MobileNumInput />
             </div>
             {/* password ---->  */}
             <div className='w-full flex flex-col gap-2'>
@@ -83,28 +106,38 @@ const Login: React.FC = () => {
               />
             </div>
           </div>
-          {/* forgot password ---->  */}
-          <div className='w-full flex justify-end items-center'>
-            <Link to='#'>
-              <Typography.smallText styles='text-black-3 hover:opacity-80 font-normal'>
-                Forgot password?
-              </Typography.smallText>
-            </Link>
+          {/* agreement checkbox ----->  */}
+          <div className='w-full flex mt-2 justify-start items-center'>
+            <CheckBoxInput
+              label={
+                <p className='text-[14px] font-normal text-black-3 font-inter'>
+                  I agree to the Privacy Policy,{' '}
+                  <Link to='#' className='text-red-1 font-medium'>
+                    Terms of Use{' '}
+                  </Link>{' '}
+                  and{' '}
+                  <Link to='#' className='text-red-1 font-medium'>
+                    {' '}
+                    Terms of Service
+                  </Link>
+                </p>
+              }
+            />
           </div>
           {/* button ---->  */}
           <div className='w-full py-3'>
             <FillButton styles='w-full h-[50px] text-white-1 bg-red-1 rounded-[60px]'>
-              Login
+              Sign up
             </FillButton>
           </div>
           {/* sign Up ---->  */}
           <Typography.mText styles='font-medium text-[#525866]'>
-            Not a member yet?{' '}
+            Already have an account?{' '}
             <Link
-              to='/signup'
+              to='/login'
               className='text-red-1 hover:opacity-80 font-semibold'
             >
-              Sign up
+              Login
             </Link>
           </Typography.mText>
           {/* language change + support ------>  */}
@@ -125,8 +158,8 @@ const Login: React.FC = () => {
         </div>
       </div>
       {/* right portion ----->  */}
-      <div className='w-full lg:block hidden h-full overflow-hidden'>
-        <img src='/assets/auth.png' className='w-full h-full object-cover' />
+      <div className='w-full lg:block hidden h-full'>
+        <img src='/assets/auth.png' className='w-full h-full object-fill' />
       </div>
     </div>
   );
@@ -147,4 +180,4 @@ const signWith = [
   },
 ];
 
-export default Login;
+export default SignUp;
