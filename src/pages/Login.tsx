@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import logo from '../../assets/logo.png';
-import Typography from '../../components/shared/Typography/Typography';
-import * as Icons from '../../svg/Icons';
+import Typography from '../components/shared/Typography/Typography';
+import * as Icons from '../svg/Icons';
 import { Link } from 'react-router-dom';
-import Input from '../../components/shared/Inputs/Input';
-import PasswordField from '../../components/shared/Inputs/PasswordField';
-import FillButton from '../../components/shared/Buttons/FillButton';
+import Input from '../components/shared/Inputs/Input';
+import PasswordField from '../components/shared/Inputs/PasswordField';
+import FillButton from '../components/shared/Buttons/FillButton';
 
 const Login: React.FC = () => {
   // states ----->
