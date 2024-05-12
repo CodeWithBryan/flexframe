@@ -38,8 +38,8 @@ const Footer: React.FC = () => {
               <div className='flex justify-center items-center gap-3'>
                 {footerData.socialBannerData.social.map((item, index) => {
                   return (
-                    <Link key={index} className='hover:opacity-80' to='#'>
-                      {item}
+                    <Link key={index} to={item.link} className='hover:opacity-80'>
+                      {item.icon}
                     </Link>
                   );
                 })}
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
           <div className='w-full h-[1px] bg-white-2/20 my-6'></div>
           {/* copyright ----->  */}
           <Typography.text styles='font-inter font-normal text-white-2 pb-6'>
-            © 2022 RP Fitness. All Rights Reserved
+            © 2024 RP Fitness. All Rights Reserved
           </Typography.text>
         </div>
       </ComponentWrapper>
@@ -128,16 +128,18 @@ const footerData = {
       },
     ],
     social: [
-      <Icons.faceBook
-        fill='#ffffff'
-        stroke='none'
-        className='w-[23px] h-[23px]'
-      />,
-      <Icons.twiiter2 fill='#ffffff' className='w-[32px] h-[32px]' />,
-      <Icons.insta3 className='w-[32px] h-[32px]' />,
-      <Icons.linkedIn2 className='w-[34px] h-[34px]' />,
-
-      <Icons.youtube3 className='w-[32px] h-[32px]' />,
+      {
+        icon: <Icons.faceBook
+          fill='#ffffff'
+          stroke='none'
+          className='w-[23px] h-[23px]'
+        />,
+        link: 'https://www.facebook.com/rnpfitnessgymm/',
+      },
+      {
+        icon: <Icons.insta3 className='w-[32px] h-[32px]' />,
+        link: 'https://www.instagram.com/ifbbproryanpateracki/',
+      },
     ],
   },
 

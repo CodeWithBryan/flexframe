@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import LandingPage from '../../pages/LandingPage';
 import Login from '../../pages/Login';
 import SignUp from '../../pages/Customer/SignUp';
@@ -15,7 +15,11 @@ const AppRouter = () => {
         <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/verify-email' element={<VerifyEmail />}></Route>
         <Route path='/welcome' element={<Welcome />}></Route>
-        <Route path='/customer' element={<Dashboard />}></Route>
+        <Route path='/dashboard' element={<Dashboard />}></Route>
+        <Route
+            path="*"
+            element={<Navigate to="/" replace />}
+        />
       </Routes>
     </BrowserRouter>
   );

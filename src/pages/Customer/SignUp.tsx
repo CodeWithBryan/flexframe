@@ -159,7 +159,7 @@ const SignUp: React.FC = () => {
       </div>
       {/* right portion ----->  */}
       <div className='w-full lg:block hidden h-full'>
-        <img src='/assets/auth.png' className='w-full h-full object-fill' />
+        <img src='/assets/auth.png' className='w-full h-full object-cover' />
       </div>
     </div>
   );
