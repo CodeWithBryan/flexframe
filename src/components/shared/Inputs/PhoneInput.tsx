@@ -7,7 +7,7 @@ const MobileNumInput: React.FC = () => {
 
   return (
     <PhoneInput
-      defaultCountry='ua'
+      defaultCountry='usa'
       value={phone}
       onChange={(phone) => setPhone(phone)}
     />
