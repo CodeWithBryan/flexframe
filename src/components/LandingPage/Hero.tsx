@@ -4,6 +4,7 @@ import ComponentWrapper from '../shared/wrappers/ComponentWrapper';
 import Typography from '../shared/Typography/Typography';
 import * as Icons from '../../svg/Icons';
 import FillButton from '../shared/Buttons/FillButton';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   return (
@@ -39,11 +40,13 @@ const Hero: React.FC = () => {
           </div>
           {/* buttons ====>  */}
           <div className='w-full flex justify-center sm:justify-start items-center gap-6 mt-2 sm:mt-4'>
-            <FillButton styles='bg-red-1 sm:w-fit w-full max-w-[320px] px-[24px] py-[12px] sm:py-[16px] rounded-[60px]'>
-              <Typography.mText styles='text-white-1 font-semibold'>
-                Join RP Fitness Today
-              </Typography.mText>
-            </FillButton>
+            <Link to="/signup">
+              <FillButton styles='bg-red-1 sm:w-fit w-full max-w-[320px] px-[24px] py-[12px] sm:py-[16px] rounded-[60px]'>
+                <Typography.mText styles='text-white-1 font-semibold'>
+                  Join RP Fitness Today
+                </Typography.mText>
+              </FillButton>
+            </Link>
             <button className='sm:flex hidden px-[24px] py-[16px] bg-transparent hover:bg-white-1/15 duration-200 rounded-[60px] justify-center items-center gap-2 hover:opacity-80 active:translate-y-[2px]'>
               <Icons.play />
               <Typography.mText styles='text-white-1 font-semibold'>

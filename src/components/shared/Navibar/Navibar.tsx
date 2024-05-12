@@ -59,11 +59,13 @@ const Navibar: React.FC = () => {
               <button className='p-[10px] xl:p-[12px] bg-white-1/10 border-[1px] border-white-1/10 active:translate-y-[2px] hover:opacity-80 rounded-full flex justify-center items-center'>
                 <Icons.person />
               </button>
-              <FillButton styles='bg-red-1 px-[20px] xl:px-[24px] py-[12px] xl:py-[16px] rounded-[60px]'>
-                <Typography.mText styles='text-white-1 font-semibold'>
-                  Join RP Fitness Today
-                </Typography.mText>
-              </FillButton>
+              <Link to="/signup">
+                <FillButton styles='bg-red-1 px-[20px] xl:px-[24px] py-[12px] xl:py-[16px] rounded-[60px]'>
+                  <Typography.mText styles='text-white-1 font-semibold'>
+                    Join RP Fitness Today
+                  </Typography.mText>
+                </FillButton>
+              </Link>
             </div>
             {/* drawer for small screen ========>  */}
             <div className='md:hidden flex '>
