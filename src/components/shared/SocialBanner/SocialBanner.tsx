@@ -30,10 +30,10 @@ const SocialBanner = () => {
               return (
                 <Link
                   className='hover:scale-110 duration-300'
-                  to='/'
+                  to={item.link}
                   key={index}
                 >
-                  {item}
+                  {item.icon}
                 </Link>
               );
             })}
@@ -48,7 +48,7 @@ const socialBannerData = {
   addresses: [
     {
       icon: <Icons.Search />,
-      text: 'info@rnpfitness.net',
+      text: 'info@rnpfitness.com',
     },
     {
       icon: <Icons.call />,
@@ -60,10 +60,22 @@ const socialBannerData = {
     },
   ],
   social: [
-    <Icons.faceBook />,
-    <Icons.linkedIn />,
-    <Icons.instagram />,
-    <Icons.youtube />,
+    {
+      icon: <Icons.faceBook />,
+      link: 'https://www.facebook.com/rnpfitnessgymm/',
+    },
+    {
+      icon: <Icons.instagram />,
+      link: 'https://www.instagram.com/ifbbproryanpateracki/',
+    },
+    // {
+    //   icon: <Icons.linkedIn />,
+    //   link: '',
+    // },
+    // {
+    //   icon: <Icons.youtube />,
+    //   link: '',
+    // },
   ],
 };
 

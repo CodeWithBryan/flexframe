@@ -7,7 +7,7 @@ import * as Icons from '../../svg/Icons';
 const AboutUs: React.FC = () => {
   return (
     <ComponentWrapper style='py-10'>
-      <div className='w-full grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-2'>
+      <div className='w-full grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-2' id="aboutus">
         {/* left portion ====>  */}
         <div className='w-full order-2 lg:order-1 flex justify-center lg:justify-start items-center'>
           <img

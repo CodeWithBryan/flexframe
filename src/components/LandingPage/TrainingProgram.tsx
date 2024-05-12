@@ -7,7 +7,7 @@ import TrainingProgramCard from './Cards/TrainingProgramCard';
 const TrainingProgram: React.FC = () => {
   return (
     <ComponentWrapper style='py-10'>
-      <div className='w-full flex flex-col gap-4 justify-center items-center'>
+      <div className='w-full flex flex-col gap-4 justify-center items-center' id="training">
         <Typography.h2 styles='font-bold text-white-1'>
           Training program for you
         </Typography.h2>

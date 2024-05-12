@@ -3,6 +3,7 @@ import Typography from '../shared/Typography/Typography';
 import ComponentWrapper from '../shared/wrappers/ComponentWrapper';
 import * as Icons from '../../svg/Icons';
 import FillButton from '../shared/Buttons/FillButton';
+import { Link } from 'react-router-dom';
 
 const CallToActionBanner: React.FC = () => {
   return (
@@ -22,11 +23,13 @@ const CallToActionBanner: React.FC = () => {
               options await. Start shaping a better you now!
             </Typography.text>
             {/* button ---->  */}
-            <FillButton styles='px-[24px] py-[16px] bg-black-1 rounded-[60px] mt-5'>
-              <Typography.mText styles='font-inter text-white-1 font-semibold'>
-                Start Your Transformation Now!
-              </Typography.mText>
-            </FillButton>
+            <Link to='/signup'>
+              <FillButton styles='px-[24px] py-[16px] bg-black-1 rounded-[60px] mt-5'>
+                <Typography.mText styles='font-inter text-white-1 font-semibold'>
+                  Start Your Transformation Now!
+                </Typography.mText>
+              </FillButton>
+            </Link>
           </div>
         </ComponentWrapper>
         {/* lines ------->  */}

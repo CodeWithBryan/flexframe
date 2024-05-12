@@ -116,7 +116,7 @@ const footerData = {
     addresses: [
       {
         icon: <Icons.Search stroke='#CDD0D5' />,
-        text: 'info@rnpfitness.net',
+        text: 'info@rnpfitness.com',
       },
       {
         icon: <Icons.call stroke='#CDD0D5' />,

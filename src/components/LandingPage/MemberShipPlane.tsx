@@ -6,7 +6,7 @@ import MemberShipCard from './Cards/MemberShipCard';
 const MemberShipPlane: React.FC = () => {
   return (
     <ComponentWrapper style='py-10'>
-      <div className='flex flex-col w-full justify-center items-center gap-4'>
+      <div className='flex flex-col w-full justify-center items-center gap-4' id="membership">
         <Typography.h2 styles='w-full font-bold text-white-1 text-left md:text-center'>
           Our memberships plans
         </Typography.h2>

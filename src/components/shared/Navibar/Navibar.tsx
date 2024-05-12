@@ -7,6 +7,7 @@ import * as Icons from '../../../svg/Icons';
 import FillButton from '../Buttons/FillButton';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
+import { HashLink } from 'react-router-hash-link';
 
 const Navibar: React.FC = () => {
   const location = useLocation();
@@ -34,7 +35,7 @@ const Navibar: React.FC = () => {
               <div className='hidden md:flex justify-center items-center gap-6 lg:gap-8'>
                 {naviLinks.map((item, index) => {
                   return (
-                    <Link
+                    <HashLink
                       key={index}
                       to={item.path}
                       className='capitalize hover:opacity-80 relative after:absolute after:w-0 after:bottom-0 after:left-0 after:h-[2px] after:bg-red-1 hover:after:w-full after:duration-200'
@@ -48,7 +49,7 @@ const Navibar: React.FC = () => {
                       >
                         {item.text}
                       </Typography.smallText>
-                    </Link>
+                    </HashLink>
                   );
                 })}
               </div>
@@ -111,20 +112,16 @@ const naviLinks = [
     text: 'home',
   },
   {
-    path: '#',
-    text: 'products',
-  },
-  {
-    path: '#',
+    path: '#aboutus',
     text: 'about',
   },
   {
-    path: '#',
-    text: 'membership',
+    path: '#training',
+    text: 'training',
   },
   {
-    path: '#',
-    text: 'contact us',
+    path: '#membership',
+    text: 'membership',
   },
 ];
 
