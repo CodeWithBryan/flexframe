@@ -16,10 +16,10 @@ const AppRouter = () => {
         <Route path='/verify-email' element={<VerifyEmail />}></Route>
         <Route path='/welcome' element={<Welcome />}></Route>
         <Route path='/dashboard' element={<Dashboard />}></Route>
-        {/* <Route
+        <Route
             path="*"
             element={<Navigate to="/" replace />}
-        /> */}
+        />
       </Routes>
     </BrowserRouter>
   );
