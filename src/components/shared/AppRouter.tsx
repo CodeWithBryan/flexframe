@@ -4,7 +4,7 @@ import Login from '../../pages/Login';
 import SignUp from '../../pages/Customer/SignUp';
 import VerifyEmail from '../../pages/Customer/VerifyEmail';
 import Welcome from '../../pages/Customer/Welcome/Welcome';
-import Dashboard from '../../pages/Customer/Dashboard';
+import Dashboard from '../../pages/Customer/Dashboard/Dashboard';
 
 const AppRouter = () => {
   return (

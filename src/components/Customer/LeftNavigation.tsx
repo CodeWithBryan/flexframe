@@ -1,22 +1,19 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
 import Typography from '../shared/Typography/Typography';
-import { GoSidebarCollapse } from 'react-icons/go';
 import { BsGrid } from 'react-icons/bs';
-// import { BsCalendar4 } from 'react-icons/bs';
-// import { FaPersonFalling } from 'react-icons/fa6';
-// import { GiMeal } from 'react-icons/gi';
-// import { BsPersonCheck } from 'react-icons/bs';
-// import { MdOutlinePriceChange } from 'react-icons/md';
-// import { IoDocumentTextOutline } from 'react-icons/io5';
-// import { BsPersonVcard } from 'react-icons/bs';
-// import { GrWorkshop } from 'react-icons/gr';
-import { BiSupport } from 'react-icons/bi';
-import { RxCross2 } from 'react-icons/rx';
+import { MdOutlinePriceChange } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
+interface Props {
+  selectedOption: string;
+  setSelectedOption: any;
+}
 
-const LeftNavigation: React.FC = () => {
+const LeftNavigation: React.FC<Props> = ({
+  selectedOption,
+  setSelectedOption,
+}: Props) => {
   return (
     <div className='w-full flex flex-col justify-between h-full p-4 border-r-[1px] border-[#E2E4E9]'>
       <div className='w-full flex flex-col'>
@@ -35,11 +32,14 @@ const LeftNavigation: React.FC = () => {
           {leftNavigationLink.map((item, index) => {
             return (
               <NavLink
-                to={item.link}
-                className={({ isActive }) => [
-                  "w-full rounded-md h-[45px] px-3 flex justify-start items-center gap-2",
-                  isActive ? 'bg-red-1 hover:bg-red-1 text-white-1' : 'bg-transparent hover:bg-red-1/5 text-[#525866]',
-                ].join(" ")}
+                key={index}
+                to={item.link as string}
+                onClick={() => setSelectedOption(item.name)}
+                className={`w-full rounded-md h-[45px] px-3 flex justify-start items-center gap-2 ${
+                  selectedOption === item.name
+                    ? 'bg-red-1 hover:bg-red-1 text-white-1'
+                    : 'bg-transparent hover:bg-red-1/5 text-[#525866]'
+                }`}
               >
                 {item.icon}
                 <Typography.mText styles=' font-medium'>
@@ -50,21 +50,6 @@ const LeftNavigation: React.FC = () => {
           })}
         </div>
       </div>
-      {/* need support ------>  */}
-      {/* <div className='w-full flex gap-3 select-none flex-col bg-[#F9F9F9] rounded-md p-3'>
-        <div className='w-full flex justify-between items-center'>
-          <div className='flex gap-2 justify-center items-center'>
-            <BiSupport className='text-black-3 text-[28px]' />
-            <Typography.mText styles='text-black-3 font-bold'>
-              Need support?
-            </Typography.mText>
-          </div>
-          <RxCross2 className='text-[24px] cursor-pointer hover:opacity-80 text-black-3' />
-        </div>
-        <Typography.mText styles='text-[#525866] font-normal'>
-          Contact with one of our experts to get support.
-        </Typography.mText>
-      </div> */}
     </div>
   );
 };
@@ -91,10 +76,10 @@ const leftNavigationLink = [
   //   name: 'Attendance',
   //   icon: <BsPersonCheck className='text-[20px]' />,
   // },
-  // {
-  //   name: 'Billings',
-  //   icon: <MdOutlinePriceChange className='text-[20px]' />,
-  // },
+  {
+    name: 'Billings',
+    icon: <MdOutlinePriceChange className='text-[20px]' />,
+  },
   // {
   //   name: 'Documents',
   //   icon: <IoDocumentTextOutline className='text-[20px]' />,

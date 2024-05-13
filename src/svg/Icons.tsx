@@ -1326,3 +1326,350 @@ export const check2: React.FC<Props> = ({
     />
   </svg>
 );
+
+export const profile: React.FC<Props> = ({
+  fill = 'none',
+  stroke = '',
+  className = 'w-[40px] h-[40px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 40 40'
+    fill={fill}
+    stroke={stroke}
+  >
+    <g filter='url(#filter0_i_682_7341)'>
+      <g clip-path='url(#clip0_682_7341)'>
+        <rect width='40' height='40' rx='20' fill='#E2E4E9' />
+        <g filter='url(#filter1_di_682_7341)'>
+          <ellipse
+            cx='20'
+            cy='38'
+            rx='16'
+            ry='12'
+            fill='url(#paint0_radial_682_7341)'
+            shape-rendering='crispEdges'
+          />
+          <path
+            d='M35.5 38C35.5 41.121 33.8144 43.9847 31.0137 46.0853C28.2128 48.1859 24.3206 49.5 20 49.5C15.6794 49.5 11.7872 48.1859 8.98629 46.0853C6.18557 43.9847 4.5 41.121 4.5 38C4.5 34.879 6.18557 32.0153 8.98629 29.9147C11.7872 27.8141 15.6794 26.5 20 26.5C24.3206 26.5 28.2128 27.8141 31.0137 29.9147C33.8144 32.0153 35.5 34.879 35.5 38Z'
+            stroke='url(#paint1_radial_682_7341)'
+            shape-rendering='crispEdges'
+          />
+        </g>
+        <g filter='url(#filter2_di_682_7341)'>
+          <circle
+            cx='20'
+            cy='16'
+            r='8'
+            fill='url(#paint2_radial_682_7341)'
+            shape-rendering='crispEdges'
+          />
+          <circle
+            cx='20'
+            cy='16'
+            r='7.5'
+            stroke='url(#paint3_radial_682_7341)'
+            shape-rendering='crispEdges'
+          />
+        </g>
+      </g>
+    </g>
+    <defs>
+      <filter
+        id='filter0_i_682_7341'
+        x='0'
+        y='-8'
+        width='40'
+        height='48'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='BackgroundImageFix'
+          result='shape'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-8' />
+        <feGaussianBlur stdDeviation='8' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.7712 0 0 0 0 0.78 0 0 0 0 0.7888 0 0 0 0.48 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='shape'
+          result='effect1_innerShadow_682_7341'
+        />
+      </filter>
+      <filter
+        id='filter1_di_682_7341'
+        x='0'
+        y='18'
+        width='40'
+        height='40'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='4' />
+        <feGaussianBlur stdDeviation='2' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.541176 0 0 0 0 0.560784 0 0 0 0 0.576471 0 0 0 0.16 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='BackgroundImageFix'
+          result='effect1_dropShadow_682_7341'
+        />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='effect1_dropShadow_682_7341'
+          result='shape'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-8' />
+        <feGaussianBlur stdDeviation='4' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='shape'
+          result='effect2_innerShadow_682_7341'
+        />
+      </filter>
+      <filter
+        id='filter2_di_682_7341'
+        x='8'
+        y='0'
+        width='24'
+        height='32'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='4' />
+        <feGaussianBlur stdDeviation='2' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.541176 0 0 0 0 0.560784 0 0 0 0 0.576471 0 0 0 0.16 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='BackgroundImageFix'
+          result='effect1_dropShadow_682_7341'
+        />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='effect1_dropShadow_682_7341'
+          result='shape'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-8' />
+        <feGaussianBlur stdDeviation='4' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='shape'
+          result='effect2_innerShadow_682_7341'
+        />
+      </filter>
+      <radialGradient
+        id='paint0_radial_682_7341'
+        cx='0'
+        cy='0'
+        r='1'
+        gradientUnits='userSpaceOnUse'
+        gradientTransform='translate(20 26) rotate(90) scale(24 32)'
+      >
+        <stop stop-color='white' />
+        <stop offset='1' stop-color='white' stop-opacity='0' />
+      </radialGradient>
+      <radialGradient
+        id='paint1_radial_682_7341'
+        cx='0'
+        cy='0'
+        r='1'
+        gradientUnits='userSpaceOnUse'
+        gradientTransform='translate(20 26) rotate(90) scale(24 32)'
+      >
+        <stop stop-color='white' />
+        <stop offset='1' stop-color='white' stop-opacity='0' />
+      </radialGradient>
+      <radialGradient
+        id='paint2_radial_682_7341'
+        cx='0'
+        cy='0'
+        r='1'
+        gradientUnits='userSpaceOnUse'
+        gradientTransform='translate(20 8) rotate(90) scale(16)'
+      >
+        <stop stop-color='white' />
+        <stop offset='1' stop-color='white' stop-opacity='0' />
+      </radialGradient>
+      <radialGradient
+        id='paint3_radial_682_7341'
+        cx='0'
+        cy='0'
+        r='1'
+        gradientUnits='userSpaceOnUse'
+        gradientTransform='translate(20 8) rotate(90) scale(16)'
+      >
+        <stop stop-color='white' />
+        <stop offset='1' stop-color='white' stop-opacity='0' />
+      </radialGradient>
+      <clipPath id='clip0_682_7341'>
+        <rect width='40' height='40' rx='20' fill='white' />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const bag: React.FC<Props> = ({
+  fill = 'none',
+  stroke = '',
+  className = 'w-[18px] h-[18px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 18 18'
+    fill={fill}
+    stroke={stroke}
+  >
+    <path
+      d='M1.0835 9.00016C1.0835 5.26821 1.0835 3.40223 2.24287 2.24287C3.40223 1.0835 5.26821 1.0835 9.00016 1.0835C12.7321 1.0835 14.5981 1.0835 15.7575 2.24287C16.9168 3.40223 16.9168 5.26821 16.9168 9.00016C16.9168 12.7321 16.9168 14.5981 15.7575 15.7575C14.5981 16.9168 12.7321 16.9168 9.00016 16.9168C5.26821 16.9168 3.40223 16.9168 2.24287 15.7575C1.0835 14.5981 1.0835 12.7321 1.0835 9.00016Z'
+      stroke='#525866'
+      stroke-width='1.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+    <path
+      d='M16.9168 10.25H12.8121C12.1104 10.25 11.559 10.8363 11.2497 11.456C10.9137 12.1293 10.2409 12.75 9.00016 12.75C7.75944 12.75 7.0866 12.1293 6.75061 11.456C6.44135 10.8363 5.88997 10.25 5.18821 10.25H1.0835'
+      stroke='#525866'
+      stroke-width='1.5'
+      stroke-linejoin='round'
+    />
+  </svg>
+);
+
+export const fillCheck: React.FC<Props> = ({
+  fill = 'white',
+  stroke = '',
+  className = 'w-[16px] h-[16px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 16 16'
+    fill={fill}
+    stroke={stroke}
+  >
+    <path
+      d='M8 14C4.6862 14 2 11.3138 2 8C2 4.6862 4.6862 2 8 2C11.3138 2 14 4.6862 14 8C14 11.3138 11.3138 14 8 14ZM7.4018 10.4L11.6438 6.1574L10.7954 5.309L7.4018 8.7032L5.7044 7.0058L4.856 7.8542L7.4018 10.4Z'
+      fill={fill}
+    />
+  </svg>
+);
+
+export const expired: React.FC<Props> = ({
+  fill = 'none',
+  stroke = '',
+  className = 'w-[16px] h-[16px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 16 16'
+    fill={fill}
+    stroke={stroke}
+  >
+    <path
+      d='M8 14C4.6862 14 2 11.3138 2 8C2 4.6862 4.6862 2 8 2C11.3138 2 14 4.6862 14 8C14 11.3138 11.3138 14 8 14ZM5.9138 5.0654C5.58604 5.29915 5.29952 5.58587 5.066 5.9138L10.0868 10.9346C10.4148 10.7009 10.7015 10.4142 10.9352 10.0862L5.9138 5.0654Z'
+      fill='#868C98'
+    />
+  </svg>
+);
+
+export const filterArrows: React.FC<Props> = ({
+  fill = 'none',
+  stroke = '',
+  className = 'w-[20px] h-[20px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 20 20'
+    fill={fill}
+    stroke={stroke}
+  >
+    <path
+      d='M14.1668 7.91667L10.0002 3.75L5.8335 7.91667H14.1668ZM14.1668 12.0833L10.0002 16.25L5.8335 12.0833H14.1668Z'
+      fill='#868C98'
+    />
+  </svg>
+);
+
+export const visa: React.FC<Props> = ({
+  fill = 'none',
+  stroke = '',
+  className = 'w-[32px] h-[32px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 32 32'
+    fill={fill}
+    stroke={stroke}
+  >
+    <circle cx='10.4' cy='16.0006' r='8.4' fill='#E80B26' />
+    <circle cx='21.6002' cy='16.0006' r='8.4' fill='#F59D31' />
+    <path
+      d='M16.0002 22.2623C17.7188 20.7242 18.8002 18.4891 18.8002 16.0013C18.8002 13.5134 17.7188 11.2783 16.0002 9.74023C14.2816 11.2783 13.2002 13.5134 13.2002 16.0013C13.2002 18.4891 14.2816 20.7242 16.0002 22.2623Z'
+      fill='#FC6020'
+    />
+  </svg>
+);
