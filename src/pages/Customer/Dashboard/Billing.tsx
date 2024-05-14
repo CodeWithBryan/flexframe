@@ -152,6 +152,7 @@ const Billing: React.FC = () => {
             {invoiceTable.rowsData.map((row, index) => {
               return (
                 <TableRow
+                  key={index}
                   planeName={row.planeName}
                   amount={row.amount}
                   method={row.method}

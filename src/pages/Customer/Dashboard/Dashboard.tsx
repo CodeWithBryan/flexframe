@@ -16,9 +16,9 @@ const Dashboard: React.FC = () => {
         />
       </div>
       {/* right portion -------> */}
-      <div className='w-full h-full flex flex-col'>
+      <div className='w-full bg-[#F9F9F9] h-full flex flex-col'>
         {/* top navigation ---> */}
-        <div className='w-full h-[72px] bg-white-1 flex justify-between items-center px-4 border-b-2'>
+        <div className='w-full h-[72px] bg-white-1 flex justify-between items-center '>
           <TopNavigation
             option={selectedOption}
             setOption={setSelectedOption}

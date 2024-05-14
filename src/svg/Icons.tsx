@@ -1673,3 +1673,349 @@ export const visa: React.FC<Props> = ({
     />
   </svg>
 );
+
+export const cross: React.FC<Props> = ({
+  fill = 'none',
+  stroke = '',
+  className = 'w-[14px] h-[14px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 14 14'
+    fill={fill}
+    stroke={stroke}
+  >
+    <path
+      d='M12.8337 1.1665L1.16699 12.8332M1.16699 1.1665L12.8337 12.8332'
+      stroke='#0A0D14'
+      stroke-width='1.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+  </svg>
+);
+
+export const card1: React.FC<Props> = ({
+  fill = 'none',
+  stroke = '',
+  className = 'w-[20px] h-[20px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 20 20'
+    fill={fill}
+    stroke={stroke}
+  >
+    <path
+      d='M1.66675 10.0002C1.66675 7.05226 1.66675 5.5783 2.54408 4.59425C2.68441 4.43685 2.83906 4.29129 3.0063 4.15922C4.05186 3.3335 5.61793 3.3335 8.75008 3.3335H11.2501C14.3822 3.3335 15.9483 3.3335 16.9938 4.15922C17.1611 4.29129 17.3157 4.43685 17.4561 4.59425C18.3334 5.5783 18.3334 7.05226 18.3334 10.0002C18.3334 12.9481 18.3334 14.422 17.4561 15.4061C17.3157 15.5635 17.1611 15.709 16.9938 15.8411C15.9483 16.6668 14.3822 16.6668 11.2501 16.6668H8.75008C5.61793 16.6668 4.05186 16.6668 3.0063 15.8411C2.83906 15.709 2.68441 15.5635 2.54408 15.4061C1.66675 14.422 1.66675 12.9481 1.66675 10.0002Z'
+      stroke='#868C98'
+      stroke-width='1.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+    <path
+      d='M8.33325 13.3335H9.58325'
+      stroke='#868C98'
+      stroke-width='1.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+    <path
+      d='M12.0833 13.3335H14.9999'
+      stroke='#868C98'
+      stroke-width='1.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+    <path
+      d='M1.66675 7.5H18.3334'
+      stroke='#868C98'
+      stroke-width='1.5'
+      stroke-linejoin='round'
+    />
+  </svg>
+);
+
+export const card2: React.FC<Props> = ({
+  fill = 'none',
+  stroke = '',
+  className = 'w-[32px] h-[24px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 32 24'
+    fill={fill}
+    stroke={stroke}
+  >
+    <g clip-path='url(#clip0_715_3375)'>
+      <g filter='url(#filter0_dii_715_3375)'>
+        <rect x='3' y='3' width='26' height='18' rx='3' fill='#CDD0D5' />
+        <rect
+          x='3.5'
+          y='3.5'
+          width='25'
+          height='17'
+          rx='2.5'
+          stroke='url(#paint0_linear_715_3375)'
+          stroke-opacity='0.32'
+        />
+      </g>
+      <g filter='url(#filter1_di_715_3375)'>
+        <rect x='17' y='15' width='8' height='2' rx='1' fill='#F9F9F9' />
+      </g>
+      <g filter='url(#filter2_di_715_3375)'>
+        <rect x='7' y='15' width='8' height='2' rx='1' fill='#F9F9F9' />
+      </g>
+      <g filter='url(#filter3_di_715_3375)'>
+        <rect x='7' y='7' width='3' height='3' rx='1.5' fill='#F9F9F9' />
+      </g>
+    </g>
+    <defs>
+      <filter
+        id='filter0_dii_715_3375'
+        x='1'
+        y='0'
+        width='30'
+        height='25'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='2' />
+        <feGaussianBlur stdDeviation='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.105882 0 0 0 0 0.109804 0 0 0 0 0.113725 0 0 0 0.04 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='BackgroundImageFix'
+          result='effect1_dropShadow_715_3375'
+        />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='effect1_dropShadow_715_3375'
+          result='shape'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-3' />
+        <feGaussianBlur stdDeviation='1.5' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.32 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='shape'
+          result='effect2_innerShadow_715_3375'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-2' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='effect2_innerShadow_715_3375'
+          result='effect3_innerShadow_715_3375'
+        />
+      </filter>
+      <filter
+        id='filter1_di_715_3375'
+        x='15'
+        y='14'
+        width='12'
+        height='7'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='2' />
+        <feGaussianBlur stdDeviation='1' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.345098 0 0 0 0 0.360784 0 0 0 0 0.372549 0 0 0 0.12 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='BackgroundImageFix'
+          result='effect1_dropShadow_715_3375'
+        />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='effect1_dropShadow_715_3375'
+          result='shape'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-1' />
+        <feGaussianBlur stdDeviation='0.5' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='shape'
+          result='effect2_innerShadow_715_3375'
+        />
+      </filter>
+      <filter
+        id='filter2_di_715_3375'
+        x='5'
+        y='14'
+        width='12'
+        height='7'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='2' />
+        <feGaussianBlur stdDeviation='1' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.345098 0 0 0 0 0.360784 0 0 0 0 0.372549 0 0 0 0.12 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='BackgroundImageFix'
+          result='effect1_dropShadow_715_3375'
+        />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='effect1_dropShadow_715_3375'
+          result='shape'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-1' />
+        <feGaussianBlur stdDeviation='0.5' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='shape'
+          result='effect2_innerShadow_715_3375'
+        />
+      </filter>
+      <filter
+        id='filter3_di_715_3375'
+        x='5'
+        y='6'
+        width='7'
+        height='8'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='2' />
+        <feGaussianBlur stdDeviation='1' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.345098 0 0 0 0 0.360784 0 0 0 0 0.372549 0 0 0 0.12 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='BackgroundImageFix'
+          result='effect1_dropShadow_715_3375'
+        />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='effect1_dropShadow_715_3375'
+          result='shape'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-1' />
+        <feGaussianBlur stdDeviation='0.5' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='shape'
+          result='effect2_innerShadow_715_3375'
+        />
+      </filter>
+      <linearGradient
+        id='paint0_linear_715_3375'
+        x1='16'
+        y1='3'
+        x2='16'
+        y2='21'
+        gradientUnits='userSpaceOnUse'
+      >
+        <stop stop-color='#8A8F93' stop-opacity='0' />
+        <stop offset='1' stop-color='#8A8F93' />
+      </linearGradient>
+      <clipPath id='clip0_715_3375'>
+        <rect width='32' height='24' rx='4' fill='white' />
+      </clipPath>
+    </defs>
+  </svg>
+);

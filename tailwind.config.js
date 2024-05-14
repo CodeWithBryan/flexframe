@@ -26,6 +26,9 @@ export default {
         red: {
           1: '#B61F24',
         },
+        green: {
+          1: '#38C793',
+        },
         white: {
           1: '#FFF',
           2: '#CCCCCC',
@@ -33,6 +36,9 @@ export default {
         },
         yellow: {
           1: '#FCB823',
+        },
+        purple: {
+          1: '#4D40CC',
         },
       },
       fontSize: {

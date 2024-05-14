@@ -40,7 +40,7 @@ export const lgText = ({
 export const Heading1 = ({ children, styles = 'text-black-main' }: Props) => {
   return (
     <h1
-      className={`text-d-md sm:text-d-lg md:text-d-xl  lg:text-d-2xl font-bold ${styles}`}
+      className={`text-d-md sm:text-d-lg md:text-d-xl lg:text-d-2xl font-bold ${styles}`}
     >
       {children}
     </h1>
