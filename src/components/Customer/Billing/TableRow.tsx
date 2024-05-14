@@ -32,7 +32,8 @@ const TableRow: React.FC<Props> = ({
   amount,
   status,
 }: Props) => {
-  const [opened, { open, close }] = useDisclosure(false);
+  const [editOpened, { open: openEditModal, close: closeEditModal }] =
+    useDisclosure(false);
 
   return (
     <React.Fragment>
@@ -90,7 +91,7 @@ const TableRow: React.FC<Props> = ({
         {/* edit row ---->  */}
         <div className='flex justify-center items-center'>
           <BsThreeDotsVertical
-            onClick={open}
+            onClick={openEditModal}
             className='text-[16px] hover:opacity-80 cursor-pointer text-[#525866]'
           />
         </div>
@@ -100,8 +101,8 @@ const TableRow: React.FC<Props> = ({
         title='Edit card details'
         description='The below information is collected for taxes and legal compliance'
         size='lg'
-        opened={opened}
-        onClose={close}
+        opened={editOpened}
+        onClose={closeEditModal}
       >
         <div className='w-full flex gap-3 mt-4 flex-col'>
           {/* cardholder name --------->  */}
@@ -183,7 +184,7 @@ const TableRow: React.FC<Props> = ({
               placeholder='Select Country'
             />
           </div>
-          <FillButton styles='w-full mt-3 text-white-1 text-[18px] font-medium h-[55px] bg-red-1 rounded-[60px]'>
+          <FillButton styles='w-full mt-3 text-white-1 text-[16px] font-medium h-[54px] bg-red-1 rounded-[60px]'>
             Save details
           </FillButton>
         </div>

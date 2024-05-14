@@ -7,7 +7,7 @@ interface Props {
   title: string;
   description?: string;
   opened: boolean;
-  onClose: () => void;
+  onClose: any;
   children: ReactNode;
 }
 
