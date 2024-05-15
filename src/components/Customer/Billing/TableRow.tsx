@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { ReactNode } from 'react';
 import { Checkbox } from '@mantine/core';
 import Typography from '../../shared/Typography/Typography';
 import * as Icons from '../../../svg/Icons';
@@ -96,7 +96,7 @@ const TableRow: React.FC<Props> = ({
           />
         </div>
       </div>
-      {/* Edit detail modal ====================> */}
+      {/* EDIT DETAIL MODAL  ====================> */}
       <CustomModal
         title='Edit card details'
         description='The below information is collected for taxes and legal compliance'
@@ -133,7 +133,7 @@ const TableRow: React.FC<Props> = ({
               <input
                 type='number'
                 name='cardNumber'
-                maxLength={16}
+                pattern='[0-9]*'
                 placeholder='0000 0000 0000 0000'
                 className='w-full text-[14px] select-none focus:outline-none pl-1 pr-2 h-[45px] placeholder:text-[#868C98] text-black-1 font-normal'
               />
