@@ -10,12 +10,19 @@ import TableRow from '../../../components/Customer/Billing/TableRow';
 import RowForSmallScreen from '../../../components/Customer/Billing/RowForSmallScreen';
 import CustomModal from '../../../components/shared/Popups/Modal';
 import { useDisclosure } from '@mantine/hooks';
+import CheckBoxInput from '../../../components/shared/Inputs/CheckBox';
 
 const Billing: React.FC = () => {
   const [upgrateOpened, { open: openUpgrateModal, close: closeUpgrateModal }] =
     useDisclosure(false);
   const [cancelSub, { open: openCancelSub, close: closeCancelSub }] =
     useDisclosure(false);
+  const [cancelSubReason, { open: openSubReason, close: closeSubReason }] =
+    useDisclosure(false);
+  const [
+    subCanceledSuccessfully,
+    { open: openSubCancel, close: closeSubCancel },
+  ] = useDisclosure(false);
 
   return (
     <React.Fragment>
@@ -31,10 +38,10 @@ const Billing: React.FC = () => {
           </Typography.smallText>
         </div>
         {/* current subscription + payement method ------->  */}
-        <div className='w-full grid grid-cols-1 xl:grid-cols-2 gap-4'>
+        <div className='w-full grid grid-cols-1 xl:grid-cols-[1.5fr,1fr] gap-5'>
           {/* current sub ->  */}
           <div className='w-full h-full flex justify-center items-center'>
-            <div className='w-full h-full max-w-[600px] flex flex-col bg-white-1 rounded-[10px] border-[1px] border-white-3'>
+            <div className='w-full h-full max-w-[600px] xl:max-w-none flex flex-col bg-white-1 rounded-[16px] border-[1px] border-white-3'>
               {/* header ->  */}
               <div className='w-full h-[50px] sm:h-[70px] border-b-[1px] border-white-3 flex justify-between items-center px-4'>
                 <Typography.mText styles='text-black-1 font-bold'>
@@ -92,7 +99,7 @@ const Billing: React.FC = () => {
           </div>
           {/* payement method ---->  */}
           <div className='w-full h-full flex justify-center items-center'>
-            <div className='w-full h-full max-w-[600px] flex flex-col bg-white-1 rounded-[10px] border-[1px] border-white-3'>
+            <div className='w-full h-full max-w-[600px] flex flex-col bg-white-1 rounded-[16px] border-[1px] border-white-3'>
               {/* header ->  */}
               <div className='w-full h-[50px] sm:h-[70px] border-b-[1px] border-white-3 flex justify-between items-center px-4'>
                 <Typography.mText styles='text-black-1 font-bold'>
@@ -274,13 +281,105 @@ const Billing: React.FC = () => {
           {/* buttons -------> */}
           <div className='w-full mt-1 grid grid-cols-[.7fr,2fr] justify-center items-center gap-3'>
             <OutlineButton
-              event={closeCancelSub}
+              event={() => {
+                closeCancelSub();
+                openSubReason();
+              }}
               styles='w-full h-[48px] text-red-1 border-red-1'
             >
               Cancel
             </OutlineButton>
             <FillButton styles='w-full rounded-[60px] h-[48px] text-white-1 border-[1px] bg-black-1'>
               Keep subscription
+            </FillButton>
+          </div>
+        </div>
+      </CustomModal>
+      {/* CANCEL SUBSCRIPTION REASON ================>  */}
+      <CustomModal
+        title='Cancel subscription'
+        description='Your feedback matters to us. we appreciate your time in providing feedback to help us improve our services. Your input is valuable to us.'
+        size='40%'
+        opened={cancelSubReason}
+        onClose={closeSubReason}
+      >
+        <div className='w-full flex gap-3 mt-5 flex-col'>
+          <div className='bg-[#F9F9F9] p-3 border-[1px] flex flex-col border-[#E2E4E9] rounded-[16px]'>
+            <p className='text-[20px] text-black-3 font-semibold'>
+              Can you tell us why?
+            </p>
+            {cancelSubReasonData.map((attri, index) => {
+              return (
+                <div
+                  key={index}
+                  className='w-full flex mt-3 justify-start items-center'
+                >
+                  <CheckBoxInput size='xs' label={attri} />
+                </div>
+              );
+            })}
+          </div>
+          {/* textArea -----> */}
+          <div className='w-full gap-2 mt-2 flex flex-col'>
+            <label
+              htmlFor='message'
+              className='text-[14px] font-normal text-black-3'
+            >
+              Is there anything you would like to share with us?{' '}
+              <span className='text-[#868C98]'> (Optional)</span>
+            </label>
+            <textarea
+              placeholder='Other information you would like to highlight'
+              className='focus:outline-none p-2 rounded-[20px] min-h-[80px] border-[1px] border-[#E2E4E9] text-[14px] font-normal text-black-3 placeholder:text-[#868C98]'
+            />
+          </div>
+          {/* buttons -------> */}
+          <div className='w-full mt-1 grid grid-cols-[.7fr,2fr] justify-center items-center gap-3'>
+            <OutlineButton
+              event={() => {
+                closeSubReason();
+                openSubCancel();
+              }}
+              styles='w-full h-[48px] text-red-1 border-red-1'
+            >
+              Cancel
+            </OutlineButton>
+            <FillButton styles='w-full rounded-[60px] h-[48px] text-white-1 border-[1px] bg-black-1'>
+              Keep subscription
+            </FillButton>
+          </div>
+        </div>
+      </CustomModal>
+      {/* MEMBERSHIP CANCELED ================>  */}
+      <CustomModal
+        title=''
+        description=''
+        size='40%'
+        opened={subCanceledSuccessfully}
+        onClose={closeSubCancel}
+      >
+        <div className='w-full justify-center items-center flex gap-3 mt-5 flex-col'>
+          <img
+            src='/assets/illustration1.png'
+            className='w-[360px] h-[220px]'
+            alt=''
+          />
+          <p className='text-[20px] font-semibold text-black-3'>
+            Membership canceled
+          </p>
+          <p className='text-[14px] font-normal text-black-3 text-center'>
+            Your membership has ended. you’ll still have your benefits unstill
+            the end of your current billing cycle. If you change your mind, you
+            can upgrade again at any time. Thanks you for being a part of the RP
+            Fitness member.
+          </p>
+          {/* buttons -------> */}
+          <div className='w-full mt-3 justify-center items-center gap-3'>
+            <FillButton
+              event={closeSubCancel}
+              styles='w-full rounded-[60px] h-[48px] text-white-1 border-[1px] bg-red-1'
+            >
+              Back to home
             </FillButton>
           </div>
         </div>
@@ -528,6 +627,19 @@ const cancelSubscriptionData = [
   '1:1 fitness assessment',
   'Personal training',
   'Group fitness classes',
+];
+
+const cancelSubReasonData = [
+  'Too expansive',
+  'Not what i expected',
+  'Inconsistent equipment maintenance',
+  'Lack of cleanliness',
+  'Limited class cariety',
+  'Unresponsive staff',
+  'Inconvenient hours',
+  'Crowded dacilities',
+  'Ineffective training programs',
+  'Lack of personalized attention',
 ];
 
 export default Billing;

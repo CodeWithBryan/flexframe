@@ -16,16 +16,18 @@ const Dashboard: React.FC = () => {
         />
       </div>
       {/* right portion -------> */}
-      <div className='w-full bg-[#F9F9F9] h-full flex flex-col'>
-        {/* top navigation ---> */}
-        <div className='w-full h-[72px] bg-white-1 flex justify-between items-center '>
-          <TopNavigation
-            option={selectedOption}
-            setOption={setSelectedOption}
-          />
+      <div className='w-full flex justify-center bg-[#F9F9F9] items-center'>
+        <div className='w-full max-w-[1200px] h-full flex flex-col'>
+          {/* top navigation ---> */}
+          <div className='w-full h-[72px] bg-white-1 flex justify-between items-center '>
+            <TopNavigation
+              option={selectedOption}
+              setOption={setSelectedOption}
+            />
+          </div>
+          {/* =======  billing section =======> */}
+          {selectedOption === 'Billings' && <Billing />}
         </div>
-        {/* =======  billing section =======> */}
-        {selectedOption === 'Billings' && <Billing />}
       </div>
     </div>
   );
