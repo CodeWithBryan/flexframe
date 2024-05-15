@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Checkbox } from '@mantine/core';
 import Typography from '../../shared/Typography/Typography';
 import * as Icons from '../../../svg/Icons';
@@ -120,7 +120,10 @@ const TableRow: React.FC<Props> = ({
           </div>
           {/* card number --------> */}
           <div className='flex flex-col gap-1'>
-            <label htmlFor='' className='text-[14px] text-black-3 font-medium'>
+            <label
+              htmlFor='cardNumber'
+              className='text-[14px] text-black-3 font-medium'
+            >
               Card Number
             </label>
             <div className='w-full border-[1px] px-2 rounded-[10px] border-white-3 grid grid-cols-[30px,1fr,30px]'>
@@ -129,6 +132,8 @@ const TableRow: React.FC<Props> = ({
               </div>
               <input
                 type='number'
+                name='cardNumber'
+                maxLength={16}
                 placeholder='0000 0000 0000 0000'
                 className='w-full text-[14px] select-none focus:outline-none pl-1 pr-2 h-[45px] placeholder:text-[#868C98] text-black-1 font-normal'
               />

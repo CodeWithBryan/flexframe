@@ -39,7 +39,9 @@ const CustomModal: React.FC<Props> = ({
       }}
       title={title}
     >
-      <p className='text-[14px] text-black-3 font-normal'>{description}</p>
+      <p className='text-[14px] max-w-[430px] w-full text-black-3 font-normal'>
+        {description}
+      </p>
       {children}
     </Modal>
   );

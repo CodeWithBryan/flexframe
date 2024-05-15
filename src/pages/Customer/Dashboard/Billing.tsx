@@ -14,6 +14,8 @@ import { useDisclosure } from '@mantine/hooks';
 const Billing: React.FC = () => {
   const [upgrateOpened, { open: openUpgrateModal, close: closeUpgrateModal }] =
     useDisclosure(false);
+  const [cancelSub, { open: openCancelSub, close: closeCancelSub }] =
+    useDisclosure(false);
 
   return (
     <React.Fragment>
@@ -39,7 +41,7 @@ const Billing: React.FC = () => {
                   Current subscription
                 </Typography.mText>
                 <div className='hidden csm:flex justify-center items-center gap-3'>
-                  <OutlineButton>Cancel</OutlineButton>
+                  <OutlineButton event={openCancelSub}>Cancel</OutlineButton>
                   <FillButton
                     event={openUpgrateModal}
                     styles='text-white-1 bg-purple-1 font-semibold px-[12px] py-[8px] rounded-[60px]'
@@ -242,6 +244,44 @@ const Billing: React.FC = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </CustomModal>
+      {/* CANCEL SUBSCRIPTION ================>  */}
+      <CustomModal
+        title='Cancel subscription'
+        description='We’re sorry to see you go. If you cancel your membership, you’ll still have your benefits unstill the end of your current billing cycle.'
+        size='40%'
+        opened={cancelSub}
+        onClose={closeCancelSub}
+      >
+        <div className='w-full flex gap-3 mt-5 flex-col'>
+          <div className='bg-[#F9F9F9] p-3 border-[1px] flex flex-col border-[#E2E4E9] rounded-[16px]'>
+            <p className='text-[20px] text-black-3 font-semibold'>
+              Resume membership at any time to...
+            </p>
+            {cancelSubscriptionData.map((attri, index) => {
+              return (
+                <p
+                  key={index}
+                  className='text-[#525866] mt-3 font-normal text-[16px]'
+                >
+                  {attri}
+                </p>
+              );
+            })}
+          </div>
+          {/* buttons -------> */}
+          <div className='w-full mt-1 grid grid-cols-[.7fr,2fr] justify-center items-center gap-3'>
+            <OutlineButton
+              event={closeCancelSub}
+              styles='w-full h-[48px] text-red-1 border-red-1'
+            >
+              Cancel
+            </OutlineButton>
+            <FillButton styles='w-full rounded-[60px] h-[48px] text-white-1 border-[1px] bg-black-1'>
+              Keep subscription
+            </FillButton>
           </div>
         </div>
       </CustomModal>
@@ -480,6 +520,14 @@ const upgradePlaneData = [
       'Group fitness classes',
     ],
   },
+];
+
+const cancelSubscriptionData = [
+  'No contract',
+  'Cardio & strength equipment',
+  '1:1 fitness assessment',
+  'Personal training',
+  'Group fitness classes',
 ];
 
 export default Billing;
