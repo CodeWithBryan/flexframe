@@ -108,7 +108,8 @@ const TableRow: React.FC<Props> = ({
         </Typography.smallText>
         {/* payement metode */}
         <div className='flex justify-start items-center w-full gap-2'>
-          {method.img}
+          {/* {method.img} */}
+          <Icons.visa className='w-[20px] h-[20px]' />
           <Typography.smallText styles='text-[#525866] font-normal'>
             {method.number}
           </Typography.smallText>
