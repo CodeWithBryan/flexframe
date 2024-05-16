@@ -7,15 +7,12 @@ import Welcome from './Welcome/Welcome';
 const MemberRouter = () => {
   return (
     <Routes>
-      <Route path="/dashboard" element={<DashboardWrapper />}>
+      <Route path='/dashboard' element={<DashboardWrapper />}>
         <Route index element={<Dashboard />} />
-        <Route path="billing" element={<Billing />} />
+        <Route path='billing' element={<Billing />} />
       </Route>
-      <Route path="/welcome" element={<Welcome />} />
-      <Route
-        path="*"
-        element={<Navigate to="/member/dashboard" replace />}
-      />
+      <Route path='/welcome' element={<Welcome />} />
+      <Route path='*' element={<Navigate to='/member/dashboard' replace />} />
     </Routes>
   );
 };
