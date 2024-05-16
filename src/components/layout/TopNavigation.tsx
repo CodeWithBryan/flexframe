@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Input } from '@mantine/core';
 import { LuSearch } from 'react-icons/lu';
 import * as Icons from '../common/Icons';
@@ -9,14 +9,15 @@ import { Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import Typography from '../common/Typography';
 import { BillingNavigation } from '../../data/billing';
+import { NavLink } from 'react-router-dom';
 
 interface Props {
   option: string;
   setOption: any;
 }
-import { NavLink } from 'react-router-dom';
 
 const TopNavigation: React.FC = () => {
+  const [option, setOption] = useState('');
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
@@ -106,44 +107,5 @@ const TopNavigation: React.FC = () => {
     </React.Fragment>
   );
 };
-
-const links = [
-  {
-    name: 'Dashboard',
-    icon: <BsGrid className='text-[20px]' />,
-  },
-  {
-    name: 'Calendar',
-    icon: <BsCalendar4 className='text-[20px]' />,
-  },
-  {
-    name: 'Workout routine',
-    icon: <FaPersonFalling className='text-[20px]' />,
-  },
-  {
-    name: 'Meal Plan',
-    icon: <GiMeal className='text-[20px]' />,
-  },
-  {
-    name: 'Attendance',
-    icon: <BsPersonCheck className='text-[20px]' />,
-  },
-  {
-    name: 'Billings',
-    icon: <MdOutlinePriceChange className='text-[20px]' />,
-  },
-  {
-    name: 'Documents',
-    icon: <IoDocumentTextOutline className='text-[20px]' />,
-  },
-  {
-    name: 'Guest passes',
-    icon: <BsPersonVcard className='text-[20px]' />,
-  },
-  {
-    name: 'Shop',
-    icon: <GrWorkshop className='text-[20px] text-[#868C98]' />,
-  },
-];
 
 export default TopNavigation;
