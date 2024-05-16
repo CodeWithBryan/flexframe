@@ -16,6 +16,7 @@ const SignUp: React.FC = () => {
     email: '',
     password: '',
     phone: '',
+    termsAgree: false,
   });
 
   // functions ----->
@@ -94,6 +95,13 @@ const SignUp: React.FC = () => {
           {/* agreement checkbox ----->  */}
           <div className='w-full flex mt-2 justify-start items-center'>
             <CheckBoxInput
+              value={signUp.termsAgree}
+              onChange={() =>
+                setSignUp((prevState) => ({
+                  ...prevState,
+                  termsAgree: !prevState.termsAgree,
+                }))
+              }
               label={
                 <p className='text-[14px] font-normal text-black-3 font-inter'>
                   I agree to the Privacy Policy,{' '}
