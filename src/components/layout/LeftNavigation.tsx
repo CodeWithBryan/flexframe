@@ -1,8 +1,7 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
 import Typography from '../common/Typography';
-import { BsGrid } from 'react-icons/bs';
-import { MdOutlinePriceChange } from 'react-icons/md';
+import { BillingNavigation } from '../../data/billing';
 import { NavLink } from 'react-router-dom';
 
 interface Props {
@@ -25,15 +24,14 @@ const LeftNavigation: React.FC<Props> = ({
               RP Fitness
             </Typography.mText>
           </div>
-          {/* <GoSidebarCollapse className='text-[27px] rotate-180 cursor-pointer text-[#525866]' /> */}
         </div>
         {/* links ----->  */}
         <div className='w-full flex flex-col items-start py-8 gap-2'>
-          {leftNavigationLink.map((item, index) => {
+          {BillingNavigation.map((item, index) => {
             return (
               <NavLink
                 key={index}
-                to={item.link as string}
+                to='#'
                 onClick={() => setSelectedOption(item.name)}
                 className={`w-full rounded-md h-[45px] px-3 flex justify-start items-center gap-2 ${
                   selectedOption === item.name
@@ -53,45 +51,5 @@ const LeftNavigation: React.FC<Props> = ({
     </div>
   );
 };
-
-const leftNavigationLink = [
-  {
-    name: 'Dashboard',
-    icon: <BsGrid className='text-[20px]' />,
-    link: '/dashboard',
-  },
-  // {
-  //   name: 'Calendar',
-  //   icon: <BsCalendar4 className='text-[20px]' />,
-  // },
-  // {
-  //   name: 'Workout routine',
-  //   icon: <FaPersonFalling className='text-[20px]' />,
-  // },
-  // {
-  //   name: 'Meal Plan',
-  //   icon: <GiMeal className='text-[20px]' />,
-  // },
-  // {
-  //   name: 'Attendance',
-  //   icon: <BsPersonCheck className='text-[20px]' />,
-  // },
-  {
-    name: 'Billings',
-    icon: <MdOutlinePriceChange className='text-[20px]' />,
-  },
-  // {
-  //   name: 'Documents',
-  //   icon: <IoDocumentTextOutline className='text-[20px]' />,
-  // },
-  // {
-  //   name: 'Guest passes',
-  //   icon: <BsPersonVcard className='text-[20px]' />,
-  // },
-  // {
-  //   name: 'Shop',
-  //   icon: <GrWorkshop className='text-[20px] text-[#868C98]' />,
-  // },
-];
 
 export default LeftNavigation;

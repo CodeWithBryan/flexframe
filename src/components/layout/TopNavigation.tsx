@@ -7,16 +7,8 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import logo from '../../assets/logo.png';
 import { Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { BsGrid } from 'react-icons/bs';
-import { BsCalendar4 } from 'react-icons/bs';
-import { FaPersonFalling } from 'react-icons/fa6';
-import { GiMeal } from 'react-icons/gi';
-import { BsPersonCheck } from 'react-icons/bs';
-import { MdOutlinePriceChange } from 'react-icons/md';
-import { IoDocumentTextOutline } from 'react-icons/io5';
-import { BsPersonVcard } from 'react-icons/bs';
-import { GrWorkshop } from 'react-icons/gr';
 import Typography from '../common/Typography';
+import { BillingNavigation } from '../../data/billing';
 
 interface Props {
   option: string;
@@ -28,7 +20,7 @@ const TopNavigation: React.FC<Props> = ({ option, setOption }: Props) => {
 
   return (
     <React.Fragment>
-      <div className='w-full border-b-[1px] border-[#E2E4E9]  h-[70px] sm:h-[75px] gap-6 px-3 sm:px-5 flex justify-between items-center bg-white-1'>
+      <div className='w-full border-b-[1px] border-[#E2E4E9]  h-[65px] sm:h-[75px] gap-6 px-3 sm:px-5 flex justify-between items-center bg-white-1'>
         {/* left por --> */}
         {/* logo  ---> */}
         <img
@@ -47,28 +39,28 @@ const TopNavigation: React.FC<Props> = ({ option, setOption }: Props) => {
           />
         </div>
         {/* right portion ---->  */}
-        <div className='flex justify-center items-center gap-4'>
+        <div className='flex justify-center items-center gap-3 sm:gap-4'>
           {/* search ----> */}
-          <div className='border-[1px] clg:hidden hover:bg-black-1/5 w-[45px] h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full'>
-            <LuSearch className='text-[22px] text-[#525866]' />
+          <div className='border-[1px] clg:hidden hover:bg-black-1/5 w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full'>
+            <LuSearch className='text-[18px] sm:text-[22px] text-[#525866]' />
           </div>
-          <button className='border-[1px] hover:bg-black-1/5 w-[45px] h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full lg:rounded-[10px]'>
-            <Icons.bag className='w-[22px] h-[22px]' />
+          <button className='border-[1px] hover:bg-black-1/5 w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full lg:rounded-[10px]'>
+            <Icons.bag className='w-[20px] sm:w-[22px] h-[20px] sm:h-[22px]' />
           </button>
           {/* notification ---> */}
-          <button className='border-[1px] hover:bg-black-1/5 w-[45px] h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full'>
-            <MdNotificationsNone className='text-[27px] text-[#525866]' />
+          <button className='border-[1px] hover:bg-black-1/5 w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full'>
+            <MdNotificationsNone className='text-[22px] sm:text-[27px] text-[#525866]' />
           </button>
           {/* profile ---> */}
           <button className='hover:opacity-80'>
-            <Icons.profile className='w-[43px] h-[43px]' />
+            <Icons.profile className='w-[35px] sm:w-[43px] h-[35px] sm:h-[43px]' />
           </button>
           {/* hamburger --->  */}
           <button
             onClick={open}
-            className='w-[45px] clg:hidden h-[45px] flex justify-center bg-[#F3F4F6] items-center rounded-full border-[1px] border-[#E2E4E9]'
+            className='w-[35px] sm:w-[45px] clg:hidden h-[35px] sm:h-[45px] flex justify-center bg-[#F3F4F6] items-center rounded-full border-[1px] border-[#E2E4E9]'
           >
-            <RxHamburgerMenu className='text-[27px] text-[#525866]' />
+            <RxHamburgerMenu className='text-[22px] sm:text-[27px] text-[#525866]' />
           </button>
         </div>
       </div>
@@ -85,7 +77,7 @@ const TopNavigation: React.FC<Props> = ({ option, setOption }: Props) => {
           {/* links ------>  */}
 
           <div className='w-full flex flex-col items-start py-5 gap-2'>
-            {links.map((item, index) => {
+            {BillingNavigation.map((item, index) => {
               return (
                 <button
                   onClick={() => setOption(item.name)}
@@ -109,44 +101,5 @@ const TopNavigation: React.FC<Props> = ({ option, setOption }: Props) => {
     </React.Fragment>
   );
 };
-
-const links = [
-  {
-    name: 'Dashboard',
-    icon: <BsGrid className='text-[20px]' />,
-  },
-  {
-    name: 'Calendar',
-    icon: <BsCalendar4 className='text-[20px]' />,
-  },
-  {
-    name: 'Workout routine',
-    icon: <FaPersonFalling className='text-[20px]' />,
-  },
-  {
-    name: 'Meal Plan',
-    icon: <GiMeal className='text-[20px]' />,
-  },
-  {
-    name: 'Attendance',
-    icon: <BsPersonCheck className='text-[20px]' />,
-  },
-  {
-    name: 'Billings',
-    icon: <MdOutlinePriceChange className='text-[20px]' />,
-  },
-  {
-    name: 'Documents',
-    icon: <IoDocumentTextOutline className='text-[20px]' />,
-  },
-  {
-    name: 'Guest passes',
-    icon: <BsPersonVcard className='text-[20px]' />,
-  },
-  {
-    name: 'Shop',
-    icon: <GrWorkshop className='text-[20px] text-[#868C98]' />,
-  },
-];
 
 export default TopNavigation;

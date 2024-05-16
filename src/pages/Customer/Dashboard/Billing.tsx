@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as Icons from '../../../components/common/Icons';
 import Typography from '../../../components/common/Typography';
 import FillButton from '../../../components/common/Buttons/FillButton';
@@ -19,6 +19,7 @@ import {
 } from '../../../data/billing';
 
 const Billing: React.FC = () => {
+  // STATES FOR MODALS =========================>
   const [upgrateOpened, { open: openUpgrateModal, close: closeUpgrateModal }] =
     useDisclosure(false);
   const [cancelSub, { open: openCancelSub, close: closeCancelSub }] =
@@ -29,6 +30,23 @@ const Billing: React.FC = () => {
     subCanceledSuccessfully,
     { open: openSubCancel, close: closeSubCancel },
   ] = useDisclosure(false);
+
+  // REASONS FOR CANCEL SUBSCRIPTIONS STATE ===================>
+  const [reasonsToCancelSub, setReasonsToCancelSub] = useState<{
+    [key: string]: boolean;
+  }>(
+    CancelSubReasonData.reduce((acc: { [key: string]: boolean }, reason) => {
+      acc[reason] = false;
+      return acc;
+    }, {})
+  );
+
+  const handleCheckBoxChange = (reason: string) => {
+    setReasonsToCancelSub((prevCheckedItems) => ({
+      ...prevCheckedItems,
+      [reason]: !prevCheckedItems[reason],
+    }));
+  };
 
   return (
     <React.Fragment>
@@ -95,8 +113,13 @@ const Billing: React.FC = () => {
                 </div>
                 {/* bottons for small screen ---> */}
                 <div className='w-full grid csm:hidden grid-cols-[1fr,3fr] justify-center items-center gap-3'>
-                  <OutlineButton styles='w-full'>Cancel</OutlineButton>
-                  <FillButton styles='w-full text-white-1 bg-purple-1 font-semibold px-[12px] py-[8px] rounded-[60px]'>
+                  <OutlineButton event={openCancelSub} styles='w-full'>
+                    Cancel
+                  </OutlineButton>
+                  <FillButton
+                    event={openUpgrateModal}
+                    styles='w-full text-white-1 bg-purple-1 font-semibold px-[12px] py-[8px] rounded-[60px]'
+                  >
                     Upgrade membership
                   </FillButton>
                 </div>
@@ -322,7 +345,12 @@ const Billing: React.FC = () => {
                   key={index}
                   className='w-full flex mt-2 sm:mt-3 justify-start items-center'
                 >
-                  <CheckBoxInput size='xs' label={attri} />
+                  <CheckBoxInput
+                    value={reasonsToCancelSub[attri]}
+                    onChange={() => handleCheckBoxChange(attri)}
+                    size='xs'
+                    label={attri}
+                  />
                 </div>
               );
             })}

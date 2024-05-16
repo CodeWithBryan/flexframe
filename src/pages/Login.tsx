@@ -36,28 +36,7 @@ const Login: React.FC = () => {
           <Typography.mText styles='text-center font-normal text-[#525866]'>
             Login to unlock a world of fitness tailored just for you.
           </Typography.mText>
-          {/* sign In with ---->  */}
-          {/* <div className='w-full py-3 grid grid-cols-3 gap-2'>
-            {signWith.map((item, index) => {
-              return (
-                <Link
-                  to={item.path}
-                  key={index}
-                  className='w-full shadow-sm h-[48px] hover:bg-black-1/5 active:translate-y-[1px] flex justify-center items-center rounded-[60px] border-white-3 border-[1px]'
-                >
-                  {item.icon}
-                </Link>
-              );
-            })}
-          </div> */}
-          {/* or ----->  */}
-          {/* <div className='w-full grid grid-cols-[1fr,20px,1fr] justify-center items-center gap-2'>
-            <div className='w-full h-[1px] bg-white-3'></div>
-            <p className='text-[11px] font-inter font-medium text-[#868C98]'>
-              OR
-            </p>
-            <div className='w-full h-[1px] bg-white-3'></div>
-          </div> */}
+
           {/* inputs ----->  */}
           <div className='flex flex-col gap-3 mt-2 sm:mt-4 items-start w-full'>
             {/* email --> */}
@@ -131,20 +110,5 @@ const Login: React.FC = () => {
     </div>
   );
 };
-
-// const signWith = [
-//   {
-//     icon: <Icons.apple className='w-[20px] h-[21px]' />,
-//     path: '#',
-//   },
-//   {
-//     icon: <Icons.faceBook3 className='w-[20px] h-[21px]' />,
-//     path: '#',
-//   },
-//   {
-//     icon: <Icons.google className='w-[20px] h-[21px]' />,
-//     path: '#',
-//   },
-// ];
 
 export default Login;

@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 
-const MobileNumInput: React.FC = () => {
-  const [phone, setPhone] = useState('');
+interface Props {
+  phone: string;
+  setPhone: any;
+}
 
-  return (
-    <PhoneInput
-      defaultCountry='usa'
-      value={phone}
-      onChange={(phone) => setPhone(phone)}
-    />
-  );
+const MobileNumInput: React.FC<Props> = ({ phone, setPhone }: Props) => {
+  return <PhoneInput defaultCountry='usa' value={phone} onChange={setPhone} />;
 };
 
 export default MobileNumInput;

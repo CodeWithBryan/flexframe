@@ -1,4 +1,13 @@
 import * as Icons from '../components/common/Icons';
+import { BsGrid } from 'react-icons/bs';
+import { BsCalendar4 } from 'react-icons/bs';
+import { FaPersonFalling } from 'react-icons/fa6';
+import { GiMeal } from 'react-icons/gi';
+import { BsPersonCheck } from 'react-icons/bs';
+import { MdOutlinePriceChange } from 'react-icons/md';
+import { IoDocumentTextOutline } from 'react-icons/io5';
+import { BsPersonVcard } from 'react-icons/bs';
+import { GrWorkshop } from 'react-icons/gr';
 
 export const InvoiceTable = {
   header: [
@@ -252,4 +261,43 @@ export const CancelSubReasonData = [
   'Crowded dacilities',
   'Ineffective training programs',
   'Lack of personalized attention',
+];
+
+export const BillingNavigation = [
+  {
+    name: 'Dashboard',
+    icon: <BsGrid className='text-[20px]' />,
+  },
+  // {
+  //   name: 'Calendar',
+  //   icon: <BsCalendar4 className='text-[20px]' />,
+  // },
+  // {
+  //   name: 'Workout routine',
+  //   icon: <FaPersonFalling className='text-[20px]' />,
+  // },
+  // {
+  //   name: 'Meal Plan',
+  //   icon: <GiMeal className='text-[20px]' />,
+  // },
+  // {
+  //   name: 'Attendance',
+  //   icon: <BsPersonCheck className='text-[20px]' />,
+  // },
+  {
+    name: 'Billings',
+    icon: <MdOutlinePriceChange className='text-[20px]' />,
+  },
+  // {
+  //   name: 'Documents',
+  //   icon: <IoDocumentTextOutline className='text-[20px]' />,
+  // },
+  // {
+  //   name: 'Guest passes',
+  //   icon: <BsPersonVcard className='text-[20px]' />,
+  // },
+  // {
+  //   name: 'Shop',
+  //   icon: <GrWorkshop className='text-[20px] text-[#868C98]' />,
+  // },
 ];
