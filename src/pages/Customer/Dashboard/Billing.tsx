@@ -11,6 +11,12 @@ import RowForSmallScreen from '../../../components/features/billing/RowForSmallS
 import { useDisclosure } from '@mantine/hooks';
 import CheckBoxInput from '../../../components/common/Inputs/CheckBox';
 import CustomModal from '../../../components/common/Modal';
+import {
+  InvoiceTable,
+  UpgradePlaneData,
+  CancelSubscriptionData,
+  CancelSubReasonData,
+} from '../../../data/billing';
 
 const Billing: React.FC = () => {
   const [upgrateOpened, { open: openUpgrateModal, close: closeUpgrateModal }] =
@@ -161,14 +167,14 @@ const Billing: React.FC = () => {
           </div>
           <div className='w-full csm:block hidden overflow-auto'>
             {/* table header --->  */}
-            <TableHeader headers={invoiceTable.header} />
+            <TableHeader headers={InvoiceTable.header} />
             {/* table rows --->  */}
             <div
               className={`w-full flex flex-col ${
-                invoiceTable.rowsData.length < 9 ? 'h-fit' : 'h-[350px] '
+                InvoiceTable.rowsData.length < 9 ? 'h-fit' : 'h-[350px] '
               } `}
             >
-              {invoiceTable.rowsData.map((row, index) => {
+              {InvoiceTable.rowsData.map((row, index) => {
                 return (
                   <TableRow
                     key={index}
@@ -186,7 +192,7 @@ const Billing: React.FC = () => {
 
           {/* table card for small screen ------>  */}
           <div className='w-full csm:hidden flex flex-col gap-4 mt-4'>
-            {invoiceTable.rowsData.map((row, index) => {
+            {InvoiceTable.rowsData.map((row, index) => {
               return (
                 <RowForSmallScreen
                   key={index}
@@ -202,7 +208,7 @@ const Billing: React.FC = () => {
           </div>
         </div>
       </div>
-      {/* UPGRATE MEMBERSHIP ================> */}
+      {/* UPGRATE MEMBERSHIP =================> */}
       <CustomModal
         title='Upgrade plan'
         description='The below information is collected for taxes and legal compliance'
@@ -212,7 +218,7 @@ const Billing: React.FC = () => {
       >
         <div className='w-full flex gap-3 mt-5 flex-col'>
           <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-            {upgradePlaneData.map((plan, index) => {
+            {UpgradePlaneData.map((plan, index) => {
               return (
                 <div
                   className='w-full flex justify-center items-center'
@@ -269,7 +275,7 @@ const Billing: React.FC = () => {
             <p className='text-[18px] sm:text-[20px] leading-[25px] text-black-3 font-semibold'>
               Resume membership at any time to...
             </p>
-            {cancelSubscriptionData.map((attri, index) => {
+            {CancelSubscriptionData.map((attri, index) => {
               return (
                 <p
                   key={index}
@@ -281,7 +287,7 @@ const Billing: React.FC = () => {
             })}
           </div>
           {/* buttons -------> */}
-          <div className='w-full mt-1 grid grid-cols-[.8fr,2fr] sm:grid-cols-[.7fr,2fr] justify-center items-center gap-2 sm:gap-3'>
+          <div className='w-full mt-1 grid grid-cols-[.9fr,2fr] sm:grid-cols-[.7fr,2fr] justify-center items-center gap-2 sm:gap-3'>
             <OutlineButton
               event={() => {
                 closeCancelSub();
@@ -291,7 +297,7 @@ const Billing: React.FC = () => {
             >
               Cancel
             </OutlineButton>
-            <FillButton styles='w-full rounded-[60px] h-[48px] text-white-1 border-[1px] bg-black-1'>
+            <FillButton styles='w-full rounded-[60px] h-[48px] text-white-1 border-black-1 border-[1px] bg-black-1'>
               Keep subscription
             </FillButton>
           </div>
@@ -301,7 +307,7 @@ const Billing: React.FC = () => {
       <CustomModal
         title='Cancel subscription'
         description='Your feedback matters to us. we appreciate your time in providing feedback to help us improve our services. Your input is valuable to us.'
-        size='auto'
+        size='34rem'
         opened={cancelSubReason}
         onClose={closeSubReason}
       >
@@ -310,7 +316,7 @@ const Billing: React.FC = () => {
             <p className='text-[18px] sm:text-[20px] text-black-3 font-semibold'>
               Can you tell us why?
             </p>
-            {cancelSubReasonData.map((attri, index) => {
+            {CancelSubReasonData.map((attri, index) => {
               return (
                 <div
                   key={index}
@@ -336,7 +342,7 @@ const Billing: React.FC = () => {
             />
           </div>
           {/* buttons -------> */}
-          <div className='w-full mt-1 grid grid-cols-[.8fr,2fr] sm:grid-cols-[.7fr,2fr] justify-center items-center gap-2 sm:gap-3'>
+          <div className='w-full mt-1 grid grid-cols-[.9fr,2fr] sm:grid-cols-[.7fr,2fr] justify-center items-center gap-2 sm:gap-3'>
             <OutlineButton
               event={() => {
                 closeSubReason();
@@ -346,7 +352,7 @@ const Billing: React.FC = () => {
             >
               Cancel
             </OutlineButton>
-            <FillButton styles='w-full rounded-[60px] h-[48px] text-white-1 border-[1px] bg-black-1'>
+            <FillButton styles='w-full rounded-[60px] h-[48px] border-black-1 text-white-1 border-[1px] bg-black-1'>
               Keep subscription
             </FillButton>
           </div>
@@ -356,14 +362,14 @@ const Billing: React.FC = () => {
       <CustomModal
         title=''
         description=''
-        size='md'
+        size='30rem'
         opened={subCanceledSuccessfully}
         onClose={closeSubCancel}
       >
         <div className='w-full justify-center items-center flex gap-3 mt-5 flex-col'>
           <img
             src='/assets/illustration1.png'
-            className='w-[360px] h-[220px]'
+            className='w-[300px] sm:w-[360px] h-[180px] sm:h-[220px]'
             alt=''
           />
           <p className='text-[20px] font-semibold text-black-3'>
@@ -389,259 +395,5 @@ const Billing: React.FC = () => {
     </React.Fragment>
   );
 };
-
-const invoiceTable = {
-  header: [
-    {
-      name: 'Plan Name',
-      isFilterIcon: false,
-    },
-    {
-      name: 'Date & Time',
-      isFilterIcon: true,
-    },
-    {
-      name: 'Expire Date',
-      isFilterIcon: true,
-    },
-    {
-      name: 'Amount',
-      isFilterIcon: true,
-    },
-    {
-      name: 'Method',
-      isFilterIcon: true,
-    },
-    {
-      name: 'Status',
-      isFilterIcon: true,
-    },
-  ],
-  rowsData: [
-    {
-      planeName: {
-        img: '/assets/subscription.svg',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'active',
-    },
-    {
-      planeName: {
-        img: '/assets/elite.png',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'expired',
-    },
-    {
-      planeName: {
-        img: '/assets/subscription.svg',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'active',
-    },
-    {
-      planeName: {
-        img: '/assets/elite.png',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'expired',
-    },
-    {
-      planeName: {
-        img: '/assets/subscription.svg',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'active',
-    },
-    {
-      planeName: {
-        img: '/assets/elite.png',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'expired',
-    },
-    {
-      planeName: {
-        img: '/assets/elite.png',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'expired',
-    },
-    {
-      planeName: {
-        img: '/assets/elite.png',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'expired',
-    },
-    {
-      planeName: {
-        img: '/assets/elite.png',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'expired',
-    },
-    {
-      planeName: {
-        img: '/assets/elite.png',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'expired',
-    },
-    {
-      planeName: {
-        img: '/assets/elite.png',
-        name: 'Elite',
-      },
-      dateAndTime: 'Dec 18, 2023',
-      expireDate: 'Jan 18, 2023',
-      amount: '$45.00',
-      method: {
-        img: <Icons.visa className='w-[20px] h-[20px]' />,
-        number: '**** 9454',
-      },
-      status: 'expired',
-    },
-  ],
-};
-
-const upgradePlaneData = [
-  {
-    type: 'Standard',
-    img: '/assets/plan1.png',
-    price: '$35',
-    btnText: 'Downgrade',
-    btnStyles: 'text-[#525866] bg-white-1  border-[1px] border-[#E2E4E9]',
-    attributes: [
-      '24/7 access',
-      'No contract - full enrollment fee',
-      'Cardio & strength equipment',
-      '1:1 fitness assessment',
-      'Discounted guest pass',
-      'Group fitness classes',
-    ],
-  },
-  {
-    type: 'Standard',
-    img: '/assets/plan1.png',
-    price: '$35',
-    btnText: 'Current plan',
-    btnStyles: 'text-[#525866] bg-[#9494941A]',
-    attributes: [
-      '24/7 access',
-      'No contract - full enrollment fee',
-      'Cardio & strength equipment',
-      '1:1 fitness assessment',
-      'Discounted guest pass',
-      'Group fitness classes',
-    ],
-  },
-  {
-    type: 'Standard',
-    img: '/assets/plan1.png',
-    price: '$35',
-    btnText: 'Upgrade',
-    btnStyles: 'text-white-1 bg-red-1',
-    attributes: [
-      '24/7 access',
-      'No contract - full enrollment fee',
-      'Cardio & strength equipment',
-      '1:1 fitness assessment',
-      'Discounted guest pass',
-      'Group fitness classes',
-    ],
-  },
-];
-
-const cancelSubscriptionData = [
-  'No contract',
-  'Cardio & strength equipment',
-  '1:1 fitness assessment',
-  'Personal training',
-  'Group fitness classes',
-];
-
-const cancelSubReasonData = [
-  'Too expansive',
-  'Not what i expected',
-  'Inconsistent equipment maintenance',
-  'Lack of cleanliness',
-  'Limited class cariety',
-  'Unresponsive staff',
-  'Inconvenient hours',
-  'Crowded dacilities',
-  'Ineffective training programs',
-  'Lack of personalized attention',
-];
 
 export default Billing;

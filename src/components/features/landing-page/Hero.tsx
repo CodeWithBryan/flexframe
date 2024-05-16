@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
           </div>
           {/* buttons ====>  */}
           <div className='w-full flex justify-center sm:justify-start items-center gap-6 mt-2 sm:mt-4'>
-            <Link to="/signup">
+            <Link to='/signup'>
               <FillButton styles='bg-red-1 sm:w-fit w-full max-w-[320px] px-[24px] py-[12px] sm:py-[16px] rounded-[60px]'>
                 <Typography.mText styles='text-white-1 font-semibold'>
                   Join RP Fitness Today

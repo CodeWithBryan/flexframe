@@ -1,4 +1,4 @@
-import React, { ReactNode, useState, useRef } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Checkbox } from '@mantine/core';
 import Typography from '../../common/Typography';
 import * as Icons from '../../common/Icons';
@@ -32,8 +32,51 @@ const TableRow: React.FC<Props> = ({
   amount,
   status,
 }: Props) => {
+  //  STATES ============================>
   const [editOpened, { open: openEditModal, close: closeEditModal }] =
     useDisclosure(false);
+
+  const [cardInfo, setCardInfo] = useState({
+    number: '',
+    name: '',
+    expiry: '',
+    cvc: '',
+  });
+  const [country, setCountry] = useState('');
+
+  // TAKING AND FORMATING CARD INFO =============================>
+  const formatCardNumber = (value: string) => {
+    const onlyNumbers = value.replace(/\D/g, '').substring(0, 16);
+    const formattedValue = onlyNumbers.replace(/(\d{4})/g, '$1 ').trim();
+    return formattedValue;
+  };
+
+  const formatExpiry = (value: string) => {
+    const onlyNumbers = value.replace(/\D/g, '').substring(0, 8);
+    let formattedValue = '';
+
+    if (onlyNumbers.length > 2) {
+      formattedValue =
+        onlyNumbers.substring(0, 2) + ' / ' + onlyNumbers.substring(2);
+    } else {
+      formattedValue = onlyNumbers;
+    }
+
+    return formattedValue;
+  };
+
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target;
+    let formattedValue;
+    if (name === 'number') {
+      formattedValue = formatCardNumber(value);
+    } else if (name === 'expiry') {
+      formattedValue = formatExpiry(value);
+    } else {
+      formattedValue = value;
+    }
+    setCardInfo({ ...cardInfo, [name]: formattedValue });
+  };
 
   return (
     <React.Fragment>
@@ -96,7 +139,7 @@ const TableRow: React.FC<Props> = ({
           />
         </div>
       </div>
-      {/* EDIT DETAIL MODAL  ====================> */}
+      {/* EDIT DETAIL MODAL  ======================> */}
       <CustomModal
         title='Edit card details'
         description='The below information is collected for taxes and legal compliance'
@@ -112,9 +155,10 @@ const TableRow: React.FC<Props> = ({
             </label>
             <Input
               type='text'
+              styles='h-[45px] rounded-[10px]'
               placeholder='Waleed Shabbir'
-              value=''
-              onChange={() => {}}
+              value={cardInfo.name}
+              onChange={handleInputChange}
               name='name'
             />
           </div>
@@ -131,11 +175,12 @@ const TableRow: React.FC<Props> = ({
                 <Icons.card1 className='w-[20px] h-[20px]' />
               </div>
               <input
-                type='number'
-                name='cardNumber'
-                pattern='[0-9]*'
+                type='text'
+                name='number'
+                value={cardInfo.number}
+                onChange={handleInputChange}
                 placeholder='0000 0000 0000 0000'
-                className='w-full text-[14px] select-none focus:outline-none pl-1 pr-2 h-[45px] placeholder:text-[#868C98] text-black-1 font-normal'
+                className='w-full rounded-[10px] text-[14px] select-none focus:outline-none pl-1 pr-2 h-[45px] placeholder:text-[#868C98] text-black-1 font-normal'
               />
               <div className='w-full flex justify-center items-center'>
                 <Icons.card2 className='w-[32px] h-[24px]' />
@@ -152,11 +197,12 @@ const TableRow: React.FC<Props> = ({
                 Expiry
               </label>
               <Input
-                type='number'
+                styles='h-[45px] rounded-[10px]'
+                type='text'
                 placeholder='MM / YY'
-                value=''
-                onChange={() => {}}
-                name='expiary'
+                value={cardInfo.expiry}
+                onChange={handleInputChange}
+                name='expiry'
               />
             </div>
             {/*  CVC  --------->  */}
@@ -169,10 +215,11 @@ const TableRow: React.FC<Props> = ({
               </label>
               <Input
                 type='number'
+                styles='h-[45px] rounded-[10px]'
                 placeholder='***'
-                value=''
-                onChange={() => {}}
-                name='expiary'
+                name='cvc'
+                value={cardInfo.cvc}
+                onChange={handleInputChange}
               />
             </div>
           </div>
@@ -182,10 +229,10 @@ const TableRow: React.FC<Props> = ({
               Country
             </label>
             <SingleSelect
-              name='country'
+              inputSize='h-[45px] rounded-[10px]'
               options={countryOptions}
-              value=''
-              setValue={() => {}}
+              value={country}
+              setValue={setCountry}
               placeholder='Select Country'
             />
           </div>

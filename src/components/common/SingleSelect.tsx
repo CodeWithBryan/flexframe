@@ -7,6 +7,7 @@ interface Props {
   name?: string;
   value?: string;
   setValue?: any;
+  inputSize?: string;
 }
 
 const SingleSelect: React.FC<Props> = ({
@@ -14,14 +15,14 @@ const SingleSelect: React.FC<Props> = ({
   placeholder,
   value,
   setValue,
-  name,
+  inputSize,
 }: Props) => {
   return (
     <Select
-      name={name}
+      classNames={{ input: `${inputSize} focus:border-[1px] border-white-3` }}
       value={value}
       onChange={setValue}
-      className="input day"
+      className='input day'
       placeholder={placeholder}
       data={options}
     />
