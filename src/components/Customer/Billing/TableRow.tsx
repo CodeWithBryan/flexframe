@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState, useRef } from 'react';
 import { Checkbox } from '@mantine/core';
 import Typography from '../../shared/Typography/Typography';
 import * as Icons from '../../../svg/Icons';
@@ -104,7 +104,7 @@ const TableRow: React.FC<Props> = ({
         opened={editOpened}
         onClose={closeEditModal}
       >
-        <div className='w-full flex gap-3 mt-4 flex-col'>
+        <div className='w-full flex gap-2 sm:gap-3 mt-4 flex-col'>
           {/* cardholder name --------->  */}
           <div className='flex flex-col gap-1'>
             <label htmlFor='' className='text-[14px] text-black-3 font-medium'>
@@ -142,7 +142,7 @@ const TableRow: React.FC<Props> = ({
               </div>
             </div>
           </div>
-          <div className='w-full grid grid-cols-2 gap-5'>
+          <div className='w-full grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-5'>
             {/*  expiray  --------->  */}
             <div className='flex flex-col gap-1'>
               <label
@@ -153,7 +153,7 @@ const TableRow: React.FC<Props> = ({
               </label>
               <Input
                 type='number'
-                placeholder='MM/YY'
+                placeholder='MM / YY'
                 value=''
                 onChange={() => {}}
                 name='expiary'
@@ -189,7 +189,7 @@ const TableRow: React.FC<Props> = ({
               placeholder='Select Country'
             />
           </div>
-          <FillButton styles='w-full mt-3 text-white-1 text-[16px] font-medium h-[54px] bg-red-1 rounded-[60px]'>
+          <FillButton styles='w-full mt-2 sm:mt-3 text-white-1 text-[16px] font-medium h-[50px] sm:h-[54px] bg-red-1 rounded-[60px]'>
             Save details
           </FillButton>
         </div>

@@ -211,43 +211,45 @@ const Billing: React.FC = () => {
         onClose={closeUpgrateModal}
       >
         <div className='w-full flex gap-3 mt-5 flex-col'>
-          <div className='w-full grid grid-cols-3 gap-4'>
+          <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
             {upgradePlaneData.map((plan, index) => {
               return (
                 <div
+                  className='w-full flex justify-center items-center'
                   key={index}
-                  className='w-full flex flex-col items-start bg-[#F9F9F9] border-[1px] border-[#E2E4E9] p-2 rounded-[16px]'
                 >
-                  <img src={plan.img} className='w-[53px] h-[54px]' alt='' />
-                  <p className='text-[20px] mt-4 text-black-3 font-normal'>
-                    Standard
-                  </p>
-                  <div className='flex justify-center gap-2 mb-4 items-center'>
-                    <Typography.h2 styles='text-black-3 font-bold'>
-                      {plan.price}
-                    </Typography.h2>
-                    <p className='text-[#525866] mt-3 text-[18px] font-normal'>
-                      /Month
+                  <div className='w-full max-w-[350px] md:max-w-none flex flex-col items-start bg-[#F9F9F9] border-[1px] border-[#E2E4E9] p-3 sm:p-3 rounded-[16px]'>
+                    <img src={plan.img} className='w-[53px] h-[54px]' alt='' />
+                    <p className='text-[20px] mt-3 sm:mt-4 text-black-3 font-normal'>
+                      Standard
                     </p>
+                    <div className='flex justify-center gap-2 mb-3 sm:mb-4 items-center'>
+                      <Typography.h2 styles='text-black-3 font-bold'>
+                        {plan.price}
+                      </Typography.h2>
+                      <p className='text-[#525866] mt-3 text-[18px] font-normal'>
+                        /Month
+                      </p>
+                    </div>
+                    {/* attributes ------> */}
+                    <div className='w-full flex flex-col gap-2 sm:gap-4'>
+                      {plan.attributes.map((attri, index) => {
+                        return (
+                          <Typography.mText
+                            key={index}
+                            styles='text-[#525866] font-normal'
+                          >
+                            {attri}
+                          </Typography.mText>
+                        );
+                      })}
+                    </div>
+                    <FillButton
+                      styles={`w-full ${plan.btnStyles} mt-5 text-[#525866] text-[14px] font-medium h-[48px] rounded-[60px]`}
+                    >
+                      Save details
+                    </FillButton>
                   </div>
-                  {/* attributes ------> */}
-                  <div className='w-full flex flex-col gap-4'>
-                    {plan.attributes.map((attri, index) => {
-                      return (
-                        <Typography.mText
-                          key={index}
-                          styles='text-[#525866] font-normal'
-                        >
-                          {attri}
-                        </Typography.mText>
-                      );
-                    })}
-                  </div>
-                  <FillButton
-                    styles={`w-full ${plan.btnStyles} mt-5 text-[#525866] text-[14px] font-medium h-[48px] rounded-[60px]`}
-                  >
-                    Save details
-                  </FillButton>
                 </div>
               );
             })}
@@ -258,20 +260,20 @@ const Billing: React.FC = () => {
       <CustomModal
         title='Cancel subscription'
         description='We’re sorry to see you go. If you cancel your membership, you’ll still have your benefits unstill the end of your current billing cycle.'
-        size='40%'
+        size='md'
         opened={cancelSub}
         onClose={closeCancelSub}
       >
         <div className='w-full flex gap-3 mt-5 flex-col'>
           <div className='bg-[#F9F9F9] p-3 border-[1px] flex flex-col border-[#E2E4E9] rounded-[16px]'>
-            <p className='text-[20px] text-black-3 font-semibold'>
+            <p className='text-[18px] sm:text-[20px] leading-[25px] text-black-3 font-semibold'>
               Resume membership at any time to...
             </p>
             {cancelSubscriptionData.map((attri, index) => {
               return (
                 <p
                   key={index}
-                  className='text-[#525866] mt-3 font-normal text-[16px]'
+                  className='text-[#525866] mt-2 sm:mt-3 font-normal text-[16px]'
                 >
                   {attri}
                 </p>
@@ -279,7 +281,7 @@ const Billing: React.FC = () => {
             })}
           </div>
           {/* buttons -------> */}
-          <div className='w-full mt-1 grid grid-cols-[.7fr,2fr] justify-center items-center gap-3'>
+          <div className='w-full mt-1 grid grid-cols-[.8fr,2fr] sm:grid-cols-[.7fr,2fr] justify-center items-center gap-2 sm:gap-3'>
             <OutlineButton
               event={() => {
                 closeCancelSub();
@@ -299,20 +301,20 @@ const Billing: React.FC = () => {
       <CustomModal
         title='Cancel subscription'
         description='Your feedback matters to us. we appreciate your time in providing feedback to help us improve our services. Your input is valuable to us.'
-        size='40%'
+        size='auto'
         opened={cancelSubReason}
         onClose={closeSubReason}
       >
         <div className='w-full flex gap-3 mt-5 flex-col'>
           <div className='bg-[#F9F9F9] p-3 border-[1px] flex flex-col border-[#E2E4E9] rounded-[16px]'>
-            <p className='text-[20px] text-black-3 font-semibold'>
+            <p className='text-[18px] sm:text-[20px] text-black-3 font-semibold'>
               Can you tell us why?
             </p>
             {cancelSubReasonData.map((attri, index) => {
               return (
                 <div
                   key={index}
-                  className='w-full flex mt-3 justify-start items-center'
+                  className='w-full flex mt-2 sm:mt-3 justify-start items-center'
                 >
                   <CheckBoxInput size='xs' label={attri} />
                 </div>
@@ -320,7 +322,7 @@ const Billing: React.FC = () => {
             })}
           </div>
           {/* textArea -----> */}
-          <div className='w-full gap-2 mt-2 flex flex-col'>
+          <div className='w-full gap-2 mt-1 sm:mt-2 flex flex-col'>
             <label
               htmlFor='message'
               className='text-[14px] font-normal text-black-3'
@@ -334,7 +336,7 @@ const Billing: React.FC = () => {
             />
           </div>
           {/* buttons -------> */}
-          <div className='w-full mt-1 grid grid-cols-[.7fr,2fr] justify-center items-center gap-3'>
+          <div className='w-full mt-1 grid grid-cols-[.8fr,2fr] sm:grid-cols-[.7fr,2fr] justify-center items-center gap-2 sm:gap-3'>
             <OutlineButton
               event={() => {
                 closeSubReason();
@@ -354,7 +356,7 @@ const Billing: React.FC = () => {
       <CustomModal
         title=''
         description=''
-        size='40%'
+        size='md'
         opened={subCanceledSuccessfully}
         onClose={closeSubCancel}
       >
