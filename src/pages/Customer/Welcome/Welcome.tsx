@@ -1,12 +1,12 @@
 import React, { useState, ChangeEvent } from 'react';
-import Typography from '../../../components/shared/Typography/Typography';
+import Typography from '../../../components/common/Typography';
 import { DateInput } from '@mantine/dates';
 import logo from '../../../assets/logo.png';
-import * as Icons from '../../../svg/Icons';
+import * as Icons from '../../../components/common/Icons';
 import classes from './Welcome.module.css';
-import SingleSelect from '../../../components/shared/Select/SingleSelect';
-import Input from '../../../components/shared/Inputs/Input';
-import FillButton from '../../../components/shared/Buttons/FillButton';
+import SingleSelect from '../../../components/common/SingleSelect';
+import Input from '../../../components/common/Inputs/Input';
+import FillButton from '../../../components/common/Buttons/FillButton';
 
 const Welcome: React.FC = () => {
   // states ---->

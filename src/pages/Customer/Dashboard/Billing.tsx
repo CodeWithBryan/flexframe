@@ -1,16 +1,16 @@
 import React from 'react';
-import * as Icons from '../../../svg/Icons';
-import Typography from '../../../components/shared/Typography/Typography';
-import FillButton from '../../../components/shared/Buttons/FillButton';
-import OutlineButton from '../../../components/shared/Buttons/OutlineButton';
+import * as Icons from '../../../components/common/Icons';
+import Typography from '../../../components/common/Typography';
+import FillButton from '../../../components/common/Buttons/FillButton';
+import OutlineButton from '../../../components/common/Buttons/OutlineButton';
 import { Input } from '@mantine/core';
 import { LuSearch } from 'react-icons/lu';
-import TableHeader from '../../../components/Customer/Billing/TableHeader';
-import TableRow from '../../../components/Customer/Billing/TableRow';
-import RowForSmallScreen from '../../../components/Customer/Billing/RowForSmallScreen';
-import CustomModal from '../../../components/shared/Popups/Modal';
+import TableHeader from '../../../components/features/billing/TableHeader';
+import TableRow from '../../../components/features/billing/TableRow';
+import RowForSmallScreen from '../../../components/features/billing/RowForSmallScreen';
 import { useDisclosure } from '@mantine/hooks';
-import CheckBoxInput from '../../../components/shared/Inputs/CheckBox';
+import CheckBoxInput from '../../../components/common/Inputs/CheckBox';
+import CustomModal from '../../../components/common/Modal';
 
 const Billing: React.FC = () => {
   const [upgrateOpened, { open: openUpgrateModal, close: closeUpgrateModal }] =

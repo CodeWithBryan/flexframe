@@ -16,6 +16,7 @@
     "@mantine/hooks": "^7.4.1",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.10.7",
+    "@types/react-router-hash-link": "^2.4.9",
     "dayjs": "^1.11.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
