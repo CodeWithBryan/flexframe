@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import LeftNavigation from '../../../components/Customer/LeftNavigation';
-import TopNavigation from '../../../components/Customer/TopNavigation';
+import LeftNavigation from '../../../components/layout/LeftNavigation';
+import TopNavigation from '../../../components/layout/TopNavigation';
 import Billing from './Billing';
 
 const Dashboard: React.FC = () => {

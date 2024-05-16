@@ -1,19 +1,19 @@
 import React from 'react';
-import SocialBanner from '../components/shared/SocialBanner/SocialBanner';
-import Hero from '../components/LandingPage/Hero';
-import AboutUs from '../components/LandingPage/AboutUs';
-import FeatureBanner from '../components/LandingPage/FeatureBanner';
-import PowerOfRip from '../components/LandingPage/PowerOfRip';
-import ManBehindPr from '../components/LandingPage/ManBehindPr';
-import SuccessStories from '../components/LandingPage/SuccessStories';
-import TrainingProgram from '../components/LandingPage/TrainingProgram';
-import GymTourVideo from '../components/LandingPage/GymTourVideo';
-import MemberShipPlane from '../components/LandingPage/MemberShipPlane';
-import OurSocialCircle from '../components/LandingPage/OurSocialCircle';
-import OurExpertTrainer from '../components/LandingPage/OurExpertTrainer';
-import OurArticles from '../components/LandingPage/OurArticles';
-import CallToActionBanner from '../components/LandingPage/CallToActionBanner';
-import Footer from '../components/shared/Footer/Footer';
+import Hero from '../components/features/landing-page/Hero';
+import AboutUs from '../components/features/landing-page/AboutUs';
+import FeatureBanner from '../components/features/landing-page/FeatureBanner';
+import PowerOfRip from '../components/features/landing-page/PowerOfRip';
+import ManBehindPr from '../components/features/landing-page/ManBehindPr';
+import SuccessStories from '../components/features/landing-page/SuccessStories';
+import TrainingProgram from '../components/features/landing-page/TrainingProgram';
+import GymTourVideo from '../components/features/landing-page/GymTourVideo';
+import MemberShipPlane from '../components/features/landing-page/MemberShipPlane';
+import OurSocialCircle from '../components/features/landing-page/OurSocialCircle';
+import OurExpertTrainer from '../components/features/landing-page/OurExpertTrainer';
+import OurArticles from '../components/features/landing-page/OurArticles';
+import CallToActionBanner from '../components/features/landing-page/CallToActionBanner';
+import Footer from '../components/layout/Footer';
+import SocialBanner from '../components/layout/SocialBanner';
 
 const LandingPage: React.FC = () => {
   return (
