@@ -1208,8 +1208,8 @@ export const faceBook3: React.FC<Props> = ({
         y2='3'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='#0062E0' />
-        <stop offset='1' stop-color='#19AFFF' />
+        <stop stopColor='#0062E0' />
+        <stop offset='1' stopColor='#19AFFF' />
       </linearGradient>
     </defs>
   </svg>
@@ -1280,26 +1280,26 @@ export const support: React.FC<Props> = ({
     <path
       d='M14.1665 7.50371C14.1665 7.2157 14.1665 7.07169 14.2099 6.94331C14.3359 6.57037 14.668 6.42563 15.0007 6.27407C15.3748 6.10368 15.5619 6.01849 15.7472 6.0035C15.9576 5.98649 16.1684 6.03181 16.3482 6.13274C16.5866 6.26654 16.7529 6.52078 16.9231 6.72751C17.7092 7.68237 18.1023 8.1598 18.2461 8.6863C18.3622 9.11117 18.3622 9.55549 18.2461 9.98037C18.0363 10.7483 17.3736 11.392 16.883 11.9878C16.6321 12.2926 16.5066 12.445 16.3482 12.5339C16.1684 12.6349 15.9576 12.6802 15.7472 12.6632C15.5619 12.6482 15.3748 12.563 15.0007 12.3926C14.668 12.241 14.3359 12.0963 14.2099 11.7234C14.1665 11.595 14.1665 11.451 14.1665 11.163V7.50371Z'
       stroke='#525866'
-      stroke-width='1.5'
+      strokeWidth='1.5'
     />
     <path
       d='M5.83301 7.50385C5.83301 7.14114 5.82282 6.81517 5.5296 6.56017C5.42295 6.46741 5.28155 6.40301 4.99876 6.27421C4.62468 6.10382 4.43764 6.01863 4.25231 6.00364C3.69627 5.95867 3.39711 6.33817 3.07645 6.72765C2.2903 7.68251 1.89723 8.15994 1.75339 8.68643C1.63732 9.11131 1.63732 9.55563 1.75339 9.98051C1.96318 10.7484 2.62594 11.3921 3.11652 11.988C3.42575 12.3636 3.72115 12.7063 4.25231 12.6633C4.43764 12.6483 4.62468 12.5631 4.99876 12.3927C5.28155 12.2639 5.42295 12.1995 5.5296 12.1068C5.82282 11.8518 5.83301 11.5258 5.83301 11.1631V7.50385Z'
       stroke='#525866'
-      stroke-width='1.5'
+      strokeWidth='1.5'
     />
     <path
       d='M4.1665 6C4.1665 3.23858 6.77818 1 9.99984 1C13.2215 1 15.8332 3.23858 15.8332 6'
       stroke='#525866'
-      stroke-width='1.5'
-      stroke-linecap='square'
-      stroke-linejoin='round'
+      strokeWidth='1.5'
+      strokeLinecap='square'
+      strokeLinejoin='round'
     />
     <path
       d='M15.833 12.667V13.3337C15.833 14.8064 14.3406 16.0003 12.4997 16.0003H10.833'
       stroke='#525866'
-      stroke-width='1.5'
-      stroke-linecap='round'
-      stroke-linejoin='round'
+      strokeWidth='1.5'
+      strokeLinecap='round'
+      strokeLinejoin='round'
     />
   </svg>
 );
@@ -1340,7 +1340,7 @@ export const profile: React.FC<Props> = ({
     stroke={stroke}
   >
     <g filter='url(#filter0_i_682_7341)'>
-      <g clip-path='url(#clip0_682_7341)'>
+      <g clipPath='url(#clip0_682_7341)'>
         <rect width='40' height='40' rx='20' fill='#E2E4E9' />
         <g filter='url(#filter1_di_682_7341)'>
           <ellipse
@@ -1349,12 +1349,12 @@ export const profile: React.FC<Props> = ({
             rx='16'
             ry='12'
             fill='url(#paint0_radial_682_7341)'
-            shape-rendering='crispEdges'
+            shapeRendering='crispEdges'
           />
           <path
             d='M35.5 38C35.5 41.121 33.8144 43.9847 31.0137 46.0853C28.2128 48.1859 24.3206 49.5 20 49.5C15.6794 49.5 11.7872 48.1859 8.98629 46.0853C6.18557 43.9847 4.5 41.121 4.5 38C4.5 34.879 6.18557 32.0153 8.98629 29.9147C11.7872 27.8141 15.6794 26.5 20 26.5C24.3206 26.5 28.2128 27.8141 31.0137 29.9147C33.8144 32.0153 35.5 34.879 35.5 38Z'
             stroke='url(#paint1_radial_682_7341)'
-            shape-rendering='crispEdges'
+            shapeRendering='crispEdges'
           />
         </g>
         <g filter='url(#filter2_di_682_7341)'>
@@ -1363,14 +1363,14 @@ export const profile: React.FC<Props> = ({
             cy='16'
             r='8'
             fill='url(#paint2_radial_682_7341)'
-            shape-rendering='crispEdges'
+            shapeRendering='crispEdges'
           />
           <circle
             cx='20'
             cy='16'
             r='7.5'
             stroke='url(#paint3_radial_682_7341)'
-            shape-rendering='crispEdges'
+            shapeRendering='crispEdges'
           />
         </g>
       </g>
@@ -1383,9 +1383,9 @@ export const profile: React.FC<Props> = ({
         width='40'
         height='48'
         filterUnits='userSpaceOnUse'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
       >
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend
           mode='normal'
           in='SourceGraphic'
@@ -1418,9 +1418,9 @@ export const profile: React.FC<Props> = ({
         width='40'
         height='40'
         filterUnits='userSpaceOnUse'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
       >
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feColorMatrix
           in='SourceAlpha'
           type='matrix'
@@ -1471,9 +1471,9 @@ export const profile: React.FC<Props> = ({
         width='24'
         height='32'
         filterUnits='userSpaceOnUse'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
       >
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feColorMatrix
           in='SourceAlpha'
           type='matrix'
@@ -1525,8 +1525,8 @@ export const profile: React.FC<Props> = ({
         gradientUnits='userSpaceOnUse'
         gradientTransform='translate(20 26) rotate(90) scale(24 32)'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </radialGradient>
       <radialGradient
         id='paint1_radial_682_7341'
@@ -1536,8 +1536,8 @@ export const profile: React.FC<Props> = ({
         gradientUnits='userSpaceOnUse'
         gradientTransform='translate(20 26) rotate(90) scale(24 32)'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </radialGradient>
       <radialGradient
         id='paint2_radial_682_7341'
@@ -1547,8 +1547,8 @@ export const profile: React.FC<Props> = ({
         gradientUnits='userSpaceOnUse'
         gradientTransform='translate(20 8) rotate(90) scale(16)'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </radialGradient>
       <radialGradient
         id='paint3_radial_682_7341'
@@ -1558,8 +1558,8 @@ export const profile: React.FC<Props> = ({
         gradientUnits='userSpaceOnUse'
         gradientTransform='translate(20 8) rotate(90) scale(16)'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </radialGradient>
       <clipPath id='clip0_682_7341'>
         <rect width='40' height='40' rx='20' fill='white' />
@@ -1583,15 +1583,15 @@ export const bag: React.FC<Props> = ({
     <path
       d='M1.0835 9.00016C1.0835 5.26821 1.0835 3.40223 2.24287 2.24287C3.40223 1.0835 5.26821 1.0835 9.00016 1.0835C12.7321 1.0835 14.5981 1.0835 15.7575 2.24287C16.9168 3.40223 16.9168 5.26821 16.9168 9.00016C16.9168 12.7321 16.9168 14.5981 15.7575 15.7575C14.5981 16.9168 12.7321 16.9168 9.00016 16.9168C5.26821 16.9168 3.40223 16.9168 2.24287 15.7575C1.0835 14.5981 1.0835 12.7321 1.0835 9.00016Z'
       stroke='#525866'
-      stroke-width='1.5'
-      stroke-linecap='round'
-      stroke-linejoin='round'
+      strokeWidth='1.5'
+      strokeLinecap='round'
+      strokeLinejoin='round'
     />
     <path
       d='M16.9168 10.25H12.8121C12.1104 10.25 11.559 10.8363 11.2497 11.456C10.9137 12.1293 10.2409 12.75 9.00016 12.75C7.75944 12.75 7.0866 12.1293 6.75061 11.456C6.44135 10.8363 5.88997 10.25 5.18821 10.25H1.0835'
       stroke='#525866'
-      stroke-width='1.5'
-      stroke-linejoin='round'
+      strokeWidth='1.5'
+      strokeLinejoin='round'
     />
   </svg>
 );
@@ -1689,9 +1689,9 @@ export const cross: React.FC<Props> = ({
     <path
       d='M12.8337 1.1665L1.16699 12.8332M1.16699 1.1665L12.8337 12.8332'
       stroke='#0A0D14'
-      stroke-width='1.5'
-      stroke-linecap='round'
-      stroke-linejoin='round'
+      strokeWidth='1.5'
+      strokeLinecap='round'
+      strokeLinejoin='round'
     />
   </svg>
 );
@@ -1711,29 +1711,29 @@ export const card1: React.FC<Props> = ({
     <path
       d='M1.66675 10.0002C1.66675 7.05226 1.66675 5.5783 2.54408 4.59425C2.68441 4.43685 2.83906 4.29129 3.0063 4.15922C4.05186 3.3335 5.61793 3.3335 8.75008 3.3335H11.2501C14.3822 3.3335 15.9483 3.3335 16.9938 4.15922C17.1611 4.29129 17.3157 4.43685 17.4561 4.59425C18.3334 5.5783 18.3334 7.05226 18.3334 10.0002C18.3334 12.9481 18.3334 14.422 17.4561 15.4061C17.3157 15.5635 17.1611 15.709 16.9938 15.8411C15.9483 16.6668 14.3822 16.6668 11.2501 16.6668H8.75008C5.61793 16.6668 4.05186 16.6668 3.0063 15.8411C2.83906 15.709 2.68441 15.5635 2.54408 15.4061C1.66675 14.422 1.66675 12.9481 1.66675 10.0002Z'
       stroke='#868C98'
-      stroke-width='1.5'
-      stroke-linecap='round'
-      stroke-linejoin='round'
+      strokeWidth='1.5'
+      strokeLinecap='round'
+      strokeLinejoin='round'
     />
     <path
       d='M8.33325 13.3335H9.58325'
       stroke='#868C98'
-      stroke-width='1.5'
-      stroke-linecap='round'
-      stroke-linejoin='round'
+      strokeWidth='1.5'
+      strokeLinecap='round'
+      strokeLinejoin='round'
     />
     <path
       d='M12.0833 13.3335H14.9999'
       stroke='#868C98'
-      stroke-width='1.5'
-      stroke-linecap='round'
-      stroke-linejoin='round'
+      strokeWidth='1.5'
+      strokeLinecap='round'
+      strokeLinejoin='round'
     />
     <path
       d='M1.66675 7.5H18.3334'
       stroke='#868C98'
-      stroke-width='1.5'
-      stroke-linejoin='round'
+      strokeWidth='1.5'
+      strokeLinejoin='round'
     />
   </svg>
 );
@@ -1750,7 +1750,7 @@ export const card2: React.FC<Props> = ({
     fill={fill}
     stroke={stroke}
   >
-    <g clip-path='url(#clip0_715_3375)'>
+    <g clipPath='url(#clip0_715_3375)'>
       <g filter='url(#filter0_dii_715_3375)'>
         <rect x='3' y='3' width='26' height='18' rx='3' fill='#CDD0D5' />
         <rect
@@ -1781,9 +1781,9 @@ export const card2: React.FC<Props> = ({
         width='30'
         height='25'
         filterUnits='userSpaceOnUse'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
       >
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feColorMatrix
           in='SourceAlpha'
           type='matrix'
@@ -1850,9 +1850,9 @@ export const card2: React.FC<Props> = ({
         width='12'
         height='7'
         filterUnits='userSpaceOnUse'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
       >
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feColorMatrix
           in='SourceAlpha'
           type='matrix'
@@ -1903,9 +1903,9 @@ export const card2: React.FC<Props> = ({
         width='12'
         height='7'
         filterUnits='userSpaceOnUse'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
       >
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feColorMatrix
           in='SourceAlpha'
           type='matrix'
@@ -1956,9 +1956,9 @@ export const card2: React.FC<Props> = ({
         width='7'
         height='8'
         filterUnits='userSpaceOnUse'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
       >
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feColorMatrix
           in='SourceAlpha'
           type='matrix'
@@ -2010,8 +2010,8 @@ export const card2: React.FC<Props> = ({
         y2='21'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='#8A8F93' stop-opacity='0' />
-        <stop offset='1' stop-color='#8A8F93' />
+        <stop stopColor='#8A8F93' stopOpacity='0' />
+        <stop offset='1' stopColor='#8A8F93' />
       </linearGradient>
       <clipPath id='clip0_715_3375'>
         <rect width='32' height='24' rx='4' fill='white' />

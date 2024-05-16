@@ -5,15 +5,7 @@ import { BsGrid } from 'react-icons/bs';
 import { MdOutlinePriceChange } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
-interface Props {
-  selectedOption: string;
-  setSelectedOption: any;
-}
-
-const LeftNavigation: React.FC<Props> = ({
-  selectedOption,
-  setSelectedOption,
-}: Props) => {
+const LeftNavigation: React.FC = () => {
   return (
     <div className='w-full flex flex-col justify-between h-full p-4 border-r-[1px] border-[#E2E4E9]'>
       <div className='w-full flex flex-col'>
@@ -33,13 +25,12 @@ const LeftNavigation: React.FC<Props> = ({
             return (
               <NavLink
                 key={index}
-                to={item.link as string}
-                onClick={() => setSelectedOption(item.name)}
-                className={`w-full rounded-md h-[45px] px-3 flex justify-start items-center gap-2 ${
-                  selectedOption === item.name
-                    ? 'bg-red-1 hover:bg-red-1 text-white-1'
-                    : 'bg-transparent hover:bg-red-1/5 text-[#525866]'
-                }`}
+                to={item.link}
+                className={({ isActive }) => [
+                  "w-full rounded-md h-[45px] px-3 flex justify-start items-center gap-2",
+                  isActive ? 'bg-red-1 hover:bg-red-1 text-white-1' : 'bg-transparent hover:bg-red-1/5 text-[#525866]',
+                ].join(" ")}
+                end
               >
                 {item.icon}
                 <Typography.mText styles=' font-medium'>
@@ -58,40 +49,13 @@ const leftNavigationLink = [
   {
     name: 'Dashboard',
     icon: <BsGrid className='text-[20px]' />,
-    link: '/dashboard',
+    link: '/member/dashboard',
   },
-  // {
-  //   name: 'Calendar',
-  //   icon: <BsCalendar4 className='text-[20px]' />,
-  // },
-  // {
-  //   name: 'Workout routine',
-  //   icon: <FaPersonFalling className='text-[20px]' />,
-  // },
-  // {
-  //   name: 'Meal Plan',
-  //   icon: <GiMeal className='text-[20px]' />,
-  // },
-  // {
-  //   name: 'Attendance',
-  //   icon: <BsPersonCheck className='text-[20px]' />,
-  // },
   {
-    name: 'Billings',
+    name: 'Billing',
     icon: <MdOutlinePriceChange className='text-[20px]' />,
+    link: '/member/dashboard/billing',
   },
-  // {
-  //   name: 'Documents',
-  //   icon: <IoDocumentTextOutline className='text-[20px]' />,
-  // },
-  // {
-  //   name: 'Guest passes',
-  //   icon: <BsPersonVcard className='text-[20px]' />,
-  // },
-  // {
-  //   name: 'Shop',
-  //   icon: <GrWorkshop className='text-[20px] text-[#868C98]' />,
-  // },
 ];
 
 export default LeftNavigation;
