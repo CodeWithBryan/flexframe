@@ -38,7 +38,8 @@ const RowForSmallScreen: React.FC<Props> = ({
             {startDate} - {expireDate}
           </Typography.xsText>
           <div className='flex justify-center items-center gap-1'>
-            {method.img}
+            {/* {method.img} */}
+            <Icons.visa className='w-[20px] h-[20px]' />
             <Typography.xsText styles='text-[#525866] font-normal'>
               {method.number}
             </Typography.xsText>

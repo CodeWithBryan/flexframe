@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Input } from '@mantine/core';
 import { LuSearch } from 'react-icons/lu';
 import * as Icons from '../common/Icons';
@@ -7,17 +7,12 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import logo from '../../assets/logo.png';
 import { Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { BsGrid } from 'react-icons/bs';
+import { MdOutlinePriceChange } from 'react-icons/md';
 import Typography from '../common/Typography';
-import { BillingNavigation } from '../../data/billing';
 import { NavLink } from 'react-router-dom';
 
-interface Props {
-  option: string;
-  setOption: any;
-}
-
 const TopNavigation: React.FC = () => {
-  const [option, setOption] = useState('');
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
@@ -47,23 +42,23 @@ const TopNavigation: React.FC = () => {
           <div className='border-[1px] clg:hidden hover:bg-black-1/5 w-[45px] h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full'>
             <LuSearch className='text-[22px] text-[#525866]' />
           </div>
-          <button className='border-[1px] hover:bg-black-1/5 w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full lg:rounded-[10px]'>
-            <Icons.bag className='w-[20px] sm:w-[22px] h-[20px] sm:h-[22px]' />
+          <button className='border-[1px] hover:bg-black-1/5 w-[45px] h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full lg:rounded-[10px]'>
+            <Icons.bag className='w-[22px] h-[22px]' />
           </button>
-          {/* notification ---> */}
-          <button className='border-[1px] hover:bg-black-1/5 w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full'>
-            <MdNotificationsNone className='text-[22px] sm:text-[27px] text-[#525866]' />
+          {/* notification */}
+          <button className='border-[1px] hover:bg-black-1/5 w-[45px] h-[45px] flex justify-center items-center border-[#E2E4E9] rounded-full'>
+            <MdNotificationsNone className='text-[27px] text-[#525866]' />
           </button>
           {/* profile */}
           <button className='hover:opacity-80'>
-            <Icons.profile className='w-[35px] sm:w-[43px] h-[35px] sm:h-[43px]' />
+            <Icons.profile className='w-[43px] h-[43px]' />
           </button>
           {/* hamburger */}
           <button
             onClick={open}
-            className='w-[35px] sm:w-[45px] clg:hidden h-[35px] sm:h-[45px] flex justify-center bg-[#F3F4F6] items-center rounded-full border-[1px] border-[#E2E4E9]'
+            className='w-[45px] clg:hidden h-[45px] flex justify-center bg-[#F3F4F6] items-center rounded-full border-[1px] border-[#E2E4E9]'
           >
-            <RxHamburgerMenu className='text-[22px] sm:text-[27px] text-[#525866]' />
+            <RxHamburgerMenu className='text-[27px] text-[#525866]' />
           </button>
         </div>
       </div>
@@ -72,40 +67,50 @@ const TopNavigation: React.FC = () => {
         <div className='w-full flex flex-col items-start'>
           {/* top section */}
           <div className='flex justify-center items-center gap-3'>
-            <img
-              src={logo}
-              className='w-[30px] h-[30px] object-fill'
-              alt='RP Fitness Logo'
-            />
+            <img src={logo} className='w-[30px] h-[30px] object-fill' alt='RP Fitness Logo' />
             <Typography.mText styles='text-black-1 font-bold'>
               RP Fitness
             </Typography.mText>
           </div>
           {/* links */}
           <div className='w-full flex flex-col items-start py-5 gap-2'>
-            {BillingNavigation.map((item, index) => {
-              return (
-                <button
-                  onClick={() => setOption(item.name)}
-                  key={index}
-                  className={`w-full ${
-                    option === item.name
-                      ? 'bg-red-1 hover:bg-red-1 text-white-1'
-                      : 'bg-transparent hover:bg-red-1/5 text-[#525866]'
-                  }  rounded-md h-[45px] px-3 flex justify-start items-center gap-2`}
-                >
-                  {item.icon}
-                  <Typography.mText styles=' font-medium'>
-                    {item.name}
-                  </Typography.mText>
-                </button>
-              );
-            })}
+            {links.map((item, index) => (
+              <NavLink
+                key={index}
+                to={item.link}
+                className={({ isActive }) => [
+                  "w-full rounded-md h-[45px] px-3 flex justify-start items-center gap-2",
+                  isActive ? 'bg-red-1 hover:bg-red-1 text-white-1' : 'bg-transparent hover:bg-red-1/5 text-[#525866]',
+                ].join(" ")}
+                end={item.exact}
+                onClick={close}
+              >
+                {item.icon}
+                <Typography.mText styles='font-medium'>
+                  {item.name}
+                </Typography.mText>
+              </NavLink>
+            ))}
           </div>
         </div>
       </Drawer>
     </React.Fragment>
   );
 };
+
+const links = [
+  {
+    name: 'Dashboard',
+    icon: <BsGrid className='text-[20px]' />,
+    link: '/member/dashboard',
+    exact: true,
+  },
+  {
+    name: 'Billing',
+    icon: <MdOutlinePriceChange className='text-[20px]' />,
+    link: '/member/dashboard/billing',
+    exact: false,
+  },
+];
 
 export default TopNavigation;
