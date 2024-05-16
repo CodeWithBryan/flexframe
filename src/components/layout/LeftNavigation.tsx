@@ -4,15 +4,7 @@ import Typography from '../common/Typography';
 import { BillingNavigation } from '../../data/billing';
 import { NavLink } from 'react-router-dom';
 
-interface Props {
-  selectedOption: string;
-  setSelectedOption: any;
-}
-
-const LeftNavigation: React.FC<Props> = ({
-  selectedOption,
-  setSelectedOption,
-}: Props) => {
+const LeftNavigation: React.FC = () => {
   return (
     <div className='w-full flex flex-col justify-between h-full p-4 border-r-[1px] border-[#E2E4E9]'>
       <div className='w-full flex flex-col'>
@@ -31,6 +23,16 @@ const LeftNavigation: React.FC<Props> = ({
             return (
               <NavLink
                 key={index}
+                to={item.link}
+                className={({ isActive }) =>
+                  [
+                    'w-full rounded-md h-[45px] px-3 flex justify-start items-center gap-2',
+                    isActive
+                      ? 'bg-red-1 hover:bg-red-1 text-white-1'
+                      : 'bg-transparent hover:bg-red-1/5 text-[#525866]',
+                  ].join(' ')
+                }
+                end
                 to='#'
                 onClick={() => setSelectedOption(item.name)}
                 className={`w-full rounded-md h-[45px] px-3 flex justify-start items-center gap-2 ${
