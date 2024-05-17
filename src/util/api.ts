@@ -22,8 +22,8 @@ interface RegisterResponse {
   user: User;
 }
 
-export const register = (email: string, password: string, firstName: string, lastName: string): Promise<AxiosResponse<RegisterResponse>> => {
-  return api.post<RegisterResponse>('/auth/register', { email, password, firstName, lastName });
+export const register = (email: string, password: string, phone: string, firstName: string, lastName: string): Promise<AxiosResponse<RegisterResponse>> => {
+  return api.post<RegisterResponse>('/auth/register', { email, password, phone, firstName, lastName });
 };
 
 export default api;
