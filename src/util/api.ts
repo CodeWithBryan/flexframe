@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import type { User } from '../stores/auth.store';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3001', // Change to your API base URL
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3001', // Change to your API base URL
   headers: {
     'Content-Type': 'application/json',
   },
