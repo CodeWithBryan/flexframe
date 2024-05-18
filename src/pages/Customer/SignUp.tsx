@@ -48,7 +48,7 @@ const SignUp: React.FC = () => {
       const user = response.data.user;
 
       storeLogin(token, user);
-      navigate('/member/dashboard');
+      navigate('/member/welcome');
     } catch (error) {
       console.error('Registration failed:', error);
       setError('Registration failed. Please try again.');

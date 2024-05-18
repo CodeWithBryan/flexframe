@@ -44,10 +44,6 @@ const Welcome: React.FC = () => {
             Answer few questions to help us improve your fitness experience.
           </Typography.mText>
 
-          <Typography.smallText styles='text-black-3 sm:text-left text-center font-normal'>
-            Didn’t receive a code? Send a new code in{' '}
-            <span className='text-red-1 font-semibold'> 00:29 </span>
-          </Typography.smallText>
           {/* inputs --------->  */}
           <div className='w-full flex flex-col gap-3 sm:gap-4 mt-3 sm:mt-4'>
             {/* date of birth ------->  */}
