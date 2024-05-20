@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage';
 import Login from './pages/Login';
 import CustomerRouter from './pages/Customer/MemberRouter';
 import Logout from './pages/Logout';
+import AdminRouter from './pages/Admin/AdminRouter';
 
 const AppRouter = () => {
   return (
@@ -17,11 +18,9 @@ const AppRouter = () => {
         <Route path='/signup' element={<SignUp />} />
         <Route path='/verify-email' element={<VerifyEmail />} />
         <Route path='/welcome' element={<Welcome />} />
-        <Route path="/member/*" element={<CustomerRouter />} />
-        <Route
-            path="*"
-            element={<Navigate to="/" replace />}
-        />
+        <Route path='/member/*' element={<CustomerRouter />} />
+        <Route path='/admin/*' element={<AdminRouter />} />
+        <Route path='*' element={<Navigate to='/' replace />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import logo from '../../../assets/logo.png';
 import Typography from '../../common/Typography';
-import { BsGrid } from 'react-icons/bs';
-import { MdOutlinePriceChange } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
-const LeftNavigation: React.FC = () => {
+interface Props {
+  data: {
+    name: string;
+    icon: ReactNode;
+    link: string;
+  }[];
+}
+
+const LeftNavigation: React.FC<Props> = ({ data }: Props) => {
   return (
     <div className='w-full flex flex-col justify-between h-full p-4 border-r-[1px] border-[#E2E4E9]'>
       <div className='w-full flex flex-col'>
@@ -21,7 +27,7 @@ const LeftNavigation: React.FC = () => {
         </div>
         {/* links ----->  */}
         <div className='w-full flex flex-col items-start py-8 gap-2'>
-          {leftNavigationLink.map((item, index) => {
+          {data.map((item, index) => {
             return (
               <NavLink
                 key={index}
@@ -48,18 +54,5 @@ const LeftNavigation: React.FC = () => {
     </div>
   );
 };
-
-const leftNavigationLink = [
-  {
-    name: 'Dashboard',
-    icon: <BsGrid className='text-[20px]' />,
-    link: '/member/dashboard',
-  },
-  {
-    name: 'Billing',
-    icon: <MdOutlinePriceChange className='text-[20px]' />,
-    link: '/member/dashboard/billing',
-  },
-];
 
 export default LeftNavigation;
