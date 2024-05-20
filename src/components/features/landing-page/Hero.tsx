@@ -4,7 +4,7 @@ import Typography from '../../common/Typography';
 import * as Icons from '../../common/Icons';
 import FillButton from '../../common/Buttons/FillButton';
 import { Link } from 'react-router-dom';
-import Navibar from '../../common/Navibar';
+import Navibar from '../../layout/LandingPage/Navibar';
 
 const Hero: React.FC = () => {
   return (
