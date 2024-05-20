@@ -1,6 +1,6 @@
 import React from 'react';
-import LeftNavigation from '../../../components/layout/LeftNavigation';
-import TopNavigation from '../../../components/layout/TopNavigation';
+import LeftNavigation from '../../../components/layout/Customer/LeftNavigation';
+import TopNavigation from '../../../components/layout/Customer/TopNavigation';
 import { Outlet } from 'react-router-dom';
 
 const DashboardWrapper: React.FC = () => {

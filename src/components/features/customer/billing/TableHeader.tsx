@@ -1,7 +1,7 @@
 import React from 'react';
-import Typography from '../../common/Typography';
+import Typography from '../../../common/Typography';
 import { Checkbox } from '@mantine/core';
-import * as Icons from '../../common/Icons';
+import * as Icons from '../../../common/Icons';
 
 interface Props {
   headers: { name: string; isFilterIcon: boolean }[];

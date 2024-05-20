@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from '../../assets/logo.png';
-import * as Icons from '../common/Icons';
+import logo from '../../../assets/logo.png';
+import * as Icons from '../../common/Icons';
 import { Link } from 'react-router-dom';
-import ComponentWrapper from '../common/ComponentWrapper';
-import Typography from '../common/Typography';
+import ComponentWrapper from '../../common/ComponentWrapper';
+import Typography from '../../common/Typography';
 
 const Footer: React.FC = () => {
   return (
@@ -38,7 +38,11 @@ const Footer: React.FC = () => {
               <div className='flex justify-center items-center gap-3'>
                 {footerData.socialBannerData.social.map((item, index) => {
                   return (
-                    <Link key={index} to={item.link} className='hover:opacity-80'>
+                    <Link
+                      key={index}
+                      to={item.link}
+                      className='hover:opacity-80'
+                    >
                       {item.icon}
                     </Link>
                   );
@@ -129,11 +133,13 @@ const footerData = {
     ],
     social: [
       {
-        icon: <Icons.faceBook
-          fill='#ffffff'
-          stroke='none'
-          className='w-[23px] h-[23px]'
-        />,
+        icon: (
+          <Icons.faceBook
+            fill='#ffffff'
+            stroke='none'
+            className='w-[23px] h-[23px]'
+          />
+        ),
         link: 'https://www.facebook.com/rnpfitnessgymm/',
       },
       {

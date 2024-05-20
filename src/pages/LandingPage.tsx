@@ -12,8 +12,8 @@ import OurSocialCircle from '../components/features/landing-page/OurSocialCircle
 import OurExpertTrainer from '../components/features/landing-page/OurExpertTrainer';
 import OurArticles from '../components/features/landing-page/OurArticles';
 import CallToActionBanner from '../components/features/landing-page/CallToActionBanner';
-import Footer from '../components/layout/Footer';
-import SocialBanner from '../components/layout/SocialBanner';
+import Footer from '../components/layout/LandingPage/Footer';
+import SocialBanner from '../components/layout/LandingPage/SocialBanner';
 
 const LandingPage: React.FC = () => {
   return (

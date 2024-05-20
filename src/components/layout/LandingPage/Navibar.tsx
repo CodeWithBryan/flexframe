@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import logo from '../../assets/logo.png';
+import logo from '../../../assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
-import FillButton from './Buttons/FillButton';
-import ComponentWrapper from './ComponentWrapper';
-import Typography from './Typography';
-import * as Icons from './Icons';
+import FillButton from '../../common/Buttons/FillButton';
+import ComponentWrapper from '../../common/ComponentWrapper';
+import Typography from '../../common/Typography';
+import * as Icons from '../../common/Icons';
 import { HashLink } from 'react-router-hash-link';
 
 const Navibar: React.FC = () => {
@@ -59,7 +59,7 @@ const Navibar: React.FC = () => {
               <button className='p-[10px] xl:p-[12px] bg-white-1/10 border-[1px] border-white-1/10 active:translate-y-[2px] hover:opacity-80 rounded-full flex justify-center items-center'>
                 <Icons.person />
               </button>
-              <Link to="/signup">
+              <Link to='/signup'>
                 <FillButton styles='bg-red-1 px-[20px] xl:px-[24px] py-[12px] xl:py-[16px] rounded-[60px]'>
                   <Typography.mText styles='text-white-1 font-semibold'>
                     Join RP Fitness Today

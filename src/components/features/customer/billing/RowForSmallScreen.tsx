@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import Typography from '../../common/Typography';
-import * as Icons from '../../common/Icons';
+import Typography from '../../../common/Typography';
+import * as Icons from '../../../common/Icons';
 
 interface Props {
   planeName: {

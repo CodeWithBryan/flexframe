@@ -1,17 +1,17 @@
 import React from 'react';
 import { Input } from '@mantine/core';
 import { LuSearch } from 'react-icons/lu';
-import * as Icons from '../common/Icons';
+import * as Icons from '../../common/Icons';
 import { MdNotificationsNone } from 'react-icons/md';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import logo from '../../assets/logo.png';
+import logo from '../../../assets/logo.png';
 import { Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { BsGrid } from 'react-icons/bs';
 import { MdOutlinePriceChange } from 'react-icons/md';
-import Typography from '../common/Typography';
+import Typography from '../../common/Typography';
 import { NavLink } from 'react-router-dom';
-import ProfileDropdown from '../common/ProfileDropdown';
+import ProfileDropdown from '../../common/ProfileDropdown';
 
 const TopNavigation: React.FC = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -66,7 +66,11 @@ const TopNavigation: React.FC = () => {
         <div className='w-full flex flex-col items-start'>
           {/* top section */}
           <div className='flex justify-center items-center gap-3'>
-            <img src={logo} className='w-[30px] h-[30px] object-fill' alt='RP Fitness Logo' />
+            <img
+              src={logo}
+              className='w-[30px] h-[30px] object-fill'
+              alt='RP Fitness Logo'
+            />
             <Typography.mText styles='text-black-1 font-bold'>
               RP Fitness
             </Typography.mText>
@@ -77,10 +81,14 @@ const TopNavigation: React.FC = () => {
               <NavLink
                 key={index}
                 to={item.link}
-                className={({ isActive }) => [
-                  "w-full rounded-md h-[45px] px-3 flex justify-start items-center gap-2",
-                  isActive ? 'bg-red-1 hover:bg-red-1 text-white-1' : 'bg-transparent hover:bg-red-1/5 text-[#525866]',
-                ].join(" ")}
+                className={({ isActive }) =>
+                  [
+                    'w-full rounded-md h-[45px] px-3 flex justify-start items-center gap-2',
+                    isActive
+                      ? 'bg-red-1 hover:bg-red-1 text-white-1'
+                      : 'bg-transparent hover:bg-red-1/5 text-[#525866]',
+                  ].join(' ')
+                }
                 end={item.exact}
                 onClick={close}
               >
