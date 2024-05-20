@@ -11,6 +11,7 @@ import { BsGrid } from 'react-icons/bs';
 import { MdOutlinePriceChange } from 'react-icons/md';
 import Typography from '../common/Typography';
 import { NavLink } from 'react-router-dom';
+import ProfileDropdown from '../common/ProfileDropdown';
 
 const TopNavigation: React.FC = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -50,9 +51,7 @@ const TopNavigation: React.FC = () => {
             <MdNotificationsNone className='text-[27px] text-[#525866]' />
           </button>
           {/* profile */}
-          <button className='hover:opacity-80'>
-            <Icons.profile className='w-[43px] h-[43px]' />
-          </button>
+          <ProfileDropdown />
           {/* hamburger */}
           <button
             onClick={open}
