@@ -11,7 +11,7 @@ interface Props {
   startDate: string;
   expireDate: string;
   method: {
-    img: ReactNode;
+    // img: ReactNode;
     number: string;
   };
   status: string;
