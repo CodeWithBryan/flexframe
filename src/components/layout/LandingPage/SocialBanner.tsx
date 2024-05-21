@@ -1,7 +1,7 @@
-import ComponentWrapper from '../common/ComponentWrapper';
-import * as Icons from '../common/Icons';
+import ComponentWrapper from '../../common/ComponentWrapper';
+import * as Icons from '../../common/Icons';
 import { Link } from 'react-router-dom';
-import Typography from '../common/Typography';
+import Typography from '../../common/Typography';
 
 const SocialBanner = () => {
   return (

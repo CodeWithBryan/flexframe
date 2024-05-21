@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Checkbox } from '@mantine/core';
-import Typography from '../../common/Typography';
-import * as Icons from '../../common/Icons';
+import Typography from '../../../common/Typography';
+import * as Icons from '../../../common/Icons';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { useDisclosure } from '@mantine/hooks';
-import Input from '../../common/Inputs/Input';
-import SingleSelect from '../../common/SingleSelect';
-import FillButton from '../../common/Buttons/FillButton';
-import CustomModal from '../../common/Modal';
+import Input from '../../../common/Inputs/Input';
+import SingleSelect from '../../../common/SingleSelect';
+import FillButton from '../../../common/Buttons/FillButton';
+import CustomModal from '../../../common/Modal';
 
 interface Props {
   planeName: {

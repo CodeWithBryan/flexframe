@@ -1,3 +1,5 @@
+import * as Icons from '../components/common/Icons';
+
 export const InvoiceTable = {
   header: [
     {
@@ -35,7 +37,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'active',
@@ -49,7 +51,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'expired',
@@ -63,7 +65,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'active',
@@ -77,7 +79,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'expired',
@@ -91,7 +93,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'active',
@@ -105,7 +107,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'expired',
@@ -119,7 +121,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'expired',
@@ -133,7 +135,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'expired',
@@ -147,7 +149,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'expired',
@@ -161,7 +163,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'expired',
@@ -175,7 +177,7 @@ export const InvoiceTable = {
       expireDate: 'Jan 18, 2023',
       amount: '$45.00',
       method: {
-        // img: <Icons.visa className='w-[20px] h-[20px]' />,
+        img: <Icons.visa className='w-[20px] h-[20px]' />,
         number: '**** 9454',
       },
       status: 'expired',
@@ -251,4 +253,3 @@ export const CancelSubReasonData = [
   'Ineffective training programs',
   'Lack of personalized attention',
 ];
-
