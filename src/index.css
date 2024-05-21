@@ -66,3 +66,16 @@ input::-webkit-inner-spin-button {
   color: black !important;
   font-weight: 400 !important;
 }
+
+.noteBg {
+  background: rgba(255, 184, 186, 0.15);
+}
+
+/* tabs styles ============>  */
+.m_539e827b:where([data-active]) {
+  border-color: #b61f24 !important;
+}
+
+.m_539e827b:where([data-active]) span {
+  color: #b61f24 !important;
+}

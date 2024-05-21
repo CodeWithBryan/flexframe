@@ -839,6 +839,255 @@ export const check: React.FC<Props> = ({
   </svg>
 );
 
+export const check3: React.FC<Props> = ({
+  className = 'w-[16px] h-[16px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 16 16'
+    fill='none'
+  >
+    <path
+      d='M8 14C4.6862 14 2 11.3138 2 8C2 4.6862 4.6862 2 8 2C11.3138 2 14 4.6862 14 8C14 11.3138 11.3138 14 8 14ZM6.69464 9.69284C7.08519 10.0834 7.71839 10.0834 8.10891 9.69279L11.2197 6.5816C11.4539 6.34731 11.4539 5.9675 11.2196 5.73323C10.9853 5.49894 10.6055 5.49896 10.3712 5.73327L8.10891 7.99597C7.71839 8.38655 7.08518 8.38658 6.69463 7.99603L6.1286 7.43C5.89432 7.19572 5.51448 7.19572 5.2802 7.43C5.04592 7.66428 5.04592 8.04412 5.2802 8.2784L6.69464 9.69284Z'
+      fill='white'
+    />
+  </svg>
+);
+
+export const Message: React.FC<Props> = ({
+  className = 'w-[21px] h-[20px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 21 20'
+    fill='none'
+  >
+    <path
+      d='M17.9398 2.54378C16.1248 0.589142 2.47213 5.37734 2.48341 7.12551C2.49619 9.10792 7.81514 9.71776 9.2894 10.1314C10.176 10.3801 10.4134 10.6351 10.6178 11.5648C11.5436 15.7751 12.0085 17.8693 13.0679 17.916C14.7566 17.9907 19.7111 4.45134 17.9398 2.54378Z'
+      stroke='#525866'
+      stroke-width='1.5'
+    />
+    <path
+      d='M9.9834 10.4167L12.9001 7.5'
+      stroke='#525866'
+      stroke-width='1.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+  </svg>
+);
+
+export const Sell: React.FC<Props> = ({
+  className = 'w-[18px] h-[20px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 18 20'
+    fill='none'
+  >
+    <path
+      d='M2.42728 14.1829L1.42431 8.19985C1.27266 7.29524 1.19684 6.84293 1.43965 6.54647C1.68245 6.25 2.12871 6.25 3.02123 6.25L15.3785 6.25C16.271 6.25 16.7173 6.25 16.9601 6.54647C17.2029 6.84293 17.1271 7.29524 16.9754 8.19985L15.9725 14.1829C15.64 16.1659 15.4738 17.1574 14.7952 17.7454C14.1165 18.3333 13.1382 18.3333 11.1817 18.3333H7.21805C5.2615 18.3333 4.28322 18.3333 3.60458 17.7454C2.92593 17.1574 2.75971 16.1659 2.42728 14.1829Z'
+      stroke='#525866'
+      stroke-width='1.5'
+    />
+    <path
+      d='M6.19971 12.5L11.1997 12.5M8.69971 10L8.69971 15'
+      stroke='#525866'
+      stroke-width='1.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+    <path
+      d='M13.7834 6.25033C13.7834 3.71902 11.7313 1.66699 9.20003 1.66699C6.66873 1.66699 4.6167 3.71902 4.6167 6.25033'
+      stroke='#525866'
+      stroke-width='1.5'
+    />
+  </svg>
+);
+
+export const Plus: React.FC<Props> = ({
+  className = 'w-[16px] h-[16px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 16 16'
+    fill='none'
+  >
+    <path
+      d='M8 1.33301V14.6663'
+      stroke='#525866'
+      stroke-width='1.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+    <path
+      d='M1.3335 8H14.6668'
+      stroke='#525866'
+      stroke-width='1.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+  </svg>
+);
+
+export const CheckIn: React.FC<Props> = ({
+  className = 'w-[21px] h-[20px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 21 20'
+    fill='none'
+  >
+    <path
+      d='M10.7996 18.3337C15.402 18.3337 19.133 14.6027 19.133 10.0003C19.133 5.39795 15.402 1.66699 10.7996 1.66699C6.19727 1.66699 2.46631 5.39795 2.46631 10.0003C2.46631 14.6027 6.19727 18.3337 10.7996 18.3337Z'
+      stroke='#525866'
+      stroke-width='1.5'
+    />
+    <path
+      d='M8.09131 7.5C8.09131 7.15483 7.81148 6.875 7.46631 6.875C7.12113 6.875 6.84131 7.15483 6.84131 7.5H8.09131ZM6.84131 12.5C6.84131 12.8452 7.12113 13.125 7.46631 13.125C7.81148 13.125 8.09131 12.8452 8.09131 12.5H6.84131ZM11.1072 12.1306C11.3635 12.3619 11.7586 12.3417 11.99 12.0854C12.2212 11.8292 12.201 11.434 11.9447 11.2028L11.1072 12.1306ZM11.9447 8.79725C12.201 8.566 12.2212 8.1708 11.99 7.91456C11.7586 7.65832 11.3635 7.6381 11.1072 7.86937L11.9447 8.79725ZM14.9663 10.625C15.3115 10.625 15.5913 10.3452 15.5913 10C15.5913 9.65483 15.3115 9.375 14.9663 9.375V10.625ZM6.84131 7.5V12.5H8.09131V7.5H6.84131ZM11.9447 11.2028L11.0775 10.4199L10.24 11.3478L11.1072 12.1306L11.9447 11.2028ZM11.0775 9.58008L11.9447 8.79725L11.1072 7.86937L10.24 8.65217L11.0775 9.58008ZM11.0775 10.4199C10.8332 10.1994 10.6984 10.0758 10.6167 9.97933C10.5446 9.89392 10.5913 9.91725 10.5913 10H9.34131C9.34131 10.3417 9.50348 10.5986 9.66206 10.7862C9.81131 10.9627 10.0226 11.1517 10.24 11.3478L11.0775 10.4199ZM10.24 8.65217C10.0226 8.84833 9.81131 9.03725 9.66206 9.21375C9.50348 9.40142 9.34131 9.65833 9.34131 10H10.5913C10.5913 10.0827 10.5446 10.1061 10.6167 10.0207C10.6984 9.92417 10.8332 9.80058 11.0775 9.58008L10.24 8.65217ZM9.96631 10.625H14.9663V9.375H9.96631V10.625Z'
+      fill='#525866'
+    />
+  </svg>
+);
+
+export const ThreeDots: React.FC<Props> = ({
+  className = 'w-[21px] h-[20px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 21 20'
+    fill='none'
+  >
+    <path
+      d='M10.5967 10H10.6042'
+      stroke='#525866'
+      stroke-width='2.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+    <path
+      d='M15.6001 10H15.6076'
+      stroke='#525866'
+      stroke-width='2.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+    <path
+      d='M5.6001 10H5.60758'
+      stroke='#525866'
+      stroke-width='2.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+  </svg>
+);
+
+export const Download: React.FC<Props> = ({
+  className = 'w-[29px] h-[30px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 29 30'
+    fill='none'
+  >
+    <g filter='url(#filter0_d_366_102991)'>
+      <path
+        d='M14.9997 25.6663C21.443 25.6663 26.6663 20.443 26.6663 13.9997C26.6663 7.55635 21.443 2.33301 14.9997 2.33301C8.55635 2.33301 3.33301 7.55635 3.33301 13.9997C3.33301 20.443 8.55635 25.6663 14.9997 25.6663Z'
+        stroke='#868C98'
+        stroke-width='1.5'
+      />
+      <path
+        d='M14.9997 18.6663V9.33301M14.9997 18.6663C14.1828 18.6663 12.6565 16.3397 12.083 15.7497M14.9997 18.6663C15.8166 18.6663 17.3429 16.3397 17.9163 15.7497'
+        stroke='#868C98'
+        stroke-width='1.5'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      />
+    </g>
+    <defs>
+      <filter
+        id='filter0_d_366_102991'
+        x='-1'
+        y='-1'
+        width='32'
+        height='32'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='1' />
+        <feGaussianBlur stdDeviation='1' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.894118 0 0 0 0 0.898039 0 0 0 0 0.905882 0 0 0 0.24 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='BackgroundImageFix'
+          result='effect1_dropShadow_366_102991'
+        />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='effect1_dropShadow_366_102991'
+          result='shape'
+        />
+      </filter>
+    </defs>
+  </svg>
+);
+
+export const DownArrow: React.FC<Props> = ({
+  className = 'w-[12px] h-[8px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 12 8'
+    fill='none'
+  >
+    <path
+      d='M11 1.50004C11 1.50004 7.31756 6.49999 5.99996 6.5C4.68237 6.50001 1 1.5 1 1.5'
+      stroke='#525866'
+      stroke-width='1.5'
+      stroke-linecap='round'
+      stroke-linejoin='round'
+    />
+  </svg>
+);
+
+export const ExclimationSign: React.FC<Props> = ({
+  className = 'w-[16px] h-[16px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 16 16'
+    fill='none'
+  >
+    <path
+      fill-rule='evenodd'
+      clip-rule='evenodd'
+      d='M8 13C10.7614 13 13 10.7614 13 8C13 5.23858 10.7614 3 8 3C5.23858 3 3 5.23858 3 8C3 10.7614 5.23858 13 8 13ZM8.89268 10.5669L8.97252 10.2405C8.93119 10.2599 8.86456 10.2821 8.77319 10.3073C8.68157 10.3326 8.59912 10.3454 8.52665 10.3454C8.37229 10.3454 8.26362 10.3201 8.20052 10.2693C8.13789 10.2184 8.10665 10.1227 8.10665 9.98262C8.10665 9.9271 8.11607 9.84434 8.13579 9.73602C8.15489 9.62699 8.17686 9.53009 8.20129 9.44533L8.49935 8.39007C8.52855 8.29322 8.54857 8.18675 8.55933 8.07055C8.57034 7.9546 8.57546 7.87348 8.57546 7.82744C8.57546 7.60491 8.49746 7.42433 8.34141 7.28503C8.18536 7.14583 7.96315 7.07623 7.67517 7.07623C7.51492 7.07623 7.34551 7.10471 7.16621 7.1616C6.98691 7.21835 6.79946 7.28672 6.60337 7.36656L6.52332 7.6932C6.58175 7.67159 6.65135 7.64834 6.73278 7.62427C6.81386 7.6003 6.89339 7.58791 6.97078 7.58791C7.12877 7.58791 7.23519 7.61485 7.29096 7.6679C7.34674 7.72112 7.37475 7.81576 7.37475 7.95107C7.37475 8.02589 7.36589 8.10901 7.3475 8.19935C7.32937 8.29025 7.30674 8.38638 7.28011 8.48784L6.98076 9.54735C6.95413 9.65869 6.93467 9.7583 6.92243 9.84675C6.91029 9.93509 6.90445 10.0218 6.90445 10.1061C6.90445 10.3239 6.98491 10.5034 7.14577 10.645C7.30664 10.7861 7.53218 10.8571 7.82215 10.8571C8.01098 10.8571 8.17671 10.8325 8.31934 10.7828C8.46181 10.7334 8.65315 10.6614 8.89268 10.5669ZM8.83957 6.28016C8.97882 6.15105 9.04811 5.99403 9.04811 5.81017C9.04811 5.62673 8.97892 5.4694 8.83957 5.33865C8.70068 5.20826 8.53326 5.14286 8.33752 5.14286C8.14116 5.14286 7.97308 5.2081 7.83286 5.33865C7.69263 5.4694 7.62237 5.62667 7.62237 5.81017C7.62237 5.99403 7.69263 6.151 7.83286 6.28016C7.97334 6.40973 8.14111 6.47457 8.33752 6.47457C8.53331 6.47457 8.70068 6.40973 8.83957 6.28016Z'
+      fill='#B61F24'
+    />
+  </svg>
+);
+
 export const twiiter: React.FC<Props> = ({
   fill = 'none',
   stroke = '#ffffff',
@@ -2015,6 +2264,244 @@ export const card2: React.FC<Props> = ({
       </linearGradient>
       <clipPath id='clip0_715_3375'>
         <rect width='32' height='24' rx='4' fill='white' />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const Profile: React.FC<Props> = ({
+  className = 'w-[72px] h-[72px]',
+}: Props) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className={className}
+    viewBox='0 0 72 72'
+    fill='none'
+  >
+    <g filter='url(#filter0_i_805_11414)'>
+      <g clip-path='url(#clip0_805_11414)'>
+        <rect width='72' height='72' rx='36' fill='#E2E4E9' />
+        <g filter='url(#filter1_di_805_11414)'>
+          <ellipse
+            cx='36.0002'
+            cy='68.3998'
+            rx='28.8'
+            ry='21.6'
+            fill='url(#paint0_radial_805_11414)'
+            shape-rendering='crispEdges'
+          />
+          <path
+            d='M64.3002 68.3998C64.3002 74.1718 61.1819 79.4355 56.0649 83.2733C50.9477 87.1112 43.8554 89.4998 36.0002 89.4998C28.145 89.4998 21.0527 87.1112 15.9355 83.2733C10.8185 79.4355 7.7002 74.1718 7.7002 68.3998C7.7002 62.6278 10.8185 57.3641 15.9355 53.5263C21.0527 49.6884 28.145 47.2998 36.0002 47.2998C43.8554 47.2998 50.9477 49.6884 56.0649 53.5263C61.1819 57.3641 64.3002 62.6278 64.3002 68.3998Z'
+            stroke='url(#paint1_radial_805_11414)'
+            shape-rendering='crispEdges'
+          />
+        </g>
+        <g filter='url(#filter2_di_805_11414)'>
+          <circle
+            cx='35.9996'
+            cy='28.8004'
+            r='14.4'
+            fill='url(#paint2_radial_805_11414)'
+            shape-rendering='crispEdges'
+          />
+          <circle
+            cx='35.9996'
+            cy='28.8004'
+            r='13.9'
+            stroke='url(#paint3_radial_805_11414)'
+            shape-rendering='crispEdges'
+          />
+        </g>
+      </g>
+    </g>
+    <defs>
+      <filter
+        id='filter0_i_805_11414'
+        x='0'
+        y='-8'
+        width='72'
+        height='80'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='BackgroundImageFix'
+          result='shape'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-8' />
+        <feGaussianBlur stdDeviation='8' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.7712 0 0 0 0 0.78 0 0 0 0 0.7888 0 0 0 0.48 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='shape'
+          result='effect1_innerShadow_805_11414'
+        />
+      </filter>
+      <filter
+        id='filter1_di_805_11414'
+        x='3.2002'
+        y='38.7998'
+        width='65.5996'
+        height='59.2002'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='4' />
+        <feGaussianBlur stdDeviation='2' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.541176 0 0 0 0 0.560784 0 0 0 0 0.576471 0 0 0 0.16 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='BackgroundImageFix'
+          result='effect1_dropShadow_805_11414'
+        />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='effect1_dropShadow_805_11414'
+          result='shape'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-8' />
+        <feGaussianBlur stdDeviation='4' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='shape'
+          result='effect2_innerShadow_805_11414'
+        />
+      </filter>
+      <filter
+        id='filter2_di_805_11414'
+        x='17.5996'
+        y='6.40039'
+        width='36.7998'
+        height='44.7998'
+        filterUnits='userSpaceOnUse'
+        color-interpolation-filters='sRGB'
+      >
+        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='4' />
+        <feGaussianBlur stdDeviation='2' />
+        <feComposite in2='hardAlpha' operator='out' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 0.541176 0 0 0 0 0.560784 0 0 0 0 0.576471 0 0 0 0.16 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='BackgroundImageFix'
+          result='effect1_dropShadow_805_11414'
+        />
+        <feBlend
+          mode='normal'
+          in='SourceGraphic'
+          in2='effect1_dropShadow_805_11414'
+          result='shape'
+        />
+        <feColorMatrix
+          in='SourceAlpha'
+          type='matrix'
+          values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          result='hardAlpha'
+        />
+        <feOffset dy='-8' />
+        <feGaussianBlur stdDeviation='4' />
+        <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+        <feColorMatrix
+          type='matrix'
+          values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'
+        />
+        <feBlend
+          mode='normal'
+          in2='shape'
+          result='effect2_innerShadow_805_11414'
+        />
+      </filter>
+      <radialGradient
+        id='paint0_radial_805_11414'
+        cx='0'
+        cy='0'
+        r='1'
+        gradientUnits='userSpaceOnUse'
+        gradientTransform='translate(36.0002 46.7998) rotate(90) scale(43.2 57.6)'
+      >
+        <stop stop-color='white' />
+        <stop offset='1' stop-color='white' stop-opacity='0' />
+      </radialGradient>
+      <radialGradient
+        id='paint1_radial_805_11414'
+        cx='0'
+        cy='0'
+        r='1'
+        gradientUnits='userSpaceOnUse'
+        gradientTransform='translate(36.0002 46.7998) rotate(90) scale(43.2 57.6)'
+      >
+        <stop stop-color='white' />
+        <stop offset='1' stop-color='white' stop-opacity='0' />
+      </radialGradient>
+      <radialGradient
+        id='paint2_radial_805_11414'
+        cx='0'
+        cy='0'
+        r='1'
+        gradientUnits='userSpaceOnUse'
+        gradientTransform='translate(35.9996 14.4004) rotate(90) scale(28.8)'
+      >
+        <stop stop-color='white' />
+        <stop offset='1' stop-color='white' stop-opacity='0' />
+      </radialGradient>
+      <radialGradient
+        id='paint3_radial_805_11414'
+        cx='0'
+        cy='0'
+        r='1'
+        gradientUnits='userSpaceOnUse'
+        gradientTransform='translate(35.9996 14.4004) rotate(90) scale(28.8)'
+      >
+        <stop stop-color='white' />
+        <stop offset='1' stop-color='white' stop-opacity='0' />
+      </radialGradient>
+      <clipPath id='clip0_805_11414'>
+        <rect width='72' height='72' rx='36' fill='white' />
       </clipPath>
     </defs>
   </svg>

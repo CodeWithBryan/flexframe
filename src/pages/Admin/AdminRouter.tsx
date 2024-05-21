@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import DashboardWrapper from './Dashboard/AdminDashboardWrapper';
 import Dashboard from './Dashboard/Dashboard';
-import Members from './Dashboard/Members';
+import Members from './Dashboard/Members/Members';
 
 const AdminRouter = () => {
   return (
