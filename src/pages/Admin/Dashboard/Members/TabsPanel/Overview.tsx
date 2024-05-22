@@ -6,7 +6,7 @@ import { BarChart } from '@mantine/charts';
 
 const Overview: React.FC = () => {
   return (
-    <div className='w-full p-4 bg-[#F9F9F9] grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-4 sm:gap-5'>
+    <div className='w-full p-4 bg-[#F9F9F9] grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-4 sm:gap-4'>
       {/* LEFT PORTION ==================> */}
       <div className='w-full flex flex-col gap-4'>
         {/* top-statistics ----> */}

@@ -12,7 +12,7 @@ import { InvoiceTable } from '../../../../../data/billing';
 
 const MemberShip: React.FC = () => {
   return (
-    <div className='w-full py-4 px-6 bg-[#F9F9F9] gap-5 flex flex-col'>
+    <div className='w-full py-4 px-6 bg-[#F9F9F9] gap-4 flex flex-col'>
       {/* MEMBERSHIP WIDGET ---------->    */}
       <div className='w-full h-full flex flex-col bg-white-1 rounded-[16px] border-[1px] border-white-3'>
         {/* header ->  */}
