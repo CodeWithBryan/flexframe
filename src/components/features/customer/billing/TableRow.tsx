@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from 'react';
+import React, { useState } from 'react';
 import { Checkbox } from '@mantine/core';
 import Typography from '../../../common/Typography';
 import * as Icons from '../../../common/Icons';
@@ -15,7 +15,7 @@ interface Props {
     name: string;
   };
   method: {
-    img: ReactNode;
+    // img: ReactNode;
     number: string;
   };
   dateAndTime: string;

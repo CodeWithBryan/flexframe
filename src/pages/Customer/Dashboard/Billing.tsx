@@ -18,6 +18,26 @@ import {
   CancelSubReasonData,
 } from '../../../data/billing';
 
+const CancelButton: React.FC = () => {
+  const [cancelSub, { open }] = useDisclosure(false);
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <button
+      className={`flex rounded-[4px] px-[8px] py-[4px] justify-center items-center gap-1 ${
+        isHovered ? 'bg-red-500' : 'bg-green-1'
+      }`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={open}
+    >
+      {!isHovered && (<Icons.fillCheck className='w-[16px] h-[16px]' />)}
+      <Typography.xsText styles='text-[12px] text-white-1 font-semibold'>
+        {isHovered ? 'Cancel' : 'Active'}
+      </Typography.xsText>
+    </button>
+  );
+}
+
 const Billing: React.FC = () => {
   // STATES FOR MODALS =========================>
   const [upgrateOpened, { open: openUpgrateModal, close: closeUpgrateModal }] =
@@ -69,17 +89,8 @@ const Billing: React.FC = () => {
               {/* header ->  */}
               <div className='w-full h-[50px] sm:h-[70px] border-b-[1px] border-white-3 flex justify-between items-center px-4'>
                 <Typography.mText styles='text-black-1 font-bold'>
-                  Current subscription
+                  Current subscriptions
                 </Typography.mText>
-                <div className='hidden csm:flex justify-center items-center gap-3'>
-                  <OutlineButton event={openCancelSub}>Cancel</OutlineButton>
-                  <FillButton
-                    event={openUpgrateModal}
-                    styles='text-white-1 bg-purple-1 font-semibold px-[12px] py-[8px] rounded-[60px]'
-                  >
-                    Upgrade membership
-                  </FillButton>
-                </div>
               </div>
               {/* bottom sect ---->  */}
               <div className='w-full flex flex-col p-3 sm:p-4 gap-3'>
@@ -104,12 +115,15 @@ const Billing: React.FC = () => {
                     </div>
                   </div>
                   {/* right por -->  */}
-                  <button className='flex bg-green-1 rounded-[4px] px-[8px] py-[4px] justify-center items-center gap-1'>
-                    <Icons.fillCheck className='w-[16px] h-[16px] ' />
-                    <Typography.xsText styles='text-[12px] text-white-1 font-semibold'>
-                      Active
-                    </Typography.xsText>
-                  </button>
+                  <div className='flex justify-between gap-3'>
+                    <CancelButton />
+                    <button className='flex bg-purple-1 rounded-[4px] px-[8px] py-[4px] justify-center items-center gap-1' onClick={openUpgrateModal}>
+                      <Icons.fillCheck className='w-[16px] h-[16px] ' />
+                      <Typography.xsText styles='text-[12px] text-white-1 font-semibold'>
+                        Upgrade
+                      </Typography.xsText>
+                    </button>
+                  </div>
                 </div>
                 {/* bottons for small screen ---> */}
                 <div className='w-full grid csm:hidden grid-cols-[1fr,3fr] justify-center items-center gap-3'>

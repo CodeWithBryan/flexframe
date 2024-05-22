@@ -56,8 +56,8 @@ const Welcome: React.FC = () => {
                 value={formData.birthDate}
                 name='dateBirth'
                 onChange={(value) => handleInputChange('birthDate', value)}
-                valueFormat='DD/MM/YYYY'
-                placeholder='DD / MM / YYYY'
+                valueFormat='MM/DD/YYYY'
+                placeholder='MM / DD / YYYY'
               />
             </div>
             {/* select gender --->  */}
@@ -70,7 +70,7 @@ const Welcome: React.FC = () => {
                 value={formData.gender}
                 setValue={(value: string) => handleInputChange('gender', value)}
                 placeholder='Male'
-                options={['Male', 'Female']}
+                options={['Male', 'Female', 'Other']}
               />
             </div>
             {/* whats your goal --->  */}
@@ -83,80 +83,7 @@ const Welcome: React.FC = () => {
                 value={formData.goal}
                 setValue={(value: string) => handleInputChange('goal', value)}
                 placeholder='Lose Weight'
-                options={['Lose Weight', 'Cuts', 'Body']}
-              />
-            </div>
-            {/* Country --->  */}
-            <div className='w-full flex flex-col gap-1'>
-              <p className='text-[14px] select-none text-[#0A0D14] font-medium'>
-                Country
-              </p>
-              <SingleSelect
-                placeholder='United States'
-                name='country'
-                value={formData.country}
-                setValue={(value: string) =>
-                  handleInputChange('country', value)
-                }
-                options={['United States', 'Canada', 'Dubai', 'Qater']}
-              />
-            </div>
-            {/* state + city select box ----> */}
-            <div className='w-full grid grid-cols-2 gap-5'>
-              {/* state */}
-              <div className='w-full flex flex-col gap-1'>
-                <p className='text-[14px] select-none text-[#0A0D14] font-medium'>
-                  State
-                </p>
-                <SingleSelect
-                  placeholder='New York'
-                  name='state'
-                  value={formData.state}
-                  setValue={(value: string) =>
-                    handleInputChange('state', value)
-                  }
-                  options={[
-                    'Texas',
-                    'California',
-                    'New York',
-                    'Florida',
-                    'Illinois',
-                  ]}
-                />
-              </div>
-              {/* city */}
-              <div className='w-full flex flex-col gap-1'>
-                <p className='text-[14px] select-none text-[#0A0D14] font-medium'>
-                  City
-                </p>
-                <SingleSelect
-                  placeholder='New York'
-                  name='city'
-                  setValue={(value: string) => handleInputChange('city', value)}
-                  value={formData.city}
-                  options={[
-                    'Texas',
-                    'California',
-                    'New York',
-                    'Florida',
-                    'Illinois',
-                  ]}
-                />
-              </div>
-            </div>
-            {/* your address ----> */}
-            <div className='w-full flex flex-col gap-1'>
-              <p className='text-[14px] select-none text-[#0A0D14] font-medium'>
-                Address
-              </p>
-              <Input
-                type='text'
-                name='address'
-                placeholder='Enter address'
-                onChange={(e: any) =>
-                  handleInputChange('address', e.target.value)
-                }
-                value={formData.address}
+                options={['Lose Weight', 'Build Muscle', 'Overall Health', 'Maintain Fitness', 'Rehabilitate Injuries']}
               />
             </div>
             {/* fill button  */}
