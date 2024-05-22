@@ -79,3 +79,14 @@ input::-webkit-inner-spin-button {
 .m_539e827b:where([data-active]) span {
   color: #b61f24 !important;
 }
+
+.m_89d33d6d::before {
+  border-width: 1px !important;
+  border-color: #e2e4e9 !important;
+}
+
+/* bar chart styles ==========> */
+.recharts-tooltip-cursor {
+  fill: #ffb8ba !important;
+  fill-opacity: 0.1;
+}

@@ -18,7 +18,7 @@ const TopNavigation: React.FC = () => {
 
   return (
     <React.Fragment>
-      <div className='w-full border-b-[1px] border-[#E2E4E9] h-[70px] sm:h-[75px] gap-6 px-3 sm:px-5 flex justify-between items-center bg-white-1'>
+      <div className='w-full border-b-[1px] border-[#E2E4E9] h-[70px] sm:h-[72px] gap-6 px-3 sm:px-5 flex justify-between items-center'>
         {/* left portion */}
         {/* logo */}
         <img

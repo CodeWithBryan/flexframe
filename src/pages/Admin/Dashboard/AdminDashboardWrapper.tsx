@@ -16,7 +16,7 @@ const DashboardWrapper: React.FC = () => {
       <div className='w-full flex justify-center bg-[#F9F9F9] items-center'>
         <div className='w-full h-full flex flex-col'>
           {/* top navigation ---> */}
-          <div className='w-full h-[72px] bg-white-1'>
+          <div className='w-full'>
             <TopNavigation />
           </div>
 
