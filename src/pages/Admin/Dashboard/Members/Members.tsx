@@ -3,6 +3,7 @@ import * as Icons from '../../../../components/common/Icons';
 import { Tabs } from '@mantine/core';
 import Overview from './TabsPanel/Overview';
 import { Menu } from '@mantine/core';
+import MemberShip from './TabsPanel/MemberShip';
 
 const Members: React.FC = () => {
   return (
@@ -166,7 +167,7 @@ const tabLists = [
   {
     label: 'Memberships',
     value: 'memberships',
-    component: 'Memberships tab content',
+    component: <MemberShip />,
   },
   {
     label: 'Purchases',
