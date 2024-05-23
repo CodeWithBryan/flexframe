@@ -8,8 +8,8 @@ import PasswordField from '../../components/common/Inputs/PasswordField';
 import FillButton from '../../components/common/Buttons/FillButton';
 import MobileNumInput from '../../components/common/Inputs/PhoneInput';
 import CheckBoxInput from '../../components/common/Inputs/CheckBox';
-import { register } from '../../util/api';
 import useAuthStore from '../../stores/auth.store';
+import { register } from '../../api/auth';
 
 const SignUp: React.FC = () => {
   // States ----->

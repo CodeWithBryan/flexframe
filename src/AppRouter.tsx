@@ -7,7 +7,7 @@ import Login from './pages/Login';
 import CustomerRouter from './pages/Customer/MemberRouter';
 import Logout from './pages/Logout';
 import AdminRouter from './pages/Admin/AdminRouter';
-import Debug from './pages/Debug';
+import DoorAccess from './pages/DoorAccess';
 
 const AppRouter = () => {
   return (
@@ -21,7 +21,7 @@ const AppRouter = () => {
         <Route path='/welcome' element={<Welcome />} />
         <Route path='/member/*' element={<CustomerRouter />} />
         <Route path='/admin/*' element={<AdminRouter />} />
-        <Route path='/debug' element={<Debug />} />
+        <Route path='/door/access' element={<DoorAccess />} />
         <Route path='*' element={<Navigate to='/' replace />} />
       </Routes>
     </BrowserRouter>
