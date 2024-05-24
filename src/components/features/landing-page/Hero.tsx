@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
       <ComponentWrapper>
         <div className='w-full xl:py-0 py-4 lg:py-5 min-h-auto sm:min-h-[calc(100vh-130px)] max-w-[670px] flex flex-col gap-5 items-start justify-center'>
           <Typography.h1 styles='text-white-1'>
-            Shape your body & live healthy life
+            Shape Your Body & Live a Healthy Life
           </Typography.h1>
           <Typography.text styles='text-white-1/80 font-normal'>
             Welcome to R&P Fitness – where sweat becomes liquid awesome! Join us

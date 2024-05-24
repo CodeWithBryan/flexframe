@@ -8,7 +8,7 @@ const OurSocialCircle: React.FC = () => {
       <ComponentWrapper>
         <div className='w-full flex flex-col gap-4 justify-center items-center'>
           <Typography.h2 styles='font-bold text-white-1 text-left md:text-center w-full'>
-            Our social cirlce
+            Our Social Circle
           </Typography.h2>
           <Typography.text styles='font-normal text-white-1/80 max-w-[850px] w-full text-left md:text-center'>
             Explore the fitness buzz in our Social Circle! Dive into our

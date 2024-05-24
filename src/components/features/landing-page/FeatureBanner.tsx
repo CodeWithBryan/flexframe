@@ -18,11 +18,26 @@ const FeatureBanner: React.FC = () => {
 
 const features = [
   'Side Planks',
-  'Medicine ball',
-  'kettlebell',
-  'Dumbbell rows',
+  'Medicine Ball Slams',
+  'Kettlebell Swings',
+  'Dumbbell Rows',
   'Barbell Squats',
   'Bench Press',
+  'Deadlifts',
+  'Pull-Ups',
+  'Push-Ups',
+  'Battle Ropes',
+  'Plank to Push-Up',
+  'Russian Twists with Medicine Ball',
+  'Kettlebell Goblet Squats',
+  'Dumbbell Shoulder Press',
+  'Barbell Deadlifts',
+  'Incline Bench Press',
+  'Renegade Rows',
+  'TRX Suspension Training',
+  'Box Jumps',
+  'Burpees'
 ];
+
 
 export default FeatureBanner;
