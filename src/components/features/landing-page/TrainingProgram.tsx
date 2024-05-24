@@ -3,6 +3,7 @@ import ComponentWrapper from '../../common/ComponentWrapper';
 import Typography from '../../common/Typography';
 import FillButton from '../../common/Buttons/FillButton';
 import TrainingProgramCard from './Cards/TrainingProgramCard';
+import { Link } from 'react-router-dom';
 
 const TrainingProgram: React.FC = () => {
   return (
@@ -22,18 +23,18 @@ const TrainingProgram: React.FC = () => {
           <div className="w-full h-[240px] sm:h-[650px] grayscale sm:grayscale-0 rounded-md bg-[url('/assets/trainingP1.webp')] bg-cover bg-no-repeat bg-center">
             <div className='flex h-full justify-end flex-col gap-3 px-4 py-6'>
               <h4 className='text-white-1 text-[38px] font-semibold'>
-                Body building
+                Body Building
               </h4>
               <Typography.text styles='text-white-1/80 font-normal sm:block hidden'>
-                Elevate your physique with our Bodybuilding Service: Tailored
-                programs for strength, muscle growth, and sculpting at RP
-                Fitness.
+              Elevate your physique with our Bodybuilding Service at R&P Fitness. Our tailored programs focus on strength, muscle growth, and sculpting to help you achieve your fitness goals.
               </Typography.text>
-              <FillButton styles='px-[24px] w-fit py-[16px] rounded-[60px] border-[1px] border-white-1 mt-4 sm:block hidden'>
-                <Typography.smallText styles='capitalize text-white-1 font-semibold'>
-                  start body building
-                </Typography.smallText>
-              </FillButton>
+              <Link to="/signup">
+                <FillButton styles='px-[24px] w-fit py-[16px] rounded-[60px] border-[1px] border-white-1 mt-4 sm:block hidden'>
+                  <Typography.smallText styles='capitalize text-white-1 font-semibold'>
+                    Start Body Building
+                  </Typography.smallText>
+                </FillButton>
+              </Link>
             </div>
           </div>
           {/* right por ===>  */}
