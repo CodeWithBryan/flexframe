@@ -62,7 +62,7 @@ const SignUp: React.FC = () => {
         <div className='w-full max-w-[420px] flex flex-col gap-3 px-4 sm:px-8 h-full justify-center items-center'>
           <img src={logo} className='w-[44px] h-[38px] object-fill' alt='Logo' />
           <Typography.lgText styles='text-black-1 font-bold'>
-            Welcome to RP Fitness
+            Welcome to R&P Fitness
           </Typography.lgText>
           <Typography.mText styles='text-center font-normal text-[#525866]'>
             Login to unlock a world of fitness tailored just for you.

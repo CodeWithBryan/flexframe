@@ -20,7 +20,7 @@ const LeftNavigation: React.FC<Props> = ({ data }: Props) => {
           <div className='flex justify-center items-center gap-3'>
             <img src={logo} className='w-[30px] h-[30px] object-fill' alt='' />
             <Typography.mText styles='text-black-1 font-bold'>
-              RP Fitness
+              R&P Fitness
             </Typography.mText>
           </div>
           {/* <GoSidebarCollapse className='text-[27px] rotate-180 cursor-pointer text-[#525866]' /> */}

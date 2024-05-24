@@ -18,7 +18,7 @@ const CallToActionBanner: React.FC = () => {
               <Icons.hightLight className='w-[50px] sm:w-[100px] md:w-[51px] h-[20px] sm:h-[40px] md:h-[56px] absolute -left-6 sm:-left-16 md:-left-12 -top-8 sm:-top-10 md:-top-11' />
             </div>
             <Typography.text styles='font-normal text-white-1/80 max-w-[650px] w-full md:text-center text-left'>
-              Unlock the path to a healthier, stronger you at RP Fitness. Our
+              Unlock the path to a healthier, stronger you at R&P Fitness. Our
               state-of-the-art facilities, expert trainers, and diverse workout
               options await. Start shaping a better you now!
             </Typography.text>

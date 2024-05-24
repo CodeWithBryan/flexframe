@@ -27,13 +27,13 @@ const ManBehindPr: React.FC = () => {
           {/* right por ====>  */}
           <div className='w-full flex flex-col gap-8 items-start'>
             <h1 className='text-[60px] text-white-1 leading-[72px] font-bold '>
-              Meet the man behind RP Fitness
+              Meet the man behind R&P Fitness
             </h1>
             <Typography.text styles='text-white-1 font-normal'>
               Meet Ryan, the passionate owner and personal trainer at RP
               Fitness. With a deep commitment to your fitness journey, Ryan
               brings expertise and personalized guidance to every session.
-              Transform your fitness goals into reality with RP Fitness, where
+              Transform your fitness goals into reality with R&P Fitness, where
               Ryan's dedication makes each workout an empowering experience.
             </Typography.text>
             {/* instructor name ---->  */}

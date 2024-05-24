@@ -12,7 +12,7 @@ const PowerOfRip: React.FC = () => {
           Experience the power of <span className='text-red-1'>RP</span>
         </Typography.h2>
         <Typography.text styles='font-normal max-w-[800px] w-full text-white-1/80 text-left md:text-center'>
-          Discover the exhilarating power of RP Fitness, where fitness dreams
+          Discover the exhilarating power of R&P Fitness, where fitness dreams
           become a reality. Our dynamic gym is more than just a workout space –
           it's a catalyst for unleashing your inner strength and achieving
           remarkable results

@@ -5,6 +5,7 @@ import * as Icons from '../../common/Icons';
 import FillButton from '../../common/Buttons/FillButton';
 import { Link } from 'react-router-dom';
 import Navibar from '../../layout/LandingPage/Navibar';
+import ReviewsComponent from './reviews';
 
 const Hero: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const Hero: React.FC = () => {
             Shape your body & live healthy life
           </Typography.h1>
           <Typography.text styles='text-white-1/80 font-normal'>
-            Welcome to RP Fitness – where sweat becomes liquid awesome! Join us
+            Welcome to R&P Fitness – where sweat becomes liquid awesome! Join us
             on a journey to peak fitness and well-being. Start your journey
             today and become fitter, healthier and happier.
           </Typography.text>
@@ -43,7 +44,7 @@ const Hero: React.FC = () => {
             <Link to='/signup'>
               <FillButton styles='bg-red-1 sm:w-fit w-full max-w-[320px] px-[24px] py-[12px] sm:py-[16px] rounded-[60px]'>
                 <Typography.mText styles='text-white-1 font-semibold'>
-                  Join RP Fitness Today
+                  Join R&P Fitness Today
                 </Typography.mText>
               </FillButton>
             </Link>
@@ -55,22 +56,7 @@ const Hero: React.FC = () => {
             </button>
           </div>
           {/* reviews =====>  */}
-          <div className='hidden md:flex flex-col gap-2 sm:gap-4 mt-2 sm:mt-4'>
-            <Typography.mText styles='text-white-1 font-medium'>
-              Trusted by 15000+ customers
-            </Typography.mText>
-            <div className='flex justify-center items-center gap-1'>
-              {[0, 1, 2, 3, 4].map((item, index) => {
-                return <Icons.star key={index} />;
-              })}
-              <Typography.mText styles='text-white-1 font-medium ml-2'>
-                5.0
-              </Typography.mText>
-              <Typography.mText styles='text-white-1 font-normal'>
-                (2.1k reviews)
-              </Typography.mText>
-            </div>
-          </div>
+          <ReviewsComponent />
         </div>
       </ComponentWrapper>
       {/* shadow for bg image ----->  */}

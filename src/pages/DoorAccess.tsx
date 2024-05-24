@@ -16,12 +16,12 @@ const DoorAccess: React.FC = () => {
                   setStatus('You are too far from the door to unlock it');
                   return;
                 }
-                
+
                 if (data === 'subscription') {
                   setStatus('You do not have a subscription to unlock the door');
                   return;
                 }
-                
+
                 if (data === 'success') {
                   setStatus('Door unlocked');
                 }

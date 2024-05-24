@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
           <div className='w-full h-[1px] bg-white-2/20 my-6'></div>
           {/* copyright ----->  */}
           <Typography.text styles='font-inter font-normal text-white-2 pb-6'>
-            © 2024 RP Fitness. All Rights Reserved
+            © 2024 R&P Fitness. All Rights Reserved
           </Typography.text>
         </div>
       </ComponentWrapper>

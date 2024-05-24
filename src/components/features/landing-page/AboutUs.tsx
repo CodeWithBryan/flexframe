@@ -25,14 +25,14 @@ const AboutUs: React.FC = () => {
             We offer a comprehensive fitness experience
           </Typography.h2>
           <Typography.text styles='font-normal text-white-1/80'>
-            At RP Fitness, we recognize the challenges of maintaining a healthy
+            At R&P Fitness, we recognize the challenges of maintaining a healthy
             lifestyle in today's fast-paced world. Our commitment goes beyond
             merely offering a gym; we provide a transformative haven where
             health, cleanliness, friendliness, and motivation converge at an
             affordable rate.
           </Typography.text>
           <Typography.text styles='font-normal text-white-1/80'>
-            RP Fitness: Beyond a gym, a sanctuary for stress relief and
+            R&P Fitness: Beyond a gym, a sanctuary for stress relief and
             well-being. Our mission is to spread wellness, providing knowledge
             on workouts, diet, and stress management for a healthier, accessible
             life.
