@@ -38,6 +38,7 @@ const Navibar: React.FC = () => {
                     <HashLink
                       key={index}
                       to={item.path}
+                      smooth
                       className='capitalize hover:opacity-80 relative after:absolute after:w-0 after:bottom-0 after:left-0 after:h-[2px] after:bg-red-1 hover:after:w-full after:duration-200'
                     >
                       <Typography.smallText
