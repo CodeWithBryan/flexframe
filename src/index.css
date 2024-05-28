@@ -90,3 +90,43 @@ input::-webkit-inner-spin-button {
   fill: #ffb8ba !important;
   fill-opacity: 0.1;
 }
+
+/* donut chart styles ===========> */
+.donutChart .recharts-tooltip-wrapper {
+  background-color: white !important;
+  border: 1px solid #e2e4e9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.areaChart .recharts-tooltip-wrapper {
+  background-color: white !important;
+  border: 1px solid #e2e4e9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.recharts-tooltip-wrapper {
+  background-color: white !important;
+  border: 1px solid #e2e4e9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.recharts-rectangle {
+  padding-right: 20px !important;
+}
+
+/*  */
+
+.orderChart .mantine-ChartLegend-legend {
+  display: flex !important;
+  justify-content: start !important;
+  align-items: center !important;
+}
+.orderChart .mantine-ChartLegend-legendItem {
+  display: flex !important;
+  justify-content: end !important;
+  gap: 6px !important;
+  align-items: center !important;
+}

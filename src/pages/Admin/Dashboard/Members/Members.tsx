@@ -1,9 +1,9 @@
 import React from 'react';
 import * as Icons from '../../../../components/common/Icons';
 import { Tabs } from '@mantine/core';
-import Overview from './TabsPanel/Overview';
+import Overview from '../../../../components/features/admin/memberDetails/TabsPanel/Overview';
+import MemberShip from '../../../../components/features/admin/memberDetails/TabsPanel/MemberShip';
 import { Menu } from '@mantine/core';
-import MemberShip from './TabsPanel/MemberShip';
 
 const Members: React.FC = () => {
   return (
