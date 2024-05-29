@@ -1,12 +1,6 @@
-import axios, { AxiosResponse } from 'axios';
-import type { User } from '../stores/auth.store';
-
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3001', // Change to your API base URL
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
+import { AxiosResponse } from "axios";
+import api from ".";
+import { User } from "../stores/auth.store";
 
 interface LoginResponse {
   access_token: string;
@@ -25,5 +19,3 @@ interface RegisterResponse {
 export const register = (email: string, password: string, phone: string, firstName: string, lastName: string): Promise<AxiosResponse<RegisterResponse>> => {
   return api.post<RegisterResponse>('/auth/register', { email, password, phone, firstName, lastName });
 };
-
-export default api;

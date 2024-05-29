@@ -7,7 +7,7 @@ import Input from '../components/common/Inputs/Input';
 import PasswordField from '../components/common/Inputs/PasswordField';
 import FillButton from '../components/common/Buttons/FillButton';
 import useAuthStore from '../stores/auth.store';
-import { login } from '../util/api';
+import { login } from '../api/auth';
 
 const Login: React.FC = () => {
   const [signIn, setSignIn] = useState({ email: '', password: '' });
@@ -26,7 +26,9 @@ const Login: React.FC = () => {
     try {
       const { data } = await login(signIn.email, signIn.password);
       storeLogin(data.access_token, data.user);
-      navigate('/member/dashboard');
+
+      const redirectTo = new URLSearchParams(location.search).get('redirect');
+      navigate(redirectTo ? redirectTo : '/member/dashboard');
     } catch (error) {
       console.error('Login failed:', error);
       setError('Invalid email or password. Please try again.');
@@ -40,7 +42,7 @@ const Login: React.FC = () => {
         <div className='w-full max-w-[420px] flex flex-col gap-3 px-4 sm:px-8 h-full justify-center items-center'>
           <img src={logo} className='w-[44px] h-[38px] object-fill' alt='Logo' />
           <Typography.lgText styles='text-black-1 font-bold'>
-            Welcome to RP Fitness
+            Welcome to R&P Fitness
           </Typography.lgText>
           <Typography.mText styles='text-center font-normal text-[#525866]'>
             Login to unlock a world of fitness tailored just for you.

@@ -38,7 +38,7 @@ const Welcome: React.FC = () => {
       <div className='w-full py-10 flex justify-center items-center'>
         <div className='w-full max-w-[540px] flex flex-col gap-3 px-4 sm:px-8 h-full justify-center items-center'>
           <Typography.lgText styles='text-black-1 font-bold'>
-            Welcome to RP Fitness
+            Welcome to R&P Fitness
           </Typography.lgText>
           <Typography.mText styles='text-center font-normal text-[#525866]'>
             Answer few questions to help us improve your fitness experience.
@@ -89,7 +89,7 @@ const Welcome: React.FC = () => {
             {/* fill button  */}
             <div className='w-full py-3'>
               <FillButton styles='w-full h-[50px] text-white-1 bg-red-1 rounded-[60px]'>
-                Get started with RP fitness
+                Get started with R&P fitness
               </FillButton>
             </div>
           </div>
@@ -99,7 +99,7 @@ const Welcome: React.FC = () => {
       <div className='w-full hidden lg:flex flex-col gap-3 h-full bg-black-3 p-11'>
         <img src={logo} className='w-[44px] h-[38px] object-fill' />
         <Typography.h2 styles='text-white-1 font-bold py-4'>
-          Thanks for becoming a RP Fitness Pro member
+          Thanks for becoming a R&P Fitness Pro member
         </Typography.h2>
         <Typography.lgText styles='text-white-1 font-semibold'>
           What’s included in your membership?

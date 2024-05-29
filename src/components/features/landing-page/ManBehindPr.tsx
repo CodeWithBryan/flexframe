@@ -27,13 +27,13 @@ const ManBehindPr: React.FC = () => {
           {/* right por ====>  */}
           <div className='w-full flex flex-col gap-8 items-start'>
             <h1 className='text-[60px] text-white-1 leading-[72px] font-bold '>
-              Meet the man behind RP Fitness
+              Meet the man behind R&P Fitness
             </h1>
             <Typography.text styles='text-white-1 font-normal'>
-              Meet Ryan, the passionate owner and personal trainer at RP
+              Meet Ryan, the passionate owner and personal trainer at R&P
               Fitness. With a deep commitment to your fitness journey, Ryan
               brings expertise and personalized guidance to every session.
-              Transform your fitness goals into reality with RP Fitness, where
+              Transform your fitness goals into reality with R&P Fitness, where
               Ryan's dedication makes each workout an empowering experience.
             </Typography.text>
             {/* instructor name ---->  */}
@@ -41,8 +41,8 @@ const ManBehindPr: React.FC = () => {
               {/*  */}
               <div className='w-full h-full border-l-[2px] border-white-1'></div>
               <div className='w-full flex flex-col'>
-                <Typography.lgText styles='text-white-1 font-bold'>
-                  RYAN
+                <Typography.lgText styles='text-white-1 font-bold uppercase'>
+                  Ryan
                 </Typography.lgText>
                 <Typography.smallText styles='text-white-1 font-normal'>
                   Fitness trainer
@@ -50,11 +50,11 @@ const ManBehindPr: React.FC = () => {
               </div>
             </div>
             {/* button ---->  */}
-            <FillButton styles='px-[24px] py-[16px] bg-black-1 rounded-[60px]'>
+            {/* <FillButton styles='px-[24px] py-[16px] bg-black-1 rounded-[60px]'>
               <Typography.mText styles='text-white-1 font-semibold'>
                 Learn more
               </Typography.mText>
-            </FillButton>
+            </FillButton> */}
           </div>
         </div>
       </ComponentWrapper>

@@ -24,7 +24,7 @@ const TopNavigation: React.FC = () => {
         <img
           src={logo}
           className='w-[40px] sm:w-[44px] clg:hidden block h-[30px] sm:h-[38px] object-fill'
-          alt='RP Fitness Logo'
+          alt='R&P Fitness Logo'
         />
 
         <div className='clg:block hidden w-full max-w-[500px]'>
@@ -69,10 +69,10 @@ const TopNavigation: React.FC = () => {
             <img
               src={logo}
               className='w-[30px] h-[30px] object-fill'
-              alt='RP Fitness Logo'
+              alt='R&P Fitness Logo'
             />
             <Typography.mText styles='text-black-1 font-bold'>
-              RP Fitness
+              R&P Fitness
             </Typography.mText>
           </div>
           {/* links */}

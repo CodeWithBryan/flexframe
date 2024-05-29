@@ -38,6 +38,7 @@ const Navibar: React.FC = () => {
                     <HashLink
                       key={index}
                       to={item.path}
+                      smooth
                       className='capitalize hover:opacity-80 relative after:absolute after:w-0 after:bottom-0 after:left-0 after:h-[2px] after:bg-red-1 hover:after:w-full after:duration-200'
                     >
                       <Typography.smallText
@@ -56,13 +57,13 @@ const Navibar: React.FC = () => {
             </div>
             {/* right por =======>  */}
             <div className='hidden md:flex justify-center items-center gap-3'>
-              <button className='p-[10px] xl:p-[12px] bg-white-1/10 border-[1px] border-white-1/10 active:translate-y-[2px] hover:opacity-80 rounded-full flex justify-center items-center'>
+              {/* <button className='p-[10px] xl:p-[12px] bg-white-1/10 border-[1px] border-white-1/10 active:translate-y-[2px] hover:opacity-80 rounded-full flex justify-center items-center'>
                 <Icons.person />
-              </button>
-              <Link to='/signup'>
+              </button> */}
+              <Link to='/login'>
                 <FillButton styles='bg-red-1 px-[20px] xl:px-[24px] py-[12px] xl:py-[16px] rounded-[60px]'>
                   <Typography.mText styles='text-white-1 font-semibold'>
-                    Join RP Fitness Today
+                    Login
                   </Typography.mText>
                 </FillButton>
               </Link>

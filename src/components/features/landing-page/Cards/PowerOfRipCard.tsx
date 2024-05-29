@@ -10,9 +10,7 @@ interface props {
 const PowerOfRipCard: React.FC<props> = ({ icon, title, des }: props) => {
   return (
     <div
-      className={`w-full h-full max-w-[420px] flex flex-col gap-2 border-[1px] p-[20px] sm:p-[32px] ${
-        title === '24/7 access' ? 'bg-white-1/10' : 'bg-transparent'
-      } border-white-1/10 rounded-[8px]`}
+      className={`w-full h-full max-w-[420px] flex flex-col gap-2 border-[1px] p-[20px] sm:p-[32px] bg-transparent border-white-1/10 rounded-[8px]`}
     >
       {icon}
       <Typography.lgText styles='text-white-1 font-bold mt-4'>

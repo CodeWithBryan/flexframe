@@ -27,9 +27,11 @@ const Footer: React.FC = () => {
                       className='flex justify-center items-center gap-2'
                     >
                       {item.icon}
-                      <Typography.mText styles='w-full max-w-[370px] leading-[30px] font-inter text-white-2 font-normal'>
-                        {item.text}
-                      </Typography.mText>
+                      <a href={item.link}>
+                        <Typography.mText styles='w-full max-w-[370px] leading-[30px] font-inter text-white-2 font-normal'>
+                          {item.text}
+                        </Typography.mText>
+                      </a>
                     </div>
                   );
                 })}
@@ -76,10 +78,9 @@ const Footer: React.FC = () => {
             })}
           </div>
           {/* line --->  */}
-          <div className='w-full h-[1px] bg-white-2/20 my-6'></div>
           {/* subscribe to our news letter ------>  */}
-          <div className='w-full flex md:flex-row flex-col  justify-between xl:gap-0 gap-x-4 gap-y-6 items-center py-1'>
-            {/* left por --->  */}
+          {/* <div className='w-full h-[1px] bg-white-2/20 my-6'></div> */}
+          {/* <div className='w-full flex md:flex-row flex-col  justify-between xl:gap-0 gap-x-4 gap-y-6 items-center py-1'>
             <div className='flex flex-col gap-2'>
               <p className='text-[20px] text-white-1 font-bold font-inter'>
                 Subscribe to our newsletter
@@ -89,7 +90,6 @@ const Footer: React.FC = () => {
                 weekly.
               </Typography.text>
             </div>
-            {/* right por ---->  */}
             <div className='max-w-[380px] lg:max-w-[450px] w-full h-[50px] sm:h-[55px] lg:h-[60px] grid-cols-[1fr,120px] grid sm:grid-cols-[1fr,130px] lg:grid-cols-[1fr,150px] rounded-[10px] sm:rounded-[60px] bg-[#292828]'>
               <input
                 type='email'
@@ -102,12 +102,12 @@ const Footer: React.FC = () => {
                 </Typography.mText>
               </button>
             </div>
-          </div>
+          </div> */}
           {/* line --->  */}
           <div className='w-full h-[1px] bg-white-2/20 my-6'></div>
           {/* copyright ----->  */}
           <Typography.text styles='font-inter font-normal text-white-2 pb-6'>
-            © 2024 RP Fitness. All Rights Reserved
+            © 2024 R&P Fitness. All Rights Reserved
           </Typography.text>
         </div>
       </ComponentWrapper>
@@ -121,14 +121,17 @@ const footerData = {
       {
         icon: <Icons.Search stroke='#CDD0D5' />,
         text: 'info@rnpfitness.com',
+        link: 'mailto:info@rnpfitness.com',
       },
       {
         icon: <Icons.call stroke='#CDD0D5' />,
         text: '+1 (407)-920-9863',
+        link: 'tel:+14079209863',
       },
       {
         icon: <Icons.location stroke='#CDD0D5' />,
         text: '885 S Charles Richard Beall Blvd. DeBary, FL 32713, USA',
+        link: 'https://maps.app.goo.gl/RtnD5jLqwxaArJAD8'
       },
     ],
     social: [
@@ -154,69 +157,69 @@ const footerData = {
       category: 'Useful links',
       links: [
         {
-          path: '#',
+          path: '/',
           name: 'Home',
         },
         {
-          path: '#',
+          path: '/member/dashboard',
           name: 'My account',
         },
+        // {
+        //   path: '#',
+        //   name: 'Become a partner',
+        // },
         {
-          path: '#',
-          name: 'Become a partner',
+          path: '/signup',
+          name: 'Start a Membership',
         },
-        {
-          path: '#',
-          name: 'Start a Memebership',
-        },
-        {
-          path: '#',
-          name: 'Career',
-        },
+        // {
+        //   path: '#',
+        //   name: 'Career',
+        // },
       ],
     },
-    {
-      category: 'Company',
-      links: [
-        {
-          path: '#',
-          name: 'About us',
-        },
-        {
-          path: '#',
-          name: 'Our trainers',
-        },
-        {
-          path: '#',
-          name: 'Services',
-        },
-        {
-          path: '#',
-          name: 'Careers',
-        },
-      ],
-    },
-    {
-      category: 'Community',
-      links: [
-        {
-          path: '#',
-          name: 'Testimonials',
-        },
-        {
-          path: '#',
-          name: 'Gallery',
-        },
-        {
-          path: '#',
-          name: 'Blogs',
-        },
-        {
-          path: '#',
-          name: 'Help & Support',
-        },
-      ],
-    },
+    // {
+    //   category: 'Company',
+    //   links: [
+    //     {
+    //       path: '#',
+    //       name: 'About us',
+    //     },
+    //     {
+    //       path: '#',
+    //       name: 'Our trainers',
+    //     },
+    //     {
+    //       path: '#',
+    //       name: 'Services',
+    //     },
+    //     {
+    //       path: '#',
+    //       name: 'Careers',
+    //     },
+    //   ],
+    // },
+    // {
+    //   category: 'Community',
+    //   links: [
+    //     {
+    //       path: '#',
+    //       name: 'Testimonials',
+    //     },
+    //     {
+    //       path: '#',
+    //       name: 'Gallery',
+    //     },
+    //     {
+    //       path: '#',
+    //       name: 'Blogs',
+    //     },
+    //     {
+    //       path: '#',
+    //       name: 'Help & Support',
+    //     },
+    //   ],
+    // },
   ],
 };
 

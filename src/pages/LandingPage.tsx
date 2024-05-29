@@ -10,7 +10,7 @@ import GymTourVideo from '../components/features/landing-page/GymTourVideo';
 import MemberShipPlane from '../components/features/landing-page/MemberShipPlane';
 import OurSocialCircle from '../components/features/landing-page/OurSocialCircle';
 import OurExpertTrainer from '../components/features/landing-page/OurExpertTrainer';
-import OurArticles from '../components/features/landing-page/OurArticles';
+// import OurArticles from '../components/features/landing-page/OurArticles';
 import CallToActionBanner from '../components/features/landing-page/CallToActionBanner';
 import Footer from '../components/layout/LandingPage/Footer';
 import SocialBanner from '../components/layout/LandingPage/SocialBanner';
@@ -30,7 +30,7 @@ const LandingPage: React.FC = () => {
       <MemberShipPlane />
       <OurSocialCircle />
       <OurExpertTrainer />
-      <OurArticles />
+      {/* <OurArticles /> */}
       <CallToActionBanner />
       <Footer />
     </div>
