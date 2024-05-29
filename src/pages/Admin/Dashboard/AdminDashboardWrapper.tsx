@@ -20,7 +20,7 @@ const DashboardWrapper: React.FC = () => {
             <TopNavigation />
           </div>
 
-          <div className='flex-grow flex justify-center items-center'>
+          <div className='flex-grow flex justify-center items-start'>
             <div className='w-full max-w-[1200px]'>
               <Outlet />
             </div>

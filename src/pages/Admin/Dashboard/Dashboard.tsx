@@ -15,6 +15,7 @@ import TableRow from '../../../components/features/customer/billing/TableRow';
 import RowForSmallScreen from '../../../components/features/customer/billing/RowForSmallScreen';
 import { InvoiceTable } from '../../../data/billing';
 import { adminDashboardData } from '../../../data/adminDashboard';
+import StatsWidget from '../../../components/common/StatsWidget';
 
 const Dashboard: React.FC = () => {
   // USET-STATES ---------------------->
@@ -89,17 +90,7 @@ const Dashboard: React.FC = () => {
       <div className='w-full grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-6'>
         {adminDashboardData.generalStatistics.map((item, index) => {
           return (
-            <div
-              key={index}
-              className='w-full bg-white-1 border-[1px] p-3 border-[#E2E4E9] rounded-[16px] flex flex-col gap-2'
-            >
-              <p className='text-[12px] text-[#0A0D14] font-normal'>
-                {item.type}
-              </p>
-              <h3 className='text-[24px] font-semibold text-[#0A0D14]'>
-                {item.value}
-              </h3>
-            </div>
+            <StatsWidget key={index} type={item.type} value={item.value} />
           );
         })}
       </div>
