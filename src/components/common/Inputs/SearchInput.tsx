@@ -9,7 +9,7 @@ interface Props {
 
 const SearchInput: React.FC<Props> = ({
   placeholder,
-  size = 'w-full h-[40px] csm:w-[200px] lg:w-[330px]',
+  size = 'w-full h-[40px] rounded-[64px] csm:w-[200px] lg:w-[330px]',
 }: Props) => {
   return (
     <Input

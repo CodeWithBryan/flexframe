@@ -4,6 +4,12 @@ import OutlineButton from '../../../../components/common/Buttons/OutlineButton';
 import { adminDashboardData } from '../../../../data/adminDashboard';
 import StatsWidget from '../../../../components/common/StatsWidget';
 import SearchInput from '../../../../components/common/Inputs/SearchInput';
+import * as Icons from '../../../../components/common/Icons';
+import SingleSelect from '../../../../components/common/SingleSelect';
+import TableHeader from '../../../../components/features/customer/billing/TableHeader';
+import { InvoiceTable } from '../../../../data/billing';
+import TableRow from '../../../../components/features/admin/members/TableRow';
+import { MembersData } from '../../../../data/members';
 
 const Members: React.FC = () => {
   return (
@@ -33,9 +39,83 @@ const Members: React.FC = () => {
           );
         })}
       </div>
-      {/*  */}
+      {/* FILTER -----> */}
+      <div className='w-full my-6 grid grid-cols-1 md:grid-cols-[1fr,1.8fr] md:gap-y-0 gap-y-4 gap-x-3 items-center'>
+        <SearchInput
+          placeholder='Search by name, email or phone number...'
+          size='w-full max-w-[400px] md:max-w-full rounded-[60px]  h-[50px]'
+        />
+        <div className='w-full flex flex-wrap justify-end items-center gap-2'>
+          <button className='flex border-[1px] border-[#E2E4E9] bg-white-1 hover:bg-black-1/5 px-[14px] h-[45px] gap-2 rounded-[60px] justify-center items-center'>
+            <Icons.date className='w-[18px] h-[19px]' />
+            <p className='text-[14px] font-medium text-[#525866]'>Date</p>
+          </button>
+          <SingleSelect
+            inputSize='w-[180px] h-[45px] rounded-[60px]'
+            options={memberOptions}
+            defaultValue='All Members'
+            placeholder='All members'
+          />
+          <SingleSelect
+            inputSize='w-[230px] h-[45px] rounded-[60px]'
+            options={memberShipOptions}
+            defaultValue='Any active membership'
+            placeholder='Any active membership'
+          />
+        </div>
+      </div>
+      {/* MEMBERS TABLE -----> */}
+      <div className='w-full flex bg-transparent csm:bg-white-1 flex-col border-[0px] csm:border-[1px] overflow-hidden csm:border-white-3 rounded-[10px]'>
+        <div className='w-full overflow-auto'>
+          {/* table header --->  */}
+          <TableHeader
+            cols='grid-cols-[30px,1fr,1fr,.8fr,.8fr,.8fr,1fr,30px]'
+            height='h-[60px]'
+            headers={MembersData.membersTable.header}
+            width='min-w-[1080px]'
+          />
+          {/* table rows --->  */}
+          <div
+            className={`w-full flex flex-col ${
+              InvoiceTable.rowsData.length < 9 ? 'h-fit' : 'h-[350px] '
+            } `}
+          >
+            {MembersData.membersTable.rowsData.map((row, index) => {
+              return (
+                <TableRow
+                  key={index}
+                  status={row.status}
+                  name={row.name}
+                  joinedDate={row.joinDate}
+                  mobileNumber={row.mobileNumber}
+                  email={row.email}
+                  spending={row.speding}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+
+const memberOptions = [
+  'All members',
+  'Active members',
+  'Inactive',
+  'Suspended',
+  'Premium Member',
+  'Tuition Fee',
+  'Phone Bill',
+];
+
+const memberShipOptions = [
+  'Any active membership',
+  'No active membership',
+  'Standard',
+  'Elite',
+  'Elite+',
+];
 
 export default Members;
