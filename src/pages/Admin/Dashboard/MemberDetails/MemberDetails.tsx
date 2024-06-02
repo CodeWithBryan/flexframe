@@ -4,6 +4,7 @@ import { Tabs } from '@mantine/core';
 import Overview from '../../../../components/features/admin/memberDetails/TabsPanel/Overview';
 import MemberShip from '../../../../components/features/admin/memberDetails/TabsPanel/MemberShip';
 import { Menu } from '@mantine/core';
+import Documents from '../../../../components/features/admin/memberDetails/TabsPanel/Documents';
 
 const MemberDetails: React.FC = () => {
   return (
@@ -177,7 +178,7 @@ const tabLists = [
   {
     label: 'Documents',
     value: 'documents',
-    component: 'Documents tab content',
+    component: <Documents />,
   },
   {
     label: 'Notes',
