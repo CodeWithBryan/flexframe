@@ -5,6 +5,7 @@ import Overview from '../../../../components/features/admin/memberDetails/TabsPa
 import MemberShip from '../../../../components/features/admin/memberDetails/TabsPanel/MemberShip';
 import { Menu } from '@mantine/core';
 import Documents from '../../../../components/features/admin/memberDetails/TabsPanel/Documents';
+import MealPlan from '../../../../components/features/admin/memberDetails/TabsPanel/MealPlan';
 
 const MemberDetails: React.FC = () => {
   return (
@@ -163,7 +164,7 @@ const tabLists = [
   {
     label: 'Meal plan',
     value: 'meal-plan',
-    component: 'Meal plan tab content',
+    component: <MealPlan />,
   },
   {
     label: 'Memberships',

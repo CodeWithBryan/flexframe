@@ -1,6 +1,6 @@
 import React from 'react';
-import { Dropzone, DropzoneProps, IMAGE_MIME_TYPE } from '@mantine/dropzone';
-import { Group, Text, rem } from '@mantine/core';
+import { Dropzone, IMAGE_MIME_TYPE } from '@mantine/dropzone';
+import { Group } from '@mantine/core';
 import { IoCloudUploadOutline } from 'react-icons/io5';
 import OutlineButton from '../../../../common/Buttons/OutlineButton';
 import * as Icons from '../../../../common/Icons';
