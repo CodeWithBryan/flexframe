@@ -6,6 +6,7 @@ import MemberShip from '../../../../components/features/admin/memberDetails/Tabs
 import { Menu } from '@mantine/core';
 import Documents from '../../../../components/features/admin/memberDetails/TabsPanel/Documents';
 import MealPlan from '../../../../components/features/admin/memberDetails/TabsPanel/MealPlan';
+import Workout from '../../../../components/features/admin/memberDetails/TabsPanel/Workout';
 
 const MemberDetails: React.FC = () => {
   return (
@@ -159,7 +160,7 @@ const tabLists = [
   {
     label: 'Workout',
     value: 'workout',
-    component: 'Workout tab content',
+    component: <Workout />,
   },
   {
     label: 'Meal plan',

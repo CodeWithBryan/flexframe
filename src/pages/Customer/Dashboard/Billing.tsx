@@ -21,6 +21,7 @@ import {
 const CancelButton: React.FC = () => {
   const [cancelSub, { open }] = useDisclosure(false);
   const [isHovered, setIsHovered] = useState(false);
+
   return (
     <button
       className={`flex rounded-[4px] px-[8px] py-[4px] justify-center items-center gap-1 ${
@@ -30,13 +31,13 @@ const CancelButton: React.FC = () => {
       onMouseLeave={() => setIsHovered(false)}
       onClick={open}
     >
-      {!isHovered && (<Icons.fillCheck className='w-[16px] h-[16px]' />)}
+      {!isHovered && <Icons.fillCheck className='w-[16px] h-[16px]' />}
       <Typography.xsText styles='text-[12px] text-white-1 font-semibold'>
         {isHovered ? 'Cancel' : 'Active'}
       </Typography.xsText>
     </button>
   );
-}
+};
 
 const Billing: React.FC = () => {
   // STATES FOR MODALS =========================>
@@ -117,7 +118,10 @@ const Billing: React.FC = () => {
                   {/* right por -->  */}
                   <div className='flex justify-between gap-3'>
                     <CancelButton />
-                    <button className='flex bg-purple-1 rounded-[4px] px-[8px] py-[4px] justify-center items-center gap-1' onClick={openUpgrateModal}>
+                    <button
+                      className='flex bg-purple-1 rounded-[4px] px-[8px] py-[4px] justify-center items-center gap-1'
+                      onClick={openUpgrateModal}
+                    >
                       <Icons.fillCheck className='w-[16px] h-[16px] ' />
                       <Typography.xsText styles='text-[12px] text-white-1 font-semibold'>
                         Upgrade
